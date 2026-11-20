@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LM Canada | Competitors Insights, Focus: Chubb Insurance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --lb:#1A1444;--b90:#29254F;--b80:#3A3468;--ly:#FFD000;--y10:#FFF8CC;--y60:#FFE280;--y40:#FFEAA9;
+ --ldt:#06748C;--lmt:#28A5AF;--lt:#78E1E1;--t40:#C9F3F4;--t80:#99E5EA;--g70:#404040;--g50:#707070;--g29:#C0BFC0;--g10:#E6E6E6;--g05:#F5F5F5;
+ --sans:"Barlow",Arial,sans-serif;--cond:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--body:"Source Serif 4",Georgia,serif;
+ --ease:cubic-bezier(.16,1,.3,1);--io:cubic-bezier(.76,0,.24,1);--spring:cubic-bezier(.34,1.56,.64,1);
+ --paper:#F5F5F5;--ink:#1A1444;--ink2:#404040;--card:#FFFFFF;--card-ink:#1A1444;--card-mute:#707070;--track:#EDEDF2;--line:#E6E6E6;
+ --accent-t:#06748C;--navy-bar:#1A1444;--shadow:0 2px 14px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.04);
+ color-scheme:light;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#100D2E;--ink:#F3F2FF;--ink2:#C2BFDD;--card:#221D52;--card-ink:#F3F2FF;--card-mute:#A6A3C6;--track:#312B6A;--line:#3A3478;
+ --accent-t:#78E1E1;--navy-bar:#9C95F0;--shadow:0 2px 18px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.05);color-scheme:dark}}
+:root[data-theme="dark"]{
+ --paper:#100D2E;--ink:#F3F2FF;--ink2:#C2BFDD;--card:#221D52;--card-ink:#F3F2FF;--card-mute:#A6A3C6;--track:#312B6A;--line:#3A3478;
+ --accent-t:#78E1E1;--navy-bar:#9C95F0;--shadow:0 2px 18px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.05);color-scheme:dark}
+html{height:100%}
+body{height:100%;background:var(--lb);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden;position:relative}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lmt);outline-offset:3px}
+
+/* ═══ pages ═══ */
+.stage{position:relative;height:100%;overflow:hidden}
+.pg{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;visibility:hidden;opacity:0}
+.pg.is-on{visibility:visible;opacity:1}
+.dk{background:var(--lb);--ink:#FFFFFF;--ink2:rgba(255,255,255,.7);--accent-t:#78E1E1;color:var(--ink)}
+.lt{background:var(--paper);color:var(--ink)}
+.yl{background:var(--ly);--ink:#1A1444;--ink2:rgba(26,20,68,.72);--accent-t:#1A1444;color:var(--ink)}
+.pg-in{position:relative;z-index:2;min-height:100%;display:flex;flex-direction:column;padding:96px clamp(22px,5vw,72px) 112px;max-width:1360px;margin:0 auto}
+
+/* outlined chapter numeral, drifting with the cursor */
+.wm{position:absolute;right:-2vw;bottom:-6vw;z-index:1;pointer-events:none;font-family:var(--cond);font-weight:900;font-size:clamp(220px,34vw,560px);line-height:.8;letter-spacing:-.02em;
+ color:transparent;-webkit-text-stroke:1.5px color-mix(in srgb,var(--ink) 10%,transparent);transform:translate3d(var(--px,0px),var(--py,0px),0)}
+.wm span{display:block;opacity:0;transform:translate3d(12%,0,0);transition:opacity 1.2s var(--ease) .2s,transform 1.6s var(--ease) .2s}
+.is-on .wm span{opacity:1;transform:none}
+.yl .wm{-webkit-text-stroke-color:rgba(26,20,68,.12)}
+
+/* soft spotlight that follows the cursor on dark pages */
+.spot{position:fixed;left:0;top:0;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;pointer-events:none;z-index:1;
+ background:radial-gradient(circle,rgba(255,208,0,.10),rgba(40,165,175,.05) 38%,transparent 66%);opacity:0;transition:opacity .8s var(--ease);will-change:transform}
+body.spot-on .spot{opacity:1}
+
+/* ═══ type ═══ */
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--lmt);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.dk .eyebrow{color:var(--lt)}.lt .eyebrow{color:var(--accent-t)}.yl .eyebrow{color:rgba(26,20,68,.6)}
+.eyebrow::before{content:"";width:24px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease) .15s}
+.eyebrow span{opacity:0;transform:translate3d(-10px,0,0);transition:opacity .6s var(--ease) .35s,transform .7s var(--ease) .35s}
+.is-on .eyebrow::before{transform:none}.is-on .eyebrow span{opacity:1;transform:none}
+.h{font-family:var(--cond);font-weight:800;font-size:clamp(38px,4.6vw,66px);line-height:1.02;letter-spacing:-.5px;text-wrap:balance}
+.h .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .1em 0;margin-bottom:-.1em}
+.h .w>i{display:inline-block;font-style:normal;transform:translate3d(0,108%,0) rotate(6deg);transform-origin:0 100%;transition:transform 1s var(--ease);transition-delay:calc(var(--i) * 45ms + 300ms)}
+.is-on .h .w>i{transform:none}
+.dk .h .hl,.lt .h .hl{color:var(--ly)}.lt .h .hl{color:var(--accent-t)}
+.rule{width:44px;height:3px;background:var(--ly);margin:16px 0 26px;transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease) .75s}
+.lt .rule{background:var(--accent-t)}.yl .rule{background:var(--lb)}
+.is-on .rule{transform:none}
+.p{font-family:var(--body);font-size:clamp(15.5px,1.15vw,17.5px);line-height:1.78;color:var(--ink2);max-width:52ch}
+
+/* staged reveal */
+.rv{opacity:0;transform:translate3d(0,26px,0);transition:opacity .8s var(--ease),transform 1s var(--ease)}
+.is-on .rv{opacity:1;transform:none}
+.is-on .d1{transition-delay:.55s}.is-on .d2{transition-delay:.7s}.is-on .d3{transition-delay:.85s}.is-on .d4{transition-delay:1s}
+.rise{opacity:0;transform:translate3d(0,50px,0) scale(.97);transition:opacity .9s var(--ease) .45s,transform 1.2s var(--ease) .45s}
+.is-on .rise{opacity:1;transform:none}
+
+.g{flex:1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,4.5vw,64px);align-items:center}
+.g.one{grid-template-columns:1fr;align-content:center}
+
+/* ═══ counters ═══ */
+.bigrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin-top:clamp(30px,6vh,60px);background:rgba(255,255,255,.08)}
+.bigrow .bk{background:var(--b90);padding:22px 22px 20px}
+.kstack{display:flex;flex-direction:column;gap:20px;margin-top:8px}
+.bk{position:relative;padding:4px 0 4px 20px}
+.kstack .bk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ly);transform:scaleY(0);transform-origin:top;transition:transform .9s var(--ease)}
+.lt .kstack .bk::before{background:var(--accent-t)}.yl .kstack .bk::before{background:var(--lb)}
+.is-on .kstack .bk::before{transform:none}
+.is-on .kstack .bk:nth-child(1)::before{transition-delay:.7s}.is-on .kstack .bk:nth-child(2)::before{transition-delay:.85s}.is-on .kstack .bk:nth-child(3)::before{transition-delay:1s}
+.bigrow .bk::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--ly);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease)}
+.is-on .bigrow .bk::after{transform:none}
+.is-on .bigrow .bk:nth-child(1)::after{transition-delay:1s}.is-on .bigrow .bk:nth-child(2)::after{transition-delay:1.1s}.is-on .bigrow .bk:nth-child(3)::after{transition-delay:1.2s}.is-on .bigrow .bk:nth-child(4)::after{transition-delay:1.3s}
+.bk .l{font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink2)}
+.dk .bk .l{color:var(--lt)}
+.bk .v{font-family:var(--cond);font-weight:900;font-size:clamp(40px,4.6vw,72px);line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums;margin:8px 0 4px;display:inline-block;transform-origin:left bottom}
+.kstack .bk .v{font-size:clamp(34px,3.5vw,54px)}
+.bk .v.y{color:var(--ly)}.bk .v.t{color:var(--accent-t)}
+.bk .s{font-size:13px;color:var(--ink2)}
+.dk .bk .s{color:rgba(255,255,255,.5)}
+.ct.pop{animation:pop .55s var(--spring)}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.07)}100%{transform:scale(1)}}
+
+/* ═══ chart cards ═══ */
+.pn{background:var(--card);color:var(--card-ink);border-radius:2px;padding:22px 24px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0;height:clamp(440px,calc(100dvh - 230px),700px);position:relative;overflow:hidden}
+.pn::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--ly);transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease) .8s}
+.is-on .pn::before{transform:none}
+.dk .pn{background:var(--b90);color:#fff;--card-ink:#fff;--card-mute:rgba(255,255,255,.55);--track:rgba(255,255,255,.08);--line:rgba(255,255,255,.1);--navy-bar:#9C95F0;box-shadow:0 20px 60px -24px rgba(0,0,0,.6)}
+.pt{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.ptl{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.src{font-size:10.5px;color:var(--card-mute);margin-top:12px;line-height:1.5}
+.pg-src{font-size:11px;color:var(--ink2);margin-top:22px}
+.cw{position:relative;flex:1;min-height:0}
+
+/* segmented switch with a sliding marker */
+.seg{position:relative;display:inline-flex;border:1.5px solid var(--line);border-radius:2px;padding:2px;isolation:isolate}
+.seg .ind{position:absolute;top:2px;bottom:2px;left:0;width:0;background:var(--ly);border-radius:1px;z-index:-1;transition:transform .5s var(--spring),width .45s var(--ease)}
+.seg button{font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:7px 13px;border:0;background:transparent;color:var(--card-mute);cursor:pointer;white-space:nowrap;transition:color .3s var(--ease)}
+.seg button:hover{color:var(--card-ink)}
+.seg button.on{color:#1A1444}
+.seg.nudge{animation:nudge 1.3s var(--ease) 1.4s 2}
+@keyframes nudge{0%,100%{box-shadow:0 0 0 0 rgba(40,165,175,0)}50%{box-shadow:0 0 0 6px rgba(40,165,175,.3)}}
+
+/* bars */
+.bars{display:flex;flex-direction:column;justify-content:safe center;gap:8px;flex:1;min-height:0}
+.br{display:grid;grid-template-columns:minmax(92px,150px) 1fr 84px;align-items:center;gap:12px;font-size:13px}
+.br .bl{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translate3d(-10px,0,0);transition:opacity .5s var(--ease),transform .6s var(--ease);transition-delay:var(--d)}
+.go .br .bl{opacity:1;transform:none}
+.bt{position:relative;height:16px;background:var(--track);border-radius:1px}
+.bt.sg::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--card-mute);opacity:.6}
+.bf{position:absolute;top:0;bottom:0;border-radius:1px;overflow:hidden;transform:scaleX(0);transform-origin:left center;transition:transform 1.1s var(--ease);transition-delay:var(--d)}
+.bf.neg{transform-origin:right center}
+.bf::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-110%)}
+.go .bf{transform:scaleX(1)}
+.go .bf::after{animation:sheen 1.1s var(--ease) forwards;animation-delay:calc(var(--d) + 1s)}
+@keyframes sheen{to{transform:translateX(110%)}}
+.br .bv{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.br .bv small{display:block;font-size:11px;line-height:1.3;font-weight:700}
+.br .bv small+small{color:var(--card-mute)}
+.pair .bt{height:10px}.pair .bt+.bt{margin-top:3px}
+.bars.cmp{gap:16px}.bars.cmp .bt{height:24px}
+.bars.cmp .br{grid-template-columns:minmax(74px,104px) 1fr 62px;gap:8px;font-size:12.5px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11.5px;color:var(--card-mute);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;display:inline-block}
+
+/* dumbbell */
+.db{display:flex;flex-direction:column;gap:10px;flex:1;justify-content:safe center}
+.dr{display:grid;grid-template-columns:minmax(92px,130px) 1fr 124px;align-items:center;gap:12px;font-size:13px}
+.dr .dl{font-weight:600}
+.dt{position:relative;height:16px}
+.dt::before{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:var(--track)}
+.dt .be{position:absolute;top:-3px;bottom:-3px;width:0;border-left:2px dashed #F26B43}
+.dt .tr{position:absolute;top:6px;height:4px;border-radius:2px;transform:scaleX(0);transition:transform 1.3s var(--ease);transition-delay:var(--d)}
+.go .dt .tr{transform:scaleX(1)}
+.dw{position:absolute;inset:0;transform:translateX(var(--x))}
+.dw.mv{transform:translateX(var(--from));transition:transform 1.3s var(--ease);transition-delay:var(--d)}
+.go .dw.mv{transform:translateX(var(--to))}
+.dot{position:absolute;left:-7px;top:1px;width:14px;height:14px;border-radius:50%}
+.dot.a{background:var(--g29)}.dot.b{background:var(--lmt);box-shadow:0 0 0 3px var(--card)}
+.dr .dv{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* two clocks */
+.clk{display:grid;grid-template-columns:1fr 1fr;gap:18px;perspective:1200px}
+.ck{background:var(--card);color:var(--card-ink);border-radius:2px;padding:24px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:2px;border-top:4px solid var(--ldt)}
+.ck.now{border-top-color:var(--ly)}
+.ck h3{font-family:var(--cond);font-size:26px;font-weight:800;margin-bottom:10px}
+.ck .r{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.ck .r:last-child{border-bottom:0}
+.ck .r span{font-size:13px;color:var(--card-mute)}
+.ck .r b{font-family:var(--cond);font-size:clamp(24px,2.4vw,36px);font-weight:900;font-variant-numeric:tabular-nums}
+.badge{display:inline-flex;align-items:center;gap:12px;margin-top:8px;background:var(--lb);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:13px 18px}
+.badge b{color:var(--ly);font-family:var(--cond);font-size:20px;letter-spacing:0}
+
+/* map */
+.map{flex:1;min-height:0}.map svg{width:100%;height:100%;display:block}
+.maptile{opacity:0}
+.is-on .maptile{animation:tile .7s var(--ease) forwards}
+@keyframes tile{from{opacity:0}to{opacity:1}}
+.maptile polygon{transform-box:fill-box;transform-origin:center;transition:transform .35s var(--spring),filter .3s;cursor:pointer}
+.maptile:hover polygon{transform:scale(1.035);filter:brightness(1.07) drop-shadow(0 6px 10px rgba(26,20,68,.25))}
+.is-on .map text{animation:tile .6s var(--ease) both;animation-delay:1.1s}
+.mapsub{font-size:11.5px;color:var(--card-mute);margin-bottom:6px;line-height:1.45}
+.rank{display:flex;flex-direction:column;margin-top:4px;max-height:46vh;overflow:auto;padding-right:6px}
+.rk{display:grid;grid-template-columns:30px 1fr auto;font-size:14px;padding:7px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent);
+ opacity:0;transform:translate3d(-14px,0,0);transition:opacity .5s var(--ease),transform .6s var(--ease);transition-delay:calc(var(--i) * 40ms + 700ms)}
+.is-on .rk{opacity:1;transform:none}
+.rk b{font-family:var(--cond);font-size:16px;color:var(--accent-t)}
+.rk span:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* head to head */
+.sw4{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;perspective:1400px}
+.swc{opacity:0;transform:rotateX(-24deg) translate3d(0,40px,0);transform-origin:top center;transition:opacity .8s var(--ease),transform 1.1s var(--ease)}
+.is-on .swc{opacity:1;transform:none}
+.is-on .swc:nth-child(1){transition-delay:.6s}.is-on .swc:nth-child(2){transition-delay:.72s}.is-on .swc:nth-child(3){transition-delay:.84s}.is-on .swc:nth-child(4){transition-delay:.96s}
+.sw{display:grid;grid-template-columns:52px 1fr;background:var(--card);color:var(--card-ink);border-radius:2px;box-shadow:var(--shadow);height:100%;overflow:hidden}
+.sw .tag{display:flex;align-items:flex-start;justify-content:center;padding-top:18px;font-family:var(--cond);font-size:22px;font-weight:900;color:#fff;background:var(--ldt)}
+.sw.s .tag{background:var(--ly);color:var(--lb)}.sw.w .tag{background:var(--lb)}.sw.t .tag{background:var(--g50)}
+.sw .bd{padding:16px 20px}
+.sw h3{font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:6px}
+.sw .c{display:flex;justify-content:space-between;gap:16px;font-size:13.5px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.sw .c:last-child{border-bottom:0}.sw .c b{font-weight:600}.sw .c span{color:var(--card-mute);text-align:right}
+.nbox{background:linear-gradient(135deg,var(--b90),var(--b80));border-left:4px solid var(--ly);padding:18px 20px 18px 22px;margin-top:24px;max-width:56ch}
+.nbox .nl2{font-size:9.5px;font-weight:700;color:var(--ly);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.nbox .nt{font-family:var(--body);font-size:14px;color:rgba(255,255,255,.8);line-height:1.72}
+.fair{position:relative;z-index:2;margin-top:30px;font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.5);max-width:130ch;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+.fair b{color:var(--ly);font-weight:700}
+
+/* 3D tilt (cursor driven) */
+[data-tilt]{transform-style:preserve-3d;transition:transform .7s var(--ease),box-shadow .4s;will-change:transform}
+[data-tilt].tilting{transition:transform .12s linear,box-shadow .4s}
+
+/* ═══ cover ═══ */
+.cover{background:var(--ly);color:var(--lb)}
+.cover .pg-in{justify-content:center;padding-top:56px;padding-bottom:48px;max-width:none}
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:1;transform:translate3d(var(--bx,0px),var(--by,0px),0);transition:transform .9s var(--ease)}
+.blob i{display:block;width:100%;height:100%;border-radius:50%;background:var(--bc);animation:drift 14s ease-in-out infinite alternate}
+.blob.b1{width:min(560px,52vw);height:min(560px,52vw);right:-120px;top:-140px;--bc:rgba(26,20,68,.07)}
+.blob.b2{width:min(340px,34vw);height:min(340px,34vw);left:52%;bottom:-110px;--bc:rgba(6,116,140,.09)}
+.blob.b3{width:120px;height:120px;left:8%;bottom:14%;--bc:rgba(26,20,68,.05)}
+.blob.b2 i{animation-duration:11s;animation-delay:-4s}.blob.b3 i{animation-duration:9s;animation-delay:-2s}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-30px,24px,0) scale(1.06)}}
+.cv-top{position:absolute;left:clamp(22px,5vw,72px);right:clamp(22px,5vw,72px);top:28px;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.cv-brand{font-family:var(--cond);font-weight:900;font-size:13px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.cv-brand::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lb);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(1.6)}}
+.cv-badge{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:var(--lb);color:var(--ly);padding:5px 12px}
+.cv-body{position:relative;z-index:3}
+.cv-ey{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(26,20,68,.6);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.cv-ey::before{content:"";width:28px;height:2px;background:var(--lb);opacity:.5;transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease) .2s}
+.is-on .cv-ey::before{transform:none}
+.cv-title{font-family:var(--cond);font-weight:900;font-size:clamp(68px,12.5vw,200px);line-height:.88;letter-spacing:-.02em;text-transform:none}
+.cv-title .ln{display:block;overflow:hidden;padding:0 .02em .04em 0}
+.cv-title .ch{display:inline-block;transform:translate3d(0,110%,0) rotate(10deg);transform-origin:0 100%;transition:transform 1.1s var(--ease);transition-delay:calc(var(--i) * 32ms + 200ms)}
+.is-on .cv-title .ch{transform:none}
+.cv-title .ch:hover{transform:translate3d(0,-6%,0)!important;transition:transform .3s var(--spring)!important}
+.cv-focus{display:flex;align-items:center;flex-wrap:wrap;gap:14px 20px;margin-top:clamp(20px,3.5vh,34px)}
+.cv-focus .fl{font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;background:var(--lb);color:var(--ly);padding:7px 12px}
+.cv-focus .fn{font-family:var(--body);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,44px);line-height:1.1}
+.cv-cta{margin-top:clamp(30px,6vh,58px);display:inline-block}
+.mag{display:inline-block;transform:translate3d(var(--mx,0px),var(--my,0px),0);transition:transform .5s var(--ease)}
+.enter{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;gap:18px;height:64px;padding:0 10px 0 30px;border:0;background:var(--lb);color:var(--ly);cursor:pointer;
+ font-size:12px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(26,20,68,.55);transition:color .45s var(--ease),box-shadow .45s var(--ease)}
+.enter::before{content:"";position:absolute;inset:0;background:var(--b90);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--io);z-index:-1}
+.enter::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);transform:translateX(-120%);z-index:-1}
+.is-on .enter::after{animation:sheen2 2.2s var(--ease) 2.6s 2}
+@keyframes sheen2{to{transform:translateX(120%)}}
+.enter .tx{display:inline-flex;transform:translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .5s var(--ease)}
+.enter .ic{position:relative;width:44px;height:44px;background:var(--ly);color:var(--lb);display:grid;place-items:center;overflow:hidden}
+.enter .ic svg{grid-area:1/1;transition:transform .55s var(--io)}
+.enter .ic svg+svg{transform:translateX(-160%)}
+.enter:hover::before,.enter:focus-visible::before{transform:scaleX(1);transform-origin:left}
+.enter:hover .ic svg:first-child,.enter:focus-visible .ic svg:first-child{transform:translateX(160%)}
+.enter:hover .ic svg+svg,.enter:focus-visible .ic svg+svg{transform:none}
+.enter:hover{box-shadow:0 26px 50px -16px rgba(26,20,68,.7)}
+.enter:active{transform:scale(.97)}
+.cv-hint{margin-top:18px;font-size:12px;color:rgba(26,20,68,.55)}
+.cv-hint kbd{font-family:var(--sans);font-size:11px;font-weight:700;border:1.5px solid rgba(26,20,68,.3);padding:1px 6px;margin:0 2px}
+.cv-art{position:absolute;left:50%;right:clamp(22px,5vw,72px);bottom:11%;height:38%;pointer-events:none;z-index:2}
+.cv-art svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cv-art path.ln{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.is-on .cv-art path.ln{transition:stroke-dashoffset 2.4s cubic-bezier(.6,0,.2,1) 1s;stroke-dashoffset:0}
+.cv-art path.ar{opacity:0;transition:opacity 1.2s var(--ease) 2.4s}
+.is-on .cv-art path.ar{opacity:1}
+.cv-art .gl{stroke:rgba(26,20,68,.1);stroke-width:1}
+.cv-art .lab{position:absolute;transform:translate(-100%,-180%);font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;white-space:nowrap;opacity:0;transition:opacity .8s var(--ease) 3.2s}
+.cv-art .x{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--lb);opacity:0;transform:scale(.3);transition:opacity .5s var(--ease) 3s,transform .7s var(--spring) 3s}
+.cv-art .x::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid var(--lb);opacity:0}
+.is-on .cv-art .lab{opacity:1}.is-on .cv-art .x{opacity:1;transform:none}
+.is-on .cv-art .x::after{animation:ring 2s var(--ease) 3.6s infinite}
+@keyframes ring{0%{opacity:.7;transform:scale(.4)}70%,100%{opacity:0;transform:scale(2)}}
+.cv-art .cap{position:absolute;left:0;bottom:-30px;font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:rgba(26,20,68,.5);opacity:0;transition:opacity .8s var(--ease) 3.2s}
+.is-on .cv-art .cap{opacity:1}
+.cv-foot{position:absolute;left:clamp(22px,5vw,72px);right:clamp(22px,5vw,72px);bottom:26px;z-index:3;display:flex;justify-content:space-between;gap:16px;font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:rgba(26,20,68,.45)}
+
+/* ═══ curtain between chapters ═══ */
+.curtain{position:fixed;inset:0;z-index:80;pointer-events:none;visibility:hidden;overflow:hidden}
+.curtain.cover,.curtain.leave{visibility:visible;pointer-events:auto}
+.cp{position:absolute;inset:0}
+.cp.a{background:var(--ly)}
+.cp.b{background:var(--lb);display:grid;place-items:center}
+.cp.b::before{content:"";position:absolute;background:var(--lmt)}
+.curtain.h .cp.b::before{top:0;bottom:0;width:10px}
+.curtain.v .cp.b::before{left:0;right:0;height:10px}
+.curtain.fwd .cp.b::before{left:0}.curtain.back .cp.b::before{right:0}
+.curtain.up .cp.b::before{top:0}.curtain.down .cp.b::before{bottom:0}
+.curtain.fwd .cp{transform:translate3d(101%,0,0)}.curtain.back .cp{transform:translate3d(-101%,0,0)}
+.curtain.up .cp{transform:translate3d(0,101%,0)}.curtain.down .cp{transform:translate3d(0,-101%,0)}
+.curtain.cover .cp{transform:none;transition:transform .5s var(--io)}
+.curtain.cover .cp.b{transition-delay:.08s}
+.curtain.fwd.leave .cp{transform:translate3d(-101%,0,0)}.curtain.back.leave .cp{transform:translate3d(101%,0,0)}
+.curtain.up.leave .cp{transform:translate3d(0,-101%,0)}.curtain.down.leave .cp{transform:translate3d(0,101%,0)}
+.curtain.leave .cp{transition:transform .6s var(--io)}
+.curtain.leave .cp.a{transition-delay:.08s}
+.cl{position:relative;text-align:center;color:#fff}
+.cl-n{display:block;font-family:var(--cond);font-weight:900;font-size:clamp(90px,14vw,200px);line-height:.85;color:var(--ly);opacity:0;transform:translate3d(0,30px,0);transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.cl-t{display:block;margin-top:14px;font-size:12px;font-weight:800;letter-spacing:4px;text-transform:uppercase;opacity:0;transform:translate3d(0,16px,0);transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.curtain.cover .cl-n{opacity:1;transform:none;transition-delay:.22s}
+.curtain.cover .cl-t{opacity:.8;transform:none;transition-delay:.3s}
+.curtain.leave .cl-n,.curtain.leave .cl-t{opacity:0;transform:translate3d(0,-20px,0);transition-duration:.25s}
+
+/* ═══ top bar ═══ */
+.prog{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--ly),var(--lmt));transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease);z-index:62}
+.topnav{position:fixed;top:3px;left:0;right:0;height:52px;z-index:61;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(18px,3vw,40px);
+ background:rgba(26,20,68,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,208,0,.12);
+ transition:transform .8s var(--ease)}
+body.on-cover .topnav{transform:translate3d(0,-120%,0)}
+.nb{font-family:var(--cond);font-weight:900;font-size:13px;color:var(--ly);letter-spacing:2px;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer}
+.nb::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ly);animation:pulse 2s ease-in-out infinite}
+.nl{position:relative;display:flex;gap:2px}
+.nl button{position:relative;font-size:9.5px;font-weight:700;color:rgba(255,255,255,.45);background:none;border:0;padding:7px 9px;text-transform:uppercase;letter-spacing:.8px;cursor:pointer;white-space:nowrap;transition:color .25s}
+.nl button:hover,.nl button.on{color:var(--ly)}
+.nl .ul{position:absolute;bottom:-1px;left:0;height:2px;width:0;background:var(--ly);transition:transform .55s var(--spring),width .45s var(--ease)}
+.nbadge{font-size:9.5px;font-weight:800;background:var(--ly);color:var(--lb);padding:4px 10px;letter-spacing:.6px;white-space:nowrap;text-transform:uppercase}
+
+/* ═══ bottom dock ═══ */
+.dock{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;transform:translate3d(-50%,0,0);display:flex;align-items:stretch;
+ background:rgba(26,20,68,.95);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 20px 50px -18px rgba(0,0,0,.6);color:#fff;
+ border-top:2px solid var(--ly);transition:transform .8s var(--ease),opacity .5s var(--ease)}
+body.on-cover .dock{transform:translate3d(-50%,160%,0);opacity:0;pointer-events:none}
+.db-btn{height:48px;min-width:48px;border:0;background:transparent;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 16px;cursor:pointer;font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;transition:background-color .2s,color .2s}
+.db-btn:hover{background:rgba(255,255,255,.08)}
+.db-btn:disabled{opacity:.3;cursor:default;background:transparent}
+.db-btn.solid{background:var(--ly);color:var(--lb)}
+.db-btn.solid:hover{background:#FFE14D}
+.db-btn svg{transition:transform .35s var(--spring)}
+#prev:not(:disabled):hover svg{transform:translateX(-3px)}#next:not(:disabled):hover svg{transform:translateX(3px)}
+.db-sep{width:1px;background:rgba(255,255,255,.12)}
+.nowbox{display:flex;align-items:center;gap:12px;width:clamp(170px,20vw,260px);padding:0 14px;overflow:hidden}
+.nowbox b{font-family:var(--cond);font-size:22px;font-weight:900;color:var(--ly);font-variant-numeric:tabular-nums}
+.nowbox span{font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nowbox.flip b,.nowbox.flip span{animation:flip .6s var(--ease) both}
+.nowbox.flip span{animation-delay:.06s}
+@keyframes flip{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}
+
+/* ═══ contents ═══ */
+.toc{position:fixed;inset:0;z-index:70;background:rgba(18,14,50,.96);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;overflow-y:auto;
+ clip-path:circle(0% at var(--ox,50%) var(--oy,100%));visibility:hidden;transition:clip-path .8s var(--io),visibility 0s linear .8s}
+.toc.open{clip-path:circle(150% at var(--ox,50%) var(--oy,100%));visibility:visible;transition:clip-path .9s var(--io),visibility 0s}
+.toc-in{max-width:1300px;margin:0 auto;padding:calc(34px + env(safe-area-inset-top,0px)) clamp(22px,5vw,72px) calc(40px + env(safe-area-inset-bottom,0px))}
+.toc-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:30px}
+.toc-hd .eyebrow{color:var(--lt)}.toc-hd .eyebrow::before{transform:none}.toc-hd .eyebrow span{opacity:1;transform:none}
+.toc-hd h2{font-family:var(--cond);font-size:clamp(40px,4.6vw,64px);font-weight:900;line-height:1}
+.toc-x{width:50px;height:50px;border:1.5px solid rgba(255,255,255,.25);background:transparent;display:grid;place-items:center;cursor:pointer;transition:transform .5s var(--spring),background-color .2s}
+.toc-x:hover{background:rgba(255,255,255,.08);transform:rotate(90deg)}
+.toc-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;perspective:1400px}
+.toc-grid li{opacity:0;transform:rotateX(-30deg) translate3d(0,30px,0);transform-origin:top;transition:opacity .5s var(--ease),transform .8s var(--ease)}
+.toc.open .toc-grid li{opacity:1;transform:none;transition-delay:calc(var(--i) * 45ms + 250ms)}
+.toc-card{width:100%;height:100%;text-align:left;display:grid;grid-template-columns:56px 1fr;cursor:pointer;background:var(--b90);border:0;color:#fff;box-shadow:0 10px 30px -14px rgba(0,0,0,.6)}
+.toc-card .n{display:flex;align-items:flex-start;justify-content:center;padding-top:16px;font-family:var(--cond);font-size:24px;font-weight:900;color:var(--lb);background:var(--ly)}
+.toc-card .bd{display:flex;flex-direction:column;gap:6px;padding:15px 18px 18px}
+.toc-card .t{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--lt)}
+.toc-card .q{font-family:var(--body);font-size:14.5px;line-height:1.45;color:rgba(255,255,255,.82);flex:1}
+.toc-card .st{font-family:var(--cond);font-weight:900;font-size:27px;white-space:nowrap;color:var(--ly);margin-top:4px}
+.toc-card.cur{outline:2px solid var(--ly);outline-offset:-2px}
+.toc-card.cur .n{background:var(--lmt);color:#fff}
+.toc-ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:28px;font-size:12px;color:rgba(255,255,255,.55)}
+.toc-ft kbd{font-family:var(--sans);font-size:11px;font-weight:700;border:1.5px solid rgba(255,255,255,.3);padding:1px 6px;color:#fff;margin:0 2px}
+.toc-back{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 22px;border:0;background:var(--ly);color:var(--lb);cursor:pointer;font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+
+/* ═══ responsive ═══ */
+@media (max-width:1280px){.nl{display:none}}
+@media (max-width:1040px){
+ .g{grid-template-columns:1fr;align-items:start}
+ .bigrow{grid-template-columns:1fr 1fr}
+ .pn{height:auto;min-height:420px}
+ .cw{min-height:320px}.map{min-height:300px}.rank{max-height:none}
+ .cv-art{left:clamp(22px,5vw,72px);height:26%;bottom:9%;opacity:.8}
+}
+@media (max-width:640px){
+ .clk,.sw4{grid-template-columns:1fr}
+ .br{grid-template-columns:92px 1fr 70px;font-size:12px;gap:8px}
+ .dr{grid-template-columns:86px 1fr 104px;font-size:12px}
+ .nowbox{width:auto;max-width:40vw;padding:0 10px}
+ .db-btn{padding:0 12px}.db-btn .lbl{display:none}
+ .nbadge{display:none}
+ .cv-hint{display:none}
+ .cv-top .cv-badge{display:none}
+ .enter{height:58px;padding-left:22px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important}
+}
+@media print{
+ body{overflow:visible;height:auto}.stage{height:auto;overflow:visible}
+ .pg{position:relative;opacity:1!important;visibility:visible!important;height:auto;min-height:100vh;page-break-after:always;overflow:visible}
+ .rv,.rise,.swc,.maptile,.rk,.br .bl,.cv-title .ch,.h .w>i,.eyebrow span{opacity:1!important;transform:none!important;animation:none!important}
+ .bf,.rule,.eyebrow::before{transform:none!important}.dock,.toc,.prog,.topnav,.curtain,.spot{display:none}
+}
+
+/* ═══ control strip ═══ */
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:-4px 0 12px}
+.ctl .opt{transition:opacity .35s var(--ease),transform .45s var(--ease)}
+.ctl .opt.off{opacity:0;transform:translate3d(-6px,0,0);pointer-events:none;position:absolute;visibility:hidden}
+.tg{display:inline-flex;align-items:center;gap:9px;height:33px;padding:0 12px 0 8px;border:1.5px solid var(--line);border-radius:2px;background:transparent;cursor:pointer;
+ font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--card-mute);transition:color .3s,border-color .3s,background-color .3s}
+.tg:hover{color:var(--card-ink)}
+.tg .kn{position:relative;width:30px;height:16px;border-radius:9px;background:var(--track);transition:background-color .35s var(--ease)}
+.tg .kn::after{content:"";position:absolute;left:2px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--card-mute);transition:transform .45s var(--spring),background-color .3s}
+.tg[aria-pressed="true"]{color:var(--card-ink);border-color:var(--ly)}
+.tg[aria-pressed="true"] .kn{background:var(--ly)}
+.tg[aria-pressed="true"] .kn::after{transform:translateX(14px);background:#1A1444}
+.lsel{height:33px;max-width:210px;font:800 10.5px var(--sans);letter-spacing:.6px;text-transform:uppercase;color:var(--card-ink);background-color:transparent;border:1.5px solid var(--line);border-radius:2px;
+ padding:0 30px 0 10px;cursor:pointer;-webkit-appearance:none;appearance:none;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2328A5AF' stroke-width='1.8'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+.lsel option{color:#1A1444;background:#fff;text-transform:none}
+.lsel.set{border-color:var(--ly)}
+.crumb{min-height:18px;margin:0 0 8px;font-size:11.5px;color:var(--card-mute)}
+.crumb button{border:0;background:none;padding:0;font:inherit;font-weight:800;color:var(--card-accent);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.dk .pn .crumb button{color:var(--lt)}
+.viz{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable}
+.viz.ch{overflow:hidden}
+.viz>*{animation:vin .65s var(--ease) both}
+@keyframes vin{from{opacity:0;transform:translate3d(0,14px,0)}to{opacity:1;transform:none}}
+.viz .cw{min-height:260px}
+.viz>.bars,.viz>.db,.viz>div>.bars{flex:1 0 auto}
+.fnote{font-size:10.5px;color:var(--card-mute);line-height:1.55;margin-top:8px}
+.fnote:empty{display:none}
+.ao{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-top:10px;padding:9px 12px;background:var(--track);font-size:12px;color:var(--card-ink);border-left:3px solid var(--g29)}
+.ao b{font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1.5px solid var(--line);border-radius:2px;background:none;cursor:pointer;font-size:11px;font-weight:600;color:var(--card-mute);transition:color .25s,border-color .25s}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c);opacity:.35;transition:opacity .25s,transform .35s var(--spring)}
+.chip.on{color:var(--card-ink);border-color:var(--c)}
+.chip.on i{opacity:1;transform:scale(1.2)}
+.br.pick{cursor:pointer}
+.br.pick:hover .bl{color:var(--card-accent)}
+.dk .pn .br.pick:hover .bl{color:var(--ly)}
+.br.pick .bt{transition:transform .3s var(--ease)}
+.br.pick:hover .bt{transform:scaleY(1.25)}
+.bt .mk{position:absolute;top:-4px;bottom:-4px;width:0;border-left:2px dashed #F26B43;z-index:1}
+.grp .bt{height:7px}.grp .bt+.bt{margin-top:2px}
+.grp .bv small{font-size:10.5px;white-space:nowrap}
+.br.grp{grid-template-columns:minmax(92px,140px) 1fr 150px}
+@media (max-width:640px){.br.grp{grid-template-columns:86px 1fr 120px}}
+.dr.two .dt{height:14px}.dr.two .dt+.dt{margin-top:4px}
+.dr.two .dv{line-height:1.35;font-size:11.5px}
+.dot.l{background:var(--ly);box-shadow:0 0 0 3px var(--card)}
+.dot.la{background:var(--y40)}
+
+/* overview cards */
+.bk .cmp{font-size:12.5px;color:var(--ink2);margin-top:4px;line-height:1.45}
+.bk .cmp b{color:var(--ly);font-weight:700}
+.bk .cmp span{display:block;font-size:11.5px;opacity:.75}
+.ovc{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;perspective:1200px}
+.r3{display:grid;grid-template-columns:1fr 112px 112px;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.r3:last-child{border-bottom:0}
+.r3 span{font-size:13px;color:var(--card-mute)}
+.r3 b{font-family:var(--cond);font-weight:900;font-size:clamp(19px,1.7vw,26px);text-align:right;font-variant-numeric:tabular-nums}
+.r3 b.lm{color:var(--lmv)}
+:root{--lmv:#8F7200}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lmv:#FFD000}}
+:root[data-theme="dark"]{--lmv:#FFD000}
+.r3.hd{padding:0 0 6px}
+.r3.hd span{font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;text-align:right}
+.r3.hd span:first-child{text-align:left}
+
+/* takeaways */
+.tk4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px;perspective:1400px}
+.tkw{opacity:0;transform:rotateX(-22deg) translate3d(0,36px,0);transform-origin:top center;transition:opacity .8s var(--ease),transform 1.1s var(--ease);transition-delay:calc(var(--i) * 110ms + 550ms)}
+.is-on .tkw{opacity:1;transform:none}
+.tkc{display:grid;grid-template-columns:56px 1fr;height:100%;background:var(--card);color:var(--card-ink);box-shadow:var(--shadow);border-radius:2px;overflow:hidden}
+.tkc .n{display:flex;justify-content:center;padding-top:18px;font-family:var(--cond);font-size:26px;font-weight:900;background:var(--ly);color:var(--lb)}
+.tkw:nth-child(even) .tkc .n{background:var(--lb);color:var(--ly)}
+.tkc .bd{display:flex;flex-direction:column;gap:8px;padding:16px 20px 18px}
+.tkc h3{font-family:var(--cond);font-size:clamp(20px,1.7vw,25px);font-weight:800;line-height:1.12}
+.tkc .fx{font-family:var(--body);font-size:14px;line-height:1.6;color:var(--card-mute);flex:1}
+.tkc .go{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:4px;padding:8px 12px;border:1.5px solid var(--line);background:none;cursor:pointer;color:var(--card-ink);
+ font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;transition:border-color .25s,background-color .25s}
+.tkc .go svg{transition:transform .35s var(--spring)}
+.tkc .go:hover{border-color:var(--ly);background:var(--y10)}
+.tkc .go:hover svg{transform:translateX(4px)}
+.notes{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:8px 28px;font-size:11.5px;line-height:1.6;color:var(--ink2);border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent);padding-top:16px}
+.notes b{color:var(--ink)}
+@media (max-width:640px){.ovc{grid-template-columns:1fr}.r3{grid-template-columns:1fr 78px 78px}.lsel{max-width:100%}}
+.rk.two,.rk.hd{grid-template-columns:28px 1fr 84px 84px;gap:10px}
+.rk.two span:nth-child(3),.rk.two span:nth-child(4){text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.rk .lmv{color:var(--lmv)}
+.rk.hd{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink2);border-bottom-width:2px;opacity:1;transform:none}
+.rk.hd span:nth-child(3),.rk.hd span:nth-child(4){text-align:right}
+.tg.nudge{animation:nudge 1.3s var(--ease) 1.6s 2}
+
+.g.wide{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.tips{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:-2px 0 10px;padding:8px 34px 8px 12px;border-left:3px solid var(--lmt);
+ background:color-mix(in srgb,var(--lmt) 10%,transparent);font-size:11.5px;line-height:1.45;color:var(--card-mute)}
+.tips b{color:var(--card-ink);font-weight:700}
+.tips .tl{font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--card-accent)}
+.tips .tx{position:absolute;right:4px;top:4px;width:26px;height:26px;border:0;background:none;color:var(--card-mute);cursor:pointer;font-size:17px;line-height:1}
+.tips .tx:hover{color:var(--card-ink)}
+.rkcap{margin:2px 0 6px;font-size:10px;font-weight:800;letter-spacing:1.3px;line-height:1.55;text-transform:uppercase;color:var(--ink2)}
+.tq{display:none;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--line);background:none;color:var(--card-mute);font-size:12px;font-weight:800;cursor:pointer;margin-left:auto}
+.tq:hover{color:var(--card-ink);border-color:var(--lmt)}
+body.notips .tips{display:none}
+body.notips .tq{display:inline-grid;place-items:center}
+:root{--k-cc:#1A1444;--k-lp:#B38F00;--card-accent:#06748C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--k-cc:#FFFFFF;--k-lp:#FFEAA9;--card-accent:#78E1E1}}
+:root[data-theme="dark"]{--k-cc:#FFFFFF;--k-lp:#FFEAA9;--card-accent:#78E1E1}
+.dk .pn{--k-cc:#FFFFFF;--k-lp:#FFEAA9;--card-accent:#78E1E1}
+@media (max-width:1040px){.g.wide{grid-template-columns:1fr}}
+</style>
+<style>.arsbox{margin:0 0 12px;padding:10px 12px;border:1px dashed var(--card-mute);border-radius:6px}.arsbox p{font-size:12px;line-height:1.5;margin-top:6px;opacity:.85}</style>
+<style>.pt .tg,.pt .seg,.pt .lsel{margin-top:-9px;margin-bottom:-9px}</style>
+</head>
+<body class="on-cover">
+<div class="prog" id="prog"></div>
+<div class="spot" id="spot" aria-hidden="true"></div>
+
+<header class="topnav" id="topnav">
+ <button class="nb" id="home" type="button">LM Canada | Chubb Playbook</button>
+ <nav class="nl" id="nl" aria-label="Chapters"><span class="ul" id="ul"></span></nav>
+ <span class="nbadge">FY 2025 and H1 2026</span>
+</header>
+
+<main class="stage" id="stage">
+
+<section class="pg cover" data-id="cover" data-title="Cover" aria-label="Cover">
+ <div class="blob b1" data-depth="26"><i></i></div><div class="blob b2" data-depth="-18"><i></i></div><div class="blob b3" data-depth="40"><i></i></div>
+ <div class="cv-art" id="cvArt" aria-hidden="true"></div>
+ <div class="cv-top rv"><span class="cv-brand">LM Canada Finance</span><span class="cv-badge">Draft, confidential</span></div>
+ <div class="pg-in">
+  <div class="cv-body">
+   <div class="cv-ey rv">Business Advisory</div>
+   <h1 class="cv-title" id="cvTitle" aria-label="Competitors Insights"><span class="ln">Competitors</span><span class="ln">Insights</span></h1>
+   <div class="cv-focus rv d1"><span class="fl">Focus</span><span class="fn">Chubb Insurance</span></div>
+   <div class="cv-cta rv d2"><span class="mag" id="mag"><button class="enter" id="enter" type="button"><span class="tx">Enter the Playbook</span>
+    <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg></span></button></span></div>
+   <p class="cv-hint rv d3">Or press <kbd>Enter</kbd>. Inside, use <kbd>←</kbd> <kbd>→</kbd>, the top bar or the dock.</p>
+  </div>
+ </div>
+ <div class="cv-foot rv d3"><span>FY 2025 and H1 2026</span><span>Source: MSA Research and Canada Finance Power BI</span></div>
+</section>
+
+<section class="pg dk" data-id="overview" data-title="Overview" data-short="Overview" data-q="Chubb’s premiums fell 15.86% in H1 2026. Ours grew 2.03%." data-st="−15.86% vs +2.03%">
+ <div class="pg-in"><div class="g one"><div>
+  <h2 class="h" style="font-size:clamp(42px,5.4vw,88px)">Chubb’s premiums fell 15.86% in H1 2026. <span class="hl">Ours grew 2.03%.</span></h2>
+  <div class="bigrow rv d1">
+   <div class="bk"><div class="l">Chubb GWP, H1 2026</div><div class="v y ct" data-v="511.1" data-f="m">$0</div><div class="cmp">LM Canada <b>$580M</b></div></div>
+   <div class="bk"><div class="l">Chubb GWP YoY, H1 2026</div><div class="v ct" data-v="-15.86" data-f="p">0%</div><div class="cmp">LM Canada <b>+2.03%</b></div></div>
+   <div class="bk"><div class="l">Chubb COR, FY 2025</div><div class="v t ct" data-v="78.80" data-f="r">0%</div><div class="cmp">LM Canada <b>80.81%</b><span>H1 2026: 77.04% vs 88.55%</span></div></div>
+   <div class="bk"><div class="l">Chubb market share, H1 2026</div><div class="v ct" data-v="2.02" data-f="r">0%</div><div class="cmp">LM Canada <b>2.30%</b></div></div>
+  </div>
+  <div class="ovc rv d2">
+   <div class="ck" data-tilt><h3>FY 2025</h3>
+    <div class="r3 hd"><span></span><span>Chubb</span><span>LM Canada</span></div>
+    <div class="r3"><span>GWP</span><b class="ct" data-v="1172.3" data-f="m">0</b><b class="lm">$1.05B</b></div>
+    <div class="r3"><span>YoY growth</span><b class="ct" data-v="-0.93" data-f="p">0</b><b class="lm">+4.24%</b></div>
+    <div class="r3"><span>Market share</span><b class="ct" data-v="2.45" data-f="r">0</b><b class="lm">2.19%</b></div>
+    <div class="r3"><span>COR</span><b class="ct" data-v="78.80" data-f="r">0</b><b class="lm">80.81%</b></div>
+    <div class="r3"><span>NISR</span><b class="ct" data-v="75.13" data-f="r">0</b><b class="lm">77.22%</b></div></div>
+   <div class="ck now" data-tilt><h3>H1 2026</h3>
+    <div class="r3 hd"><span></span><span>Chubb</span><span>LM Canada</span></div>
+    <div class="r3"><span>GWP</span><b class="ct" data-v="511.1" data-f="m">0</b><b class="lm">$580M</b></div>
+    <div class="r3"><span>YoY growth</span><b class="ct" data-v="-15.86" data-f="p">0</b><b class="lm">+2.03%</b></div>
+    <div class="r3"><span>Market share</span><b class="ct" data-v="2.02" data-f="r">0</b><b class="lm">2.30%</b></div>
+    <div class="r3"><span>COR</span><b class="ct" data-v="77.04" data-f="r">0</b><b class="lm">88.55%</b></div>
+    <div class="r3"><span>NISR</span><b class="ct" data-v="71.75" data-f="r">0</b><b class="lm">86.67%</b></div></div>
+  </div>
+  <p class="pg-src rv d3">COR on a pre-discounted basis. Half-year ratios are seasonal; profitability comparisons in this report use full years. Source: MSA Research and Canada Finance Power BI</p>
+ </div></div></div>
+</section>
+
+<section class="pg lt" data-id="gwp-trend" data-title="GWP trend" data-short="GWP trend" data-q="H1 2026 is the first time since at least 2021 that LM Canada’s GWP passed Chubb’s." data-st="$580M vs $511M">
+ <div class="pg-in"><div class="g">
+  <div>
+   <h2 class="h">H1 2026 is the first time since at least 2021 that <span class="hl">LM Canada’s GWP passed Chubb’s.</span></h2>
+   <div class="kstack rv d1">
+    <div class="bk"><div class="l">H1 2026 gap</div><div class="v t ct" data-v="69.3" data-f="md">0</div><div class="s">LM Canada $580M, Chubb $511M</div></div>
+    <div class="bk"><div class="l">Full-year gap, 2020</div><div class="v ct" data-v="254.4" data-f="m">0</div><div class="s">Chubb ahead of LM Canada</div></div>
+    <div class="bk"><div class="l">Full-year gap, 2025</div><div class="v ct" data-v="121.0" data-f="m">0</div><div class="s">Chubb still ahead on a full year</div></div>
+   </div>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl">GWP, Chubb vs LM Canada</span><span class="seg" id="sRace"><button class="on" data-k="h1">Half year</button><button data-k="fy">Full year</button></span></div>
+   <div class="viz" id="raceViz"></div>
+   <div class="src">Half-year data starts in H1 2021; full-year data in FY 2020. Source: MSA Research and Canada Finance Power BI</div></div>
+ </div></div>
+</section>
+
+<section class="pg dk" data-id="gwp-insights" data-title="GWP insights" data-short="GWP insights" data-q="Commercial Property and CGL account for 72% of Chubb’s H1 2026 decline." data-st="72%">
+ <div class="pg-in"><div class="g wide">
+  <div>
+   <h2 class="h">Commercial Property and CGL account for <span class="hl">72% of Chubb’s H1 2026 decline.</span></h2>
+   <div class="kstack rv d1">
+    <div class="bk"><div class="l">Chubb GWP change, H1 2026</div><div class="v ct" data-v="-96.4" data-f="md">0</div><div class="s">$608M in H1 2025 to $511M</div></div>
+    <div class="bk"><div class="l">Commercial Property*</div><div class="v y ct" data-v="-42.2" data-f="md">0</div><div class="s">$189M to $147M</div></div>
+    <div class="bk"><div class="l">CGL</div><div class="v t ct" data-v="-27.1" data-f="md">0</div><div class="s">$90M to $63M</div></div>
+   </div>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl" id="gT">GWP by line</span><button class="tg" id="gArs" type="button" aria-pressed="false"><span class="kn"></span>Excl. ARS</button></div>
+   <div class="ctl">
+    <span class="seg" id="gPer"><button class="on" data-k="h1">H1</button><button data-k="fy">Full year</button></span>
+    <span class="seg" id="gView"><button class="on" data-k="snap">Snapshot</button><button data-k="trend">Trend</button></span>
+    <span class="seg opt" id="gYrs"><button data-k="2">2 yrs</button><button data-k="3">3</button><button data-k="4">4</button><button data-k="5">5</button><button class="on" data-k="6">6</button></span>
+    <button class="tg" id="gCmp" type="button" aria-pressed="false"><span class="kn"></span>Add LM Canada</button>
+    <select class="lsel" id="gLine" aria-label="Line of business"></select>
+   </div>
+   <div class="crumb" id="gCrumb"></div>
+   <div class="viz" id="gViz"></div>
+   <div class="fnote" id="gNote"></div>
+   <div class="src">* For submissions and reports to OSFI, P&amp;C carriers roll property, construction and energy into Commercial Property. Source: MSA Research and Canada Finance Power BI</div></div>
+ </div></div>
+</section>
+
+<section class="pg lt" data-id="cor-insights" data-title="COR insights" data-short="COR insights" data-q="On FY 2025, Chubb’s COR is 2 points better than ours. Over five years, the gap is 21 points." data-st="78.80% vs 80.81%">
+ <div class="pg-in"><div class="g wide">
+  <div>
+   <h2 class="h">On FY 2025, Chubb’s COR is 2 points better than ours. <span class="hl">Over five years, the gap is 21 points.</span></h2>
+   <div class="kstack rv d1">
+    <div class="bk"><div class="l">COR, FY 2025</div><div class="v ct" data-v="78.80" data-f="r">0</div><div class="s">LM Canada 80.81%</div></div>
+    <div class="bk"><div class="l">Average COR, 3 years</div><div class="v t ct" data-v="70.79" data-f="r">0</div><div class="s">LM Canada 80.63%</div></div>
+    <div class="bk"><div class="l">Average COR, 5 years</div><div class="v t ct" data-v="64.21" data-f="r">0</div><div class="s">LM Canada 85.36%</div></div>
+   </div>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl" id="rT">COR by line, FY 2025</span></div>
+   <div class="ctl">
+    <span class="seg" id="rView"><button class="on" data-k="snap">Snapshot</button><button data-k="move">Change</button><button data-k="trend">Trend</button></span>
+    <span class="seg opt" id="rFrom"><button class="on" data-k="2">vs FY 2024</button><button data-k="1">FY 2023</button><button data-k="0">FY 2022</button></span>
+    <button class="tg" id="rCmp" type="button" aria-pressed="false"><span class="kn"></span>Add LM Canada</button>
+    <select class="lsel" id="rLine" aria-label="Line of business"></select>
+   </div>
+   <div class="crumb" id="rCrumb"></div>
+   <div class="viz" id="rViz"></div>
+   <div class="fnote">The dashed line marks break-even at 100%; lower is better. All Other is left out: its small, changing base gives ratios that aren’t meaningful (Chubb’s ranged from −93% to 479%).</div>
+   <div class="src">Full years, pre-discounted COR. * OSFI reporting rolls property, construction and energy into Commercial Property. Source: MSA Research and Canada Finance Power BI</div></div>
+ </div></div>
+</section>
+
+<section class="pg yl" data-id="claims" data-title="Claims analysis" data-short="Claims" data-q="Over three years to FY 2025, Chubb’s claims grew $813M. Its premiums fell $10M." data-st="+$813M vs −$10M">
+ <div class="pg-in"><div class="g wide">
+  <div>
+   <h2 class="h">Over three years to FY 2025, Chubb’s claims grew $813M. Its premiums fell $10M.</h2>
+   <div class="kstack rv d1">
+    <div class="bk"><div class="l" id="kWin">Chubb, 3 years to FY 2025</div><div class="v ct" id="kC" data-v="813.1" data-f="md">0</div><div class="s">Claims growth</div></div>
+    <div class="bk"><div class="l">&nbsp;</div><div class="v ct" id="kP" data-v="-9.7" data-f="md">0</div><div class="s">Premiums growth</div></div>
+   </div>
+   <p class="p rv d2" id="kLM" style="margin-top:20px"></p>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl" id="kT">Claims vs premiums growth by line</span></div>
+   <div class="ctl">
+    <span class="seg" id="kView"><button class="on" data-k="snap">Snapshot</button><button data-k="trend">Trend</button></span>
+    <span class="seg opt" id="kWinS"><button class="on" data-k="3">3 years</button><button data-k="5">5 years</button><button data-k="7">7 years</button></span>
+    <button class="tg" id="kCmp" type="button" aria-pressed="false"><span class="kn"></span>Add LM Canada</button>
+    <select class="lsel" id="kLine" aria-label="Line of business"></select>
+   </div>
+   <div class="crumb" id="kCrumb"></div>
+   <div class="viz" id="kViz"></div>
+   <div class="legend" id="kLeg"></div>
+   <div class="fnote" id="kNote"></div>
+   <div class="src">Growth in dollars over each window, ending FY 2025. * OSFI reporting rolls property, construction and energy into Commercial Property. Source: MSA Research and Canada Finance Power BI</div></div>
+ </div></div>
+</section>
+
+<section class="pg lt" data-id="footprint" data-title="Provincial footprint" data-short="Footprint" data-q="Half of Chubb’s H1 2026 book is Ontario." data-st="51%">
+ <div class="pg-in"><div class="g wide">
+  <div>
+   <h2 class="h">Half of Chubb’s H1 2026 book is <span class="hl">Ontario.</span></h2>
+   <div class="rkcap" id="rkCap"></div><div class="rank" id="rank"></div>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl">By province</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="seg opt" id="mUnit"><button class="on" data-k="d">$</button><button data-k="p">CAGR %</button></span><select class="lsel" id="mLine" aria-label="Line of business"></select></span></div>
+   <div class="ctl">
+    <span class="seg" id="sMap"><button class="on" data-k="prem">Premium</button><button data-k="share">Share</button><button data-k="growth">Growth $</button></span>
+    <span class="seg opt" id="mWin"><button data-k="2">2 yrs</button><button class="on" data-k="3">3</button><button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button><button data-k="7">7</button></span>
+    <span class="seg" id="sMapP"><button data-k="fy25">FY 2025</button><button class="on" data-k="h126">H1 2026</button></span>
+    <button class="tg" id="mCmp" type="button" aria-pressed="false"><span class="kn"></span>Add LM Canada</button>
+   </div>
+   <div class="mapsub" id="mapS"></div>
+   <div class="map" id="map"></div>
+   <div class="legend" id="mapL"></div>
+   <div class="src">Source: MSA Research and Canada Finance Power BI regional dashboards</div></div>
+ </div></div>
+</section>
+
+<section class="pg dk" data-id="growth" data-title="Growth in percent and dollars" data-short="Growth" data-q="Chubb’s −15.86% is −$96M. Our +2.03% is +$12M." data-st="−$96M vs +$12M">
+ <div class="pg-in"><div class="g">
+  <div>
+   <h2 class="h">Chubb’s −15.86% is −$96M. <span class="hl">Our +2.03% is +$12M.</span></h2>
+   <p class="p rv d1" id="twP"></p>
+  </div>
+  <div class="pn rise"><div class="pt"><span class="ptl">YoY GWP growth</span></div>
+   <div class="ctl"><span class="seg" id="sTwM"><button class="on" data-k="p">In percent</button><button data-k="d">In dollars</button></span><span class="seg" id="sTw"><button data-k="fy25">FY 2025</button><button class="on" data-k="h126">H1 2026</button></span></div>
+   <div class="viz" id="twViz"><div id="twA" class="bars"></div></div><div class="src">Industry dollars derived (≈). Source: MSA Research and Canada Finance Power BI</div></div>
+ </div></div>
+</section>
+
+<section class="pg lt" data-id="takeaways" data-title="Key takeaways" data-short="Takeaways" data-q="Five facts from the data, each linked to its page." data-st="5">
+ <div class="pg-in"><div class="g one"><div>
+  <h2 class="h">Five things the data shows.</h2>
+  <div class="tk4" id="tks"></div>
+  <div class="notes rv d4">
+   <p><b>Commercial Property*.</b> For submissions and reports to OSFI, P&amp;C carriers roll property, construction and energy into Commercial Property.</p>
+   <p><b>All Other¹ (LM Canada).</b> Includes fronting programs, such as Global Transaction Services and part of Asurion, and new lines not yet material enough to classify under a standard line.</p>
+   <p><b>All Other² (Chubb).</b> Lines not classified under a standard line. Because the two books differ, All Other is never compared side by side.</p>
+   <p><b>COR basis.</b> Pre-discounted. Half-year ratios are seasonal, so profitability is compared on full years.</p>
+   <p><b>Disclaimer.</b> In the interest of fairness and transparency, it should be noted that all Chubb Insurance Company of Canada figures in this report are drawn from publicly filed statutory data as compiled by MSA Research, and all Liberty lines of business referenced relate exclusively to business written by Liberty Mutual Canada.</p>
+   <p><b>Period basis.</b> MSA statutory periods are cumulative year to date: “2025 Q4” is full-year 2025 and “2026 Q2” is the six months ended 30 June 2026 (H1 2026).</p>
+  </div>
+ </div></div></div>
+</section>
+
+</main>
+
+<div class="curtain" id="curtain" aria-hidden="true"><div class="cp a"></div><div class="cp b"></div></div>
+
+<nav class="dock" id="dock" aria-label="Playbook navigation">
+ <button class="db-btn" id="tocBtn" type="button" aria-haspopup="dialog" aria-controls="toc" aria-expanded="false">
+  <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2" y="2" width="5.5" height="5.5" stroke="currentColor" stroke-width="1.8"/><rect x="10.5" y="2" width="5.5" height="5.5" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="10.5" width="5.5" height="5.5" stroke="currentColor" stroke-width="1.8"/><rect x="10.5" y="10.5" width="5.5" height="5.5" stroke="currentColor" stroke-width="1.8"/></svg>
+  <span class="lbl">Contents</span></button>
+ <span class="db-sep"></span>
+ <button class="db-btn" id="prev" type="button" aria-label="Previous chapter"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></button>
+ <div class="nowbox" id="now" aria-live="polite"><b id="nowN">01</b><span id="nowT">The headline</span></div>
+ <button class="db-btn solid" id="next" type="button" aria-label="Next chapter"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></button>
+ <span class="db-sep"></span>
+ <button class="db-btn" id="fs" type="button" aria-label="Present full screen" title="Present full screen" hidden><svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2.5 6.5v-4h4M11.5 2.5h4v4M15.5 11.5v4h-4M6.5 15.5h-4v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg></button>
+</nav>
+
+<div class="toc" id="toc" role="dialog" aria-modal="true" aria-label="Contents">
+ <div class="toc-in">
+  <div class="toc-hd"><div><div class="eyebrow"><span>Chubb competitor playbook</span></div><h2>Contents</h2></div><button class="toc-x" id="tocX" type="button" aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2.2"/></svg></button></div>
+  <ol class="toc-grid" id="tocGrid"></ol>
+  <div class="toc-ft"><button class="toc-back" id="toCover" type="button">Back to the cover</button>
+   <span><kbd>←</kbd><kbd>→</kbd> move between chapters, <kbd>C</kbd> opens contents, <kbd>Esc</kbd> closes it, <kbd>F</kbd> presents full screen</span></div>
+ </div>
+</div>
+
+<script>
+/* Shared data v2 · FY 2025 and H1 2026 */
+const C={lb:"#1A1446",b90:"#29254F",ly:"#FFD000",y80:"#FFDB50",y60:"#FFE280",y40:"#FFEAA9",
+ ldt:"#06748C",lmt:"#28A3AF",lt:"#78E1E1",t80:"#99E5EA",t40:"#C9F3F4",
+ g81:"#565656",g69:"#707070",g29:"#C0BFC0",g10:"#E6E6E6",dg:"#343741",wh:"#FFFFFF",red:"#F26B43"};
+const MINUS="\u2212";
+const pct=v=>(v>0?"+":v<0?MINUS:"")+Math.abs(v).toFixed(2)+"%";
+const money=v=>{const neg=v<0,a=Math.abs(v);let s;
+  if(a>=1000){s=(a/1000).toFixed(2).replace(/\.?0+$/,"")+"B"}else if(a>=10){s=Math.round(a)+"M"}else{s=a.toFixed(1)+"M"}
+  return (neg?MINUS+"$":"$")+s};
+const moneyD=v=>(v>0?"+":"")+money(v);
+const D={
+ yearsFY:["2020","2021","2022","2023","2024","2025"],
+ yearsH1:["2021 H1","2022 H1","2023 H1","2024 H1","2025 H1","2026 H1"],
+ gwpFY:{chubb:[933.4,1076.8,1182.0,1202.0,1183.3,1172.3],branch:[679.0,756.5,886.8,873.4,1008.5,1051.3],sbu:[634.7,693.3,800.2,757.9,820.4,832.7]},
+ gwpH1:{chubb:[509.3,575.5,610.1,612.9,607.5,511.1],branch:[415.5,461.8,437.8,501.5,568.9,580.4],sbu:[342.1,413.9,387.5,411.9,465.8,463.0]},
+ lobGWP:{
+  l:["Comm Property","CGL","Comm Auto","D&O","Professional","Excess","Surety","Umbrella","Cyber","Pollution","Fidelity","Marine","All Other"],
+  fy25:[351.4,174.0,129.1,114.3,88.9,80.4,79.4,41.5,40.0,32.9,29.9,6.9,3.6],
+  h126:[146.9,63.0,66.3,53.9,40.9,40.2,23.6,19.2,20.6,13.8,15.4,5.4,2.0]
+ },
+ lobCOR:{
+  l:["Comm Property","CGL","Comm Auto","D&O","Professional","Excess","Surety","Umbrella","Cyber","Pollution","Fidelity","Marine"],
+  corFY:[78.19,80.71,102.67,93.30,113.33,60.09,41.77,25.31,29.33,68.49,44.83,58.69],
+  corH1:[74.28,71.16,99.90,72.78,86.97,97.83,71.79,39.98,89.97,54.22,129.75,32.50]
+ },
+ claims:{
+  l:["Comm Property","Comm Auto","D&O","CGL","Professional","Excess","Surety","Cyber","Fidelity","Umbrella","Pollution","Marine","All Other"],
+  y3:{c:[255.6,147.8,99.2,79.9,64.8,40.2,18.1,22.0,14.7,9.7,3.6,3.3,-7.9],p:[-11.7,-13.1,-19.3,-24.3,-5.8,-12.6,-3.1,-2.7,-1.0,-3.4,-3.6,1.1,0.7]},
+  y5:{c:[260.4,171.2,110.8,101.8,99.0,57.1,21.4,6.7,20.7,10.2,18.7,2.0,-2.6],p:[4.0,16.5,-16.7,-13.1,2.7,1.2,3.0,6.8,0.0,-0.3,-4.1,1.5,0.5]},
+  y7:{c:[260.9,167.8,89.6,101.3,81.8,56.9,16.5,24.6,16.8,16.4,16.6,-0.7,-5.4],p:[29.5,25.9,11.9,13.5,11.8,10.7,6.9,14.8,4.4,8.0,0.4,0.6,1.0]}
+ },
+ provNames:{ON:"Ontario",QC:"Quebec",AB:"Alberta",BC:"British Columbia",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland",PE:"PEI",YT:"Yukon",NT:"NWT",NU:"Nunavut"},
+ provOrder:["ON","QC","AB","BC","MB","SK","NB","NS","NL","PE","YT","NT","NU"],
+ prem:{
+  h126:{vals:{ON:{v:260.8,s:51.02},QC:{v:78.5,s:15.35},AB:{v:71.4,s:13.98},BC:{v:51.9,s:10.15},NB:{v:18.2,s:3.55},NS:{v:8.3,s:1.62}},
+        cut:{MB:11.5,SK:10.7,NL:2.2,PE:0.9,YT:0.7,NT:0.5,NU:0.3},ooc:null},
+  fy25:{vals:{ON:{v:520,s:44.33},AB:{v:165,s:14.11},QC:{v:164,s:14.00},BC:{v:139,s:11.87}},cut:{},ooc:{v:107,s:9.17}}
+ },
+ provPerf:{
+  chubbG:{AB:-9.29,SK:0.45,QC:-12.45,PE:-0.59,ON:-18.53,NU:0.05,NS:0.70,NT:0.06,NL:0.03,NB:2.37,MB:0.40,BC:-12.94,YT:-0.30},
+  branchG:{AB:52.69,SK:2.98,QC:9.16,PE:0.56,ON:37.62,NU:0.68,NS:1.92,NT:0.01,NL:2.20,NB:-1.93,MB:15.28,BC:-7.90,YT:0.12},
+  chubbS:{AB:5.45,SK:4.51,QC:4.03,PE:2.70,ON:7.57,NU:1.23,NS:3.92,NT:0.79,NL:1.43,NB:10.06,MB:3.48,BC:5.20,YT:2.58},
+  branchS:{AB:9.24,SK:7.35,QC:3.56,PE:3.02,ON:4.50,NU:13.87,NS:4.35,NT:1.41,NL:7.00,NB:7.14,MB:19.01,BC:4.92,YT:4.34}
+ },
+ provPerfFY:{
+  chubbG:{AB:-0.35,SK:-2.43,QC:-11.17,PE:0.07,ON:11.53,NU:-0.21,NS:8.00,NT:0.15,NL:-0.70,NB:2.56,MB:0.23,BC:7.42,YT:-1.36},
+  branchG:{AB:41.59,SK:0.95,QC:36.69,PE:-0.07,ON:6.70,NU:1.61,NS:7.92,NT:0.16,NL:-0.64,NB:-8.49,MB:46.73,BC:-26.09,YT:0.04},
+  chubbS:{AB:5.70,SK:4.50,QC:4.35,PE:3.73,ON:7.53,NU:0.90,NS:4.53,NT:1.52,NL:1.77,NB:7.05,MB:3.08,BC:6.39,YT:3.40},
+  branchS:{AB:6.74,SK:6.66,QC:3.89,PE:2.59,ON:3.81,NU:11.24,NS:4.36,NT:2.21,NL:4.46,NB:5.55,MB:18.15,BC:4.33,YT:2.87}
+ },
+ growth:{
+  h126:{l:["LM Branch","LM SBU","Industry","GRS NA peers","Chubb"],p:[2.03,-0.60,-0.52,-11.60,-15.86],d:[11.5,-2.8,-132,-205.0,-96.4],approx:[false,false,true,false,false]},
+  fy25:{l:["LM Branch","LM SBU","Industry","GRS NA peers","Chubb"],p:[4.24,1.50,-0.12,-0.82,-0.93],d:[42.8,12.3,-58,null,-11.0],approx:[false,false,true,false,false]}
+ },
+ tier:{l:["LM Branch","Continental","Berkshire H.","AIG","Chubb"],d:[11.5,-0.7,-15.7,-92.2,-96.4]},
+ corAgg:{h126:{l:["Chubb","Industry","LM Branch","GRS NA peers"],v:[79.29,82.36,89.42,92.24]}},
+ swot:{
+  hd:["Where we lead","Where Chubb leads","Where we can win business","What could hold us back"],
+  s:[["Growth this half","we +$12M, Chubb −$96M"],["3-year growth rate","we +9.86%, Chubb −5.73%"],["Ontario, last 3 years","we +$38M, Chubb −$19M"],["Alberta, last 3 years","we +$53M, Chubb −$9M"]],
+  w:[["Profit on each dollar (combined ratio)","Chubb 79.29%, we 89.42%"],["Same gap last year","Chubb 82.73%, we 87.60%"],["3-year average combined ratio","Chubb 81.54%, we 86.52%"],["Ontario market share","Chubb 7.57%, we 4.50%"]],
+  o:[["Chubb’s premium is down","−$96M this half"],["Their big provinces are shrinking","ON, QC, AB and BC down $53M"],["Their commercial property premium is shrinking","−$12M over 3 years"],["We started growing earlier","2025: we +4.24%, they −0.93%"]],
+  t:[["Their combined ratio is 10 points lower","79.29% vs our 89.42%"],["Their parent is very profitable","group combined ratio 83.8%"],["BC is weak for both of us","they −$13M, we −$8M"],["Prices are falling","market rates down 7%"]]
+ },
+ pub:["Group P&C net premiums written $12.77B, up 3.0%; up 6.3% excluding large-account and E&S property, which the group reported reducing (Chubb Limited Q2 2026 results).",
+      "Read for Canada: those are the same lines the Canadian book is weighted to, led by commercial property."]
+};
+
+/* ---------- Canada map ---------- */
+const GEO={
+ YT:"2,74 44,82 96,140 150,208 193,252 2,252",NT:"44,82 130,88 210,96 310,104 438,106 438,252 193,252 150,208 96,140",
+ NU:"438,106 500,120 540,152 536,205 519,252 438,252",NUB:"600,34 676,16 744,46 772,98 742,142 688,134 640,98 606,66",
+ NUV:"400,38 468,26 506,54 478,86 424,74",NUS:"556,150 594,140 606,166 568,176",
+ BC:"22,252 236,252 236,362 285,464 152,464 128,420 96,362 62,302",AB:"236,252 348,252 348,464 285,464 236,362",
+ SK:"348,252 444,252 444,464 348,464",MB:"444,252 519,252 546,283 574,306 595,318 517,464 444,464",
+ ON:"517,464 595,318 632,332 663,350 668,398 673,428 680,428 680,506 714,540 745,548 700,582 657,600 628,566 606,528 578,504 540,494",
+ QC:"680,428 676,378 690,330 703,292 718,252 738,216 757,206 772,238 764,262 790,272 816,330 838,382 872,392 908,398 930,440 878,456 838,472 840,492 786,520 748,540 714,536 680,506",
+ NL:"820,300 848,258 872,246 906,268 922,330 940,392 908,398 872,392 848,362 830,336",NLI:"922,462 962,428 988,436 986,470 948,508 918,496",
+ NB:"766,522 808,520 814,560 774,564",PE:"820,524 846,528 842,536 818,532",
+ NS:"812,556 846,568 878,584 888,572 856,552 828,544",NSC:"872,540 886,534 892,546 878,552",VI:"78,436 104,452 118,472 96,474 74,452"};
+const GEOKEY={YT:"YT",NT:"NT",NU:"NU",NUB:"NU",NUV:"NU",NUS:"NU",BC:"BC",AB:"AB",SK:"SK",MB:"MB",ON:"ON",QC:"QC",NL:"NL",NLI:"NL",NB:"NB",PE:"PE",NS:"NS",NSC:"NS",VI:"BC"};
+const LBL={YT:[12,178],NT:[214,174],NU:[448,166],BC:[108,328],AB:[246,338],SK:[356,338],MB:[450,320],ON:[556,428],QC:[724,338],NL:[842,316],
+           NB:{t:[742,618],l:[790,562,790,600]},PE:{t:[952,520],l:[846,530,946,516]},NS:{t:[952,590],l:[884,576,946,584]}};
+const MAPSUB={
+ prem:{h126:"Chubb premium by province, H1 2026, and its share of the Chubb book. Every province and territory; out of Canada is listed in the ranking.",
+       fy25:"Chubb premium by province, FY 2025, and its share of the Chubb book. Every province and territory; out of Canada is listed in the ranking."},
+ share:{h126:"Chubb market share in each province within Liberty’s peer panel, H1 2026.",fy25:"Chubb market share in each province within Liberty’s peer panel, FY 2025."},
+ growth:{h126:"Chubb 3-year growth in dollars by province, H1 2026.",fy25:"Chubb 3-year growth in dollars by province, FY 2025."}
+};
+const perf=per=>per==="fy25"?D.provPerfFY:D.provPerf;
+function provCell(a,m,per){
+ const pp=perf(per);
+ if(m==="share"){const s=pp.chubbS[a];return{f:s>=7?C.ly:s>=3?C.y60:C.y40,t:C.lb,v:s.toFixed(1)+"%",tip:D.provNames[a]+": Chubb share "+s.toFixed(2)+"%, LM Branch "+pp.branchS[a].toFixed(2)+"%"}}
+ if(m==="growth"){const g=pp.chubbG[a],neg=g<0,flat=Math.abs(g)<0.1;
+   return{f:flat?C.t40:neg?C.lb:C.lmt,t:neg?C.wh:C.lb,v:moneyD(g),tip:D.provNames[a]+": Chubb 3-year growth "+moneyD(g)+", LM Branch "+moneyD(pp.branchG[a])}}
+ const pd=D.prem[per],p=pd.vals[a];
+ if(p)return{f:p.s>=15?C.ly:C.y60,t:C.lb,v:money(p.v)+", "+p.s.toFixed(1)+"%",tip:D.provNames[a]+": Chubb premium "+money(p.v)+", "+p.s.toFixed(2)+"% of the Chubb book"};
+ const cut=pd.cut[a];
+ return{f:C.g10,t:C.g81,v:cut?"under $"+cut.toFixed(1)+"M":"not itemised",tip:D.provNames[a]+(cut?": written, below the top-15 disclosure cut (under $"+cut.toFixed(1)+"M)":": not itemised in the FY 2025 extract")};
+}
+function renderCanada(boxId,m,per){
+ const fa=21,fv=16,F="Barlow, Arial, sans-serif";
+ let svg='<svg viewBox="0 0 1080 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chubb by province" preserveAspectRatio="xMidYMid meet">';
+ const cells={};D.provOrder.forEach(a=>cells[a]=provCell(a,m,per));
+ let i=0;
+ Object.keys(GEO).forEach(k=>{const c=cells[GEOKEY[k]];
+  const mnx=Math.min(...GEO[k].split(" ").map(q=>+q.split(",")[0]));
+  svg+='<g class="maptile" style="animation-delay:'+Math.round(120+mnx*0.85)+'ms"><polygon points="'+GEO[k]+'" fill="'+c.f+'" style="stroke:var(--card)" stroke-width="2.5" stroke-linejoin="round"></polygon><title>'+c.tip+'</title></g>'});
+ D.provOrder.forEach(a=>{const c=cells[a],pos=LBL[a];let x,y,st='fill:'+c.t;
+  if(Array.isArray(pos)){x=pos[0];y=pos[1]}
+  else{x=pos.t[0];y=pos.t[1];st='fill:var(--card-ink)';const l=pos.l;svg+='<line x1="'+l[0]+'" y1="'+l[1]+'" x2="'+l[2]+'" y2="'+l[3]+'" style="stroke:var(--card-mute)" stroke-width="1.2"></line>'}
+  svg+='<text x="'+x+'" y="'+y+'" font-family="'+F+'" font-size="'+fa+'" font-weight="800" style="'+st+'" pointer-events="none">'+a+'</text>'
+     +'<text x="'+x+'" y="'+(y+fv+5)+'" font-family="'+F+'" font-size="'+fv+'" font-weight="600" style="'+st+'" pointer-events="none">'+c.v+'</text>'});
+ if(m==="prem"&&per==="fy25"){const o=D.prem.fy25.ooc;svg+='<text x="12" y="624" font-family="'+F+'" font-size="'+fv+'" font-weight="700" style="fill:var(--accent-t)">Out of Canada '+money(o.v)+', '+o.s.toFixed(1)+'%</text>'}
+ document.getElementById(boxId).innerHTML=svg+'</svg>';
+}
+function mapLegend(mode){
+ if(mode==="share")return'<span><i style="background:var(--ly)"></i>7% or more</span><span><i style="background:var(--y60)"></i>3% to 7%</span><span><i style="background:var(--y40)"></i>Under 3%</span>';
+ if(mode==="growth")return'<span><i style="background:var(--lmt)"></i>Growing</span><span><i style="background:var(--lb);outline:1px solid var(--card-mute)"></i>Shrinking</span><span><i style="background:var(--t40)"></i>Flat (under $0.1M)</span>';
+ return'<span><i style="background:var(--ly)"></i>15% of book or more</span><span><i style="background:var(--y60)"></i>Under 15% of book</span>';
+}
+</script>
+<script>
+const PROVWIN={"2":{"c":{"AB":-9.27,"BC":4.26,"MB":0.81,"NB":3.39,"NS":4.89,"NT":0.12,"NL":-0.17,"NU":-0.01,"ON":-40.74,"PE":0.11,"QC":-14.59,"SK":0.09},"l":{"AB":50.09,"BC":-18.4,"MB":26.35,"NB":-4.42,"NS":5.62,"NT":0.09,"NL":-0.43,"NU":1.13,"ON":16.05,"PE":0.02,"QC":19.03,"SK":1.47}},"4":{"c":{"AB":8.09,"BC":11.1,"MB":1.69,"NB":3.85,"NS":7.41,"NT":0.11,"NL":-1.07,"NU":-0.2,"ON":66.78,"PE":0.51,"QC":-4.55,"SK":-0.99},"l":{"AB":76.17,"BC":-21.82,"MB":56.69,"NB":-16.04,"NS":6.99,"NT":0.62,"NL":0.0,"NU":1.32,"ON":39.62,"PE":0.61,"QC":53.15,"SK":6.39}},"5":{"c":{"AB":15.47,"BC":32.99,"MB":2.13,"NB":5.81,"NS":14.71,"NT":-0.29,"NL":-0.35,"NU":-0.42,"ON":139.36,"PE":0.79,"QC":25.86,"SK":-0.24},"l":{"AB":71.34,"BC":-0.05,"MB":57.66,"NB":-17.38,"NS":10.34,"NT":0.72,"NL":1.43,"NU":1.67,"ON":92.66,"PE":0.57,"QC":71.88,"SK":7.57}},"6":{"c":{"AB":31.07,"BC":49.22,"MB":3.87,"NB":8.75,"NS":10.99,"NT":-0.3,"NL":-0.55,"NU":-0.42,"ON":184.93,"PE":0.6,"QC":53.09,"SK":3.76},"l":{"AB":99.78,"BC":28.15,"MB":63.07,"NB":-22.13,"NS":13.9,"NT":0.59,"NL":2.85,"NU":2.67,"ON":108.67,"PE":0.76,"QC":91.44,"SK":11.24}},"7":{"c":{"AB":47.23,"BC":61.1,"MB":5.07,"NB":11.68,"NS":12.31,"NT":-0.17,"NL":-1.57,"NU":-0.5,"ON":230.29,"PE":0.85,"QC":70.23,"SK":5.08},"l":{"AB":119.91,"BC":52.2,"MB":65.33,"NB":-17.29,"NS":12.23,"NT":0.54,"NL":4.25,"NU":2.74,"ON":153.85,"PE":1.15,"QC":105.57,"SK":14.43}}}; /* FY 2025 province growth by window (2,4,5,6,7 years); Yukon not in these extracts */
+const D2={"L":["Commercial Property","CGL","Commercial Auto","D&O","Professional","EXS/UMB","Surety","Cyber","Pollution","Fidelity","Marine","All Other"],"gwp":{"c":{"h1":{"Commercial Property":[142.828,164.597,158.61,173.302,189.098,146.871],"CGL":[76.104,72.094,87.304,97.998,90.134,63.012],"Commercial Auto":[49.78,78.749,79.335,72.307,72.891,66.279],"D&O":[70.581,73.583,73.167,59.337,54.665,53.866],"Professional":[38.228,45.53,46.755,54.276,45.138,40.94],"Surety":[20.598,21.884,26.687,34.2,29.441,23.597],"Cyber":[13.861,20.771,23.337,21.462,18.339,20.616],"Pollution":[17.931,14.976,17.458,17.301,15.393,13.835],"Fidelity":[15.438,14.797,16.464,7.521,13.72,15.437],"Marine":[3.903,3.862,4.303,4.316,4.738,5.354],"All Other":[1.507,1.208,1.267,1.429,1.62,1.978],"EXS/UMB":[58.495,63.477,75.381,69.443,72.324,59.356]},"fy":{"Commercial Property":[291.726,317.601,345.792,330.01,352.892,351.429],"CGL":[109.691,117.084,141.763,171.064,177.238,173.962],"Commercial Auto":[123.811,134.361,153.739,157.113,133.483,129.087],"D&O":[115.963,156.848,152.794,139.08,118.274,114.34],"Professional":[74.655,84.949,96.383,96.726,110.494,88.941],"Surety":[25.795,41.195,41.771,54.888,65.586,79.442],"Cyber":[17.143,30.803,47.516,46.477,40.986,39.987],"Pollution":[31.481,35.862,36.038,36.901,35.571,32.934],"Fidelity":[26.743,30.27,32.391,31.033,13.529,29.856],"Marine":[7.834,6.968,6.245,6.121,7.161,6.849],"All Other":[2.7,2.43,2.699,2.696,2.882,3.596],"EXS/UMB":[105.841,118.416,124.889,129.93,125.179,121.896]}},"l":{"h1":{"Commercial Property":[147.331,172.504,143.317,170.863,160.218,172.115],"CGL":[63.153,66.819,39.206,45.198,109.321,88.557],"All Other":[46.513,46.245,57.772,66.891,72.087,79.284],"Surety":[26.305,43.617,36.324,64.296,71.66,79.015],"D&O":[35.529,33.641,32.706,30.38,30.423,30.907],"Commercial Auto":[20.515,24.451,30.412,34.413,42.663,38.333],"Professional":[16.495,14.321,16.9,15.203,15.81,16.061],"Pollution":[10.602,11.492,10.359,12.637,14.173,15.299],"Marine":[12.089,10.033,10.433,9.555,8.74,9.882],"Cyber":[3.234,4.626,17.963,4.832,7.614,8.094],"Fidelity":[4.623,4.696,4.386,4.653,5.924,4.899],"EXS/UMB":[29.075,29.377,37.993,42.57,30.249,37.969]},"fy":{"Commercial Property":[238.797,243.302,283.106,241.133,290.353,244.267],"CGL":[86.355,97.158,105.299,105.668,100.951,154.625],"All Other":[57.907,75.848,95.608,121.952,132.8,146.733],"Surety":[39.053,52.61,72.554,74.404,128.195,145.265],"D&O":[63.486,78.953,81.606,77.452,74.852,73.768],"Commercial Auto":[48.933,55.325,69.308,72.767,95.576,104.593],"Professional":[34.277,36.655,30.64,32.148,32.421,28.86],"Pollution":[16.43,21.204,24.727,25.176,27.496,29.421],"Marine":[24.737,21.587,22.651,21.986,20.026,18.512],"Cyber":[3.725,7.186,11.302,13.766,15.449,18.086],"Fidelity":[7.669,9.065,9.962,9.724,10.964,13.36],"EXS/UMB":[57.652,57.654,80.037,77.213,79.406,73.787]}}},"cor":{"c":{"All Other":[92.87,-92.88,479.17,-5.44],"CGL":[81.78,67.73,83.64,79.54],"Commercial Auto":[103.71,76.16,86.05,71.12],"Commercial Property":[88.91,75.56,75.88,85.93],"Cyber":[92.81,72.85,33.16,64.32],"D&O":[79.56,73.69,24.97,95.46],"Fidelity":[94.79,70.73,-3.81,59.92],"Marine":[96.21,115.01,115.13,116.98],"Pollution":[58.56,73.44,-13.19,75.18],"Professional":[58.71,63.61,73.74,64.65],"Surety":[63.39,63.27,42.62,70.24],"EXS/UMB":[40.75,65.45,65.51,74.28]},"l":{"All Other":[106.42,111.81,85.71,98.32],"CGL":[102.54,29.7,107.23,60.9],"Commercial Auto":[77.29,126.4,44.51,92.31],"Commercial Property":[77.63,83.4,83.77,84.73],"Cyber":[43.69,82.78,72.0,74.66],"D&O":[60.37,58.29,89.06,45.34],"Fidelity":[34.9,58.24,59.07,69.14],"Marine":[150.56,58.83,-7.25,91.96],"Pollution":[55.0,76.56,49.11,48.23],"Professional":[113.82,52.96,42.16,33.08],"Surety":[40.57,36.84,53.17,77.93],"EXS/UMB":[139.69,59.65,88.94,88.27]}},"pc":{"c":{"2":{"All Other":[-6.78,0.9],"CGL":[47.212,2.898],"Commercial Auto":[96.252,-28.026],"Commercial Property":[188.688,21.419],"Cyber":[-1.856,-6.49],"D&O":[121.923,-24.74],"Fidelity":[16.591,-1.177],"Marine":[3.207,0.728],"Pollution":[3.372,-3.967],"Professional":[57.765,-7.785],"Surety":[17.368,24.554],"EXS/UMB":[23.171,-8.034]},"3":{"All Other":[-6.128,0.897],"CGL":[100.445,32.199],"Commercial Auto":[112.91,-24.652],"Commercial Property":[242.267,5.637],"Cyber":[9.606,-7.529],"D&O":[88.319,-38.454],"Fidelity":[6.511,-2.535],"Marine":[2.214,0.604],"Pollution":[27.091,-3.104],"Professional":[110.456,-7.442],"Surety":[20.604,37.671],"EXS/UMB":[98.814,-2.993]},"4":{"All Other":[-2.099,1.166],"CGL":[89.39,56.878],"Commercial Auto":[133.179,-5.274],"Commercial Property":[249.943,33.828],"Cyber":[-18.297,9.184],"D&O":[85.189,-42.508],"Fidelity":[15.874,-0.414],"Marine":[0.367,-0.119],"Pollution":[17.38,-2.928],"Professional":[87.769,3.992],"Surety":[21.581,38.247],"EXS/UMB":[44.962,3.48]},"5":{"All Other":[-7.2,0.896],"CGL":[98.291,64.271],"Commercial Auto":[139.278,5.276],"Commercial Property":[187.338,59.703],"Cyber":[9.379,22.844],"D&O":[66.675,-1.623],"Fidelity":[16.776,3.113],"Marine":[2.049,-0.985],"Pollution":[4.385,1.453],"Professional":[36.534,14.286],"Surety":[20.239,53.647],"EXS/UMB":[30.714,16.055]},"6":{"All Other":[-5.79,1.456],"CGL":[80.659,70.926],"Commercial Auto":[150.352,32.49],"Commercial Property":[231.002,110.676],"Cyber":[17.896,26.864],"D&O":[54.885,18.806],"Fidelity":[13.822,5.76],"Marine":[1.538,-0.752],"Pollution":[-9.525,0.382],"Professional":[98.041,19.448],"Surety":[22.205,38.455],"EXS/UMB":[43.17,41.257]},"7":{"All Other":[-8.073,2.297],"CGL":[74.596,78.662],"Commercial Auto":[160.691,58.346],"Commercial Property":[222.814,144.112],"Cyber":[21.399,30.014],"D&O":[49.869,27.892],"Fidelity":[31.571,6.203],"Marine":[2.167,-0.349],"Pollution":[-2.937,0.765],"Professional":[61.05,22.922],"Surety":[27.587,44.844],"EXS/UMB":[111.106,55.033]}},"l":{"2":{"All Other":[29.514,24.781],"CGL":[55.199,48.957],"Commercial Auto":[42.964,31.826],"Commercial Property":[45.883,3.134],"Cyber":[12.92,4.32],"D&O":[34.128,-3.684],"Fidelity":[9.543,3.636],"Marine":[17.297,-3.474],"Pollution":[-0.113,4.245],"Professional":[1.655,-3.288],"Surety":[110.915,70.861],"EXS/UMB":[129.378,-3.426]},"3":{"All Other":[81.335,51.125],"CGL":[71.787,49.326],"Commercial Auto":[72.732,35.285],"Commercial Property":[68.02,-38.839],"Cyber":[17.832,6.784],"D&O":[27.787,-7.838],"Fidelity":[11.683,3.398],"Marine":[-7.836,-4.139],"Pollution":[-1.118,4.694],"Professional":[-29.08,-1.78],"Surety":[100.809,72.711],"EXS/UMB":[64.866,-6.25]},"4":{"All Other":[97.08,70.885],"CGL":[69.49,57.467],"Commercial Auto":[63.615,49.268],"Commercial Property":[46.14,0.965],"Cyber":[14.753,10.9],"D&O":[21.44,-5.185],"Fidelity":[11.611,4.295],"Marine":[7.439,-3.075],"Pollution":[0.698,8.217],"Professional":[-49.814,-7.795],"Surety":[93.758,92.655],"EXS/UMB":[118.681,16.133]},"5":{"All Other":[101.916,88.826],"CGL":[67.519,68.27],"Commercial Auto":[56.274,55.66],"Commercial Property":[131.59,5.47],"Cyber":[19.415,14.361],"D&O":[26.858,10.282],"Fidelity":[9.762,5.691],"Marine":[-1.448,-6.225],"Pollution":[4.334,12.991],"Professional":[-56.87,-5.417],"Surety":[85.341,106.212],"EXS/UMB":[142.629,16.135]},"6":{"All Other":[105.368,90.04],"CGL":[89.482,81.428],"Commercial Auto":[57.475,61.143],"Commercial Property":[53.291,64.468],"Cyber":[19.92,15.814],"D&O":[40.625,31.345],"Fidelity":[10.379,2.206],"Marine":[9.869,0.459],"Pollution":[11.864,14.561],"Professional":[-27.191,-6.118],"Surety":[104.397,111.117],"EXS/UMB":[89.771,29.344]},"7":{"All Other":[50.482,82.95],"CGL":[94.853,105.641],"Commercial Auto":[79.121,68.977],"Commercial Property":[96.52,84.878],"Cyber":[19.709,18.074],"D&O":[-11.815,39.643],"Fidelity":[36.707,2.57],"Marine":[18.286,6.604],"Pollution":[8.192,20.659],"Professional":[3.723,3.95],"Surety":[103.66,115.295],"EXS/UMB":[147.617,43.86]}}}};
+</script>
+
+<script>
+const $=id=>document.getElementById(id);
+const REDUCE=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const FINE=matchMedia("(pointer: fine)").matches;
+const F={m:v=>money(v),md:v=>moneyD(v),p:v=>pct(v),r:v=>v.toFixed(2)+"%",n:v=>Math.round(v)+"","n%":v=>Math.round(v)+"%"};
+
+/* counters: ease out, then a small spring pop on landing */
+function countUp(el,delay){
+ if(el._r)cancelAnimationFrame(el._r);
+ const t=parseFloat(el.dataset.v),f=F[el.dataset.f]||F.r;
+ if(REDUCE){el.textContent=f(t);return}
+ const t0=performance.now()+(delay==null?500:delay),dur=1500;
+ el.textContent=f(0);el.classList.remove("pop");
+ const fr=now=>{const k=Math.max(0,Math.min(1,(now-t0)/dur)),e=1-Math.pow(1-k,5);el.textContent=f(t*e);
+  if(k<1)el._r=requestAnimationFrame(fr);else{void el.offsetWidth;el.classList.add("pop")}};
+ el._r=requestAnimationFrame(fr);
+}
+const cssv=(n,el)=>getComputedStyle(el||document.documentElement).getPropertyValue(n).trim();
+/* ═══ labels, colours and helpers ═══ */
+const LN=D2.L;                                   /* lines of business, standard order */
+const lab=k=>k==="Commercial Property"?"Commercial Property*":k;
+const CH=C.lmt,LMc=C.ly;                         /* Chubb teal, LM Canada yellow */
+const PAL=["#28A5AF","#FFD000","#9C95F0","#F26B43","#78E1E1","#E36FA6","#8FD18B","#C0BFC0","#FFE280","#06748C","#B9A2F0","#F7A35C","#7FB8FF"];
+const col=n=>n==="LM Canada"?C.ly:n==="Chubb"?C.lmt:n==="LM SBU"?C.t80:n==="Industry"?C.g29:"var(--navy-bar)";
+const PER={h1:["H1 2021","H1 2022","H1 2023","H1 2024","H1 2025","H1 2026"],fy:["FY 2020","FY 2021","FY 2022","FY 2023","FY 2024","FY 2025"]};
+const CORY=["FY 2022","FY 2023","FY 2024","FY 2025"];
+const WIN=[2,3,4,5,6,7];
+const sum=a=>a.reduce((x,y)=>x+y,0);
+const FN1="All Other¹ (LM Canada) includes fronting programs, such as Global Transaction Services and part of Asurion, and new lines not yet material enough to classify.";
+const FN2="All Other² (Chubb) covers lines not classified under a standard line.";
+
+/* play: stagger rows, then grow bars and count values */
+function play(el,base){
+ base=base==null?650:base;
+ el.classList.remove("go");void el.offsetWidth;
+ el.querySelectorAll(".br,.dr").forEach((r,i)=>r.style.setProperty("--d",(base+i*45)+"ms"));
+ requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add("go")));
+ el.querySelectorAll(".ct").forEach(c=>countUp(c,base+100));
+}
+
+/* bars: each row carries one or more values; signed rows split at the centre line */
+function bars(target,rows,o){
+ const el=typeof target==="string"?$(target):target;
+ el.classList.remove("db");el.classList.add("bars");
+ const mx=Math.max(o.min||0,...rows.flatMap(r=>r.vals.map(x=>Math.abs(x.v))))||1;
+ const tr=x=>{const w=Math.abs(x.v)/mx*(o.sg?50:100),neg=o.sg&&x.v<0,ps=o.sg?(neg?"right:50%":"left:50%"):"left:0";
+  const mk=o.mark!=null?'<i class="mk" style="left:'+(o.mark/mx*100).toFixed(2)+'%"></i>':"";
+  return'<div class="bt'+(o.sg?" sg":"")+'">'+mk+'<div class="bf'+(neg?" neg":"")+'" style="'+ps+';width:'+w.toFixed(2)+'%;background:'+x.c+'"></div></div>'};
+ const ct=(v,extra)=>'<span class="ct" data-v="'+v+'" data-f="'+o.f+'"'+(extra||"")+'>0</span>';
+ el.innerHTML=rows.map(r=>{const n=r.vals.length;
+  const val=o.lab?o.lab(r,ct):(n>1?r.vals.map(x=>'<small>'+ct(x.v)+'</small>').join(""):ct(r.vals[0].v));
+  return'<div class="br'+(n>1?" pair":"")+(n>2?" grp":"")+(o.click&&r.key?" pick":"")+'"'+(r.key?' data-key="'+r.key+'"':"")+(o.click&&r.key?' role="button" tabindex="0" aria-label="Deep dive into '+r.l+'"':"")+'>'
+   +'<div class="bl" title="'+r.l+'">'+r.l+'</div><div>'+r.vals.map(tr).join("")+'</div><div class="bv">'+val+'</div></div>'}).join("");
+ if(o.click)el.querySelectorAll(".br.pick").forEach(b=>{b.onclick=()=>o.click(b.dataset.key);b.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();o.click(b.dataset.key)}}});
+ play(el,o.base);
+}
+
+/* dumbbell: dots slide from the earlier year to FY 2025 */
+function dumbbell(el,rows,o){
+ el.classList.remove("bars");el.classList.add("db");
+ const sc=v=>Math.max(0,Math.min(100,(v+20)/180*100));
+ el.innerHTML=rows.map(r=>{
+  const tracks=r.items.map(it=>{const a=sc(it.a),b=sc(it.b),better=it.b<it.a,lo=Math.min(a,b);
+   return'<div class="dt"><div class="be" style="left:'+sc(100).toFixed(2)+'%"></div>'
+   +'<div class="tr" style="left:'+lo.toFixed(2)+'%;width:'+Math.abs(b-a).toFixed(2)+'%;background:'+(better?C.lmt:"#F26B43")+';opacity:.45;transform-origin:'+(better?"right":"left")+'"></div>'
+   +'<div class="dw" style="--x:'+a.toFixed(2)+'%"><i class="dot '+(it.lm?"la":"a")+'"></i></div>'
+   +'<div class="dw mv" style="--from:'+a.toFixed(2)+'%;--to:'+b.toFixed(2)+'%"><i class="dot '+(it.lm?"l":"b")+'"></i></div></div>'}).join("");
+  const txt=r.items.map(it=>(r.items.length>1?(it.lm?"LM ":"C "):"")+it.a.toFixed(1)+'% → <span class="ct" data-v="'+it.b+'" data-f="r">0</span>').join("<br>");
+  return'<div class="dr'+(r.items.length>1?" two":"")+'"><div class="dl">'+r.l+'</div><div>'+tracks+'</div><div class="dv">'+txt+'</div></div>'}).join("");
+ play(el,o&&o.base);
+}
+
+/* line charts: every trend view, drawn point by point */
+const charts={};
+function lineChart(key,host,labels,sets,o){
+ o=o||{};
+ if(charts[key]){charts[key].destroy();delete charts[key]}
+ host.innerHTML='<div class="cw"><canvas aria-label="'+(o.aria||"Trend line chart")+'"></canvas></div>';
+ const vz=host.closest(".viz");if(vz)vz.classList.add("ch");
+ if(!window.Chart)return;
+ const pn=host.closest(".pn")||document.documentElement,mute=cssv("--card-mute",pn),grid=cssv("--line",pn),ink=cssv("--card-ink",pn),FONT="Barlow, Arial, sans-serif";
+ const fmt=o.fmt||(v=>money(v)),dly=REDUCE?0:Math.max(140,Math.round(1300/labels.length)),start=o.base==null?650:o.base;
+ const prev=c=>c.index===0?c.chart.scales.y.getPixelForValue(Math.max(c.chart.scales.y.min,Math.min(c.chart.scales.y.max,0))):c.chart.getDatasetMeta(c.datasetIndex).data[c.index-1].getProps(["y"],true).y;
+ const ds=sets.map((s,i)=>({label:s.label,data:s.data,borderColor:s.c,backgroundColor:s.c,borderWidth:s.w||3.5,borderDash:s.dash||[],tension:.35,
+  pointRadius:s.pr==null?4.5:s.pr,pointHoverRadius:8,borderCapStyle:"round",spanGaps:true,order:s.order||i}));
+ if(o.mark!=null)ds.push({label:"Break-even "+o.mark+"%",data:labels.map(()=>o.mark),borderColor:"#F26B43",backgroundColor:"#F26B43",borderDash:[6,5],borderWidth:1.5,pointRadius:0,pointHoverRadius:0,order:99});
+ charts[key]=new Chart(host.querySelector("canvas"),{type:"line",data:{labels,datasets:ds},
+  options:{maintainAspectRatio:false,resizeDelay:120,interaction:{mode:"index",intersect:false},
+   transitions:{resize:{animation:{duration:0}}},
+   animation:REDUCE?false:{onComplete:ctx=>{ctx.chart.options.animation=false},x:{type:"number",easing:"easeOutCubic",duration:dly,from:NaN,delay(c){if(c.type!=="data"||c.xS)return 0;c.xS=true;return start+c.index*dly+c.datasetIndex*70}},
+              y:{type:"number",easing:"easeOutCubic",duration:dly,from:prev,delay(c){if(c.type!=="data"||c.yS)return 0;c.yS=true;return start+c.index*dly+c.datasetIndex*70}}},
+   plugins:{legend:{display:o.legend!==false,position:"top",align:"end",labels:{color:ink,font:{family:FONT,size:12,weight:"700"},boxWidth:12,boxHeight:12}},
+    tooltip:{backgroundColor:"#FFD000",titleColor:"#1A1444",bodyColor:"#1A1444",titleFont:{family:FONT,weight:"800"},bodyFont:{family:FONT,weight:"600"},padding:10,cornerRadius:2,
+     callbacks:{label:c=>" "+c.dataset.label+": "+fmt(c.raw)}}},
+   scales:{x:{grid:{display:false},border:{color:grid},ticks:{color:mute,font:{family:FONT,size:12,weight:"700"}}},
+    y:{grid:{color:grid},border:{display:false},grace:"8%",ticks:{color:mute,callback:v=>fmt(v),font:{family:FONT,size:11.5}}}}}});
+}
+
+/* shared control helpers */
+function setSeg(id,k){const b=$(id);if(!b)return;b.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.k==String(k)));placeInd(b)}
+function setTg(id,on){const b=$(id);b.setAttribute("aria-pressed",on?"true":"false")}
+function showOpt(id,on){$(id).classList.toggle("off",!on);if(on)requestAnimationFrame(()=>placeInd($(id)))}
+function fillSel(id,keys){const s=$(id);s.innerHTML='<option value="">All lines</option>'+keys.map(k=>'<option value="'+k+'">'+lab(k)+'</option>').join("")}
+function syncSel(id,v){const s=$(id);s.value=v||"";s.classList.toggle("set",!!v)}
+function crumb(id,line,txt,back){const c=$(id);
+ c.innerHTML=line?'<button type="button">All lines</button> / '+lab(line)+(txt?", "+txt:""):txt;
+ const b=c.querySelector("button");if(b)b.onclick=back}
+function chipsFor(host,keys,on,colorOf,toggle){
+ const d=document.createElement("div");d.className="chips";
+ d.innerHTML=keys.map(k=>'<button type="button" class="chip'+(on.has(k)?" on":"")+'" data-k="'+k+'" style="--c:'+colorOf(k)+'" aria-pressed="'+on.has(k)+'"><i></i>'+lab(k)+'</button>').join("");
+ d.querySelectorAll(".chip").forEach(b=>b.onclick=()=>toggle(b.dataset.k));host.appendChild(d);
+}
+const lineColor=k=>PAL[LN.indexOf(k)%PAL.length];
+
+/* ═══ 02 GWP trend ═══ */
+let raceK="h1";
+function drawRace(k,base){
+ raceK=k;const fy=k==="fy",s=fy?D.gwpFY:D.gwpH1;
+ lineChart("race",$("raceViz"),fy?PER.fy:PER.h1,[
+  {label:"Chubb",data:s.chubb,c:CH,w:4},
+  {label:"LM Canada",data:s.branch,c:LMc,w:4},
+  {label:"LM SBU",data:s.sbu,c:"#8C88B0",w:2,dash:[5,4],pr:3}],{base,aria:"Line chart of GWP, Chubb vs LM Canada"});
+}
+
+/* ═══ 03 GWP insights ═══ */
+const G={per:"h1",view:"snap",cmp:false,line:"",yrs:6,chips:null};
+function renderG(base){
+ const per=G.per,P=PER[per],c=D2.gwp.c[per],l=D2.gwp.l[per],viz=$("gViz"),last=5,n=G.yrs;
+ const pl=per==="h1"?"H1 2026":"FY 2025",idx=[...Array(n)].map((_,i)=>6-n+i);
+ if(G.cmp&&G.line==="All Other")G.line="";
+ setSeg("gPer",per);setSeg("gView",G.view);setSeg("gYrs",n);setTg("gCmp",G.cmp);setTg("gArs",!!G.ars);syncSel("gLine",G.line);
+ showOpt("gYrs",G.view==="trend"||!!G.line);
+ viz.innerHTML="";viz.classList.remove("ch");let note="";
+ const back=()=>{G.line="";renderG(0)};
+ if(G.view==="snap"&&!G.line){
+  const keys=LN.filter(k=>!(G.cmp&&k==="All Other")).sort((a,b)=>c[b][last]-c[a][last]);
+  $("gT").textContent="GWP by line, "+pl;
+  crumb("gCrumb","",G.cmp?"Chubb (teal) and LM Canada (yellow). Select a line to see its history.":"Chubb. Select a line to see its history.");
+  const host=document.createElement("div");viz.appendChild(host);
+  bars(host,keys.map(k=>({key:k,l:lab(k)+(k==="All Other"?"²":""),vals:[{v:c[k][last],c:CH}].concat(G.cmp?[{v:l[k][last],c:LMc}]:[])})),{f:"m",base,click:k=>{G.line=k;renderG(0)}});
+  if(G.cmp){const a=document.createElement("div");a.className="ao";a.innerHTML="<b>All Other, not comparable:</b> LM Canada "+money(l["All Other"][last])+"¹, Chubb "+money(c["All Other"][last])+"²";viz.appendChild(a);note=FN1+" "+FN2}
+  else note=FN2;
+ }else if(G.view==="snap"){
+  const k=G.line;$("gT").textContent="GWP, "+lab(k);
+  crumb("gCrumb",k,"last "+n+(per==="h1"?" half years":" full years"),back);
+  const host=document.createElement("div");viz.appendChild(host);
+  bars(host,idx.map(i=>({l:P[i],vals:[{v:c[k][i],c:CH}].concat(G.cmp?[{v:l[k][i],c:LMc}]:[])})),{f:"m",base});
+  if(k==="All Other")note=FN2;
+ }else{
+  const labels=idx.map(i=>P[i]);
+  if(!G.line&&!G.cmp){
+   if(!G.chips)G.chips=new Set(LN.slice().sort((a,b)=>c[b][last]-c[a][last]).slice(0,5));
+   $("gT").textContent="Chubb GWP by line, trend";
+   crumb("gCrumb","","Chubb’s five largest lines. Use the chips to add or remove lines.");
+   const host=document.createElement("div");host.style.cssText="flex:1;display:flex;flex-direction:column;min-height:300px";viz.appendChild(host);
+   lineChart("g",host,labels,[...G.chips].map(k=>({label:lab(k),data:idx.map(i=>c[k][i]),c:lineColor(k),w:3})),{base,legend:false});
+   chipsFor(viz,LN,G.chips,lineColor,k=>{G.chips.has(k)?G.chips.delete(k):G.chips.add(k);renderG(0)});
+   if(G.chips.has("All Other"))note=FN2;
+  }else{
+   const k=G.line||"Commercial Property";
+   $("gT").textContent="GWP trend, "+lab(k);
+   crumb("gCrumb",k,G.cmp?"Chubb vs LM Canada":"Chubb",back);
+   const host=document.createElement("div");host.style.cssText="flex:1;display:flex;flex-direction:column;min-height:300px";viz.appendChild(host);
+   lineChart("g",host,labels,[{label:"Chubb",data:idx.map(i=>c[k][i]),c:CH,w:4}].concat(G.cmp?[{label:"LM Canada",data:idx.map(i=>l[k][i]),c:LMc,w:4}]:[]),{base});
+   if(!G.line&&G.cmp)syncSel("gLine","Commercial Property");
+  }
+ }
+ if(G.ars)arsPanel(viz,per);
+ $("gNote").textContent=note;
+}
+
+
+/* ARS: LM Canada only (Chubb has no ARS). Not split by line in the extracts. */
+function arsPanel(viz,per){const d=document.createElement("div");d.className="arsbox";
+ if(per==="h1"){const host=document.createElement("div");d.appendChild(host);
+  bars(host,[{l:"Chubb",vals:[{v:511.1,c:CH}]},{l:"LM Canada, incl. ARS",vals:[{v:580.4,c:LMc}]},{l:"LM Canada, excl. ARS",vals:[{v:400.0,c:C.y60}]}],{f:"m",base:0});
+  const p=document.createElement("p");p.textContent="H1 2026 GWP. Excluding ARS, LM Canada is $400M, up 5.00% (with ARS: $580M, up 2.03%). Chubb has no ARS. ARS isn’t split by line in the extracts, so the line view below still includes it.";d.appendChild(p)}
+ else{const host=document.createElement("div");d.appendChild(host);
+  bars(host,[{l:"Chubb",vals:[{v:1172.3,c:CH}]},{l:"LM Canada, incl. ARS",vals:[{v:1051.3,c:LMc}]},{l:"LM Canada, excl. ARS",vals:[{v:794.2,c:C.y60}]}],{f:"m",base:0});
+  const p=document.createElement("p");p.textContent="FY 2025 GWP. Excluding ARS, LM Canada is $794M, up 0.3% (with ARS: $1,051M, up 4.2%). Chubb has no ARS. ARS isn’t split by line in the extracts, so the line view below still includes it.";d.appendChild(p)}
+ viz.insertBefore(d,viz.firstChild)}
+/* ═══ 04 COR insights ═══ */
+const R={view:"snap",from:2,cmp:false,line:"",chips:null};
+const RK=LN.filter(k=>k!=="All Other");
+function renderR(base){
+ const c=D2.cor.c,l=D2.cor.l,viz=$("rViz");
+ setSeg("rView",R.view);setSeg("rFrom",R.from);setTg("rCmp",R.cmp);syncSel("rLine",R.line);
+ showOpt("rFrom",R.view==="move");
+ viz.innerHTML="";viz.classList.remove("ch");const back=()=>{R.line="";renderR(0)};
+ const host=document.createElement("div");host.style.cssText="flex:1;display:flex;flex-direction:column;min-height:0";viz.appendChild(host);
+ const keys=R.line?[R.line]:RK.slice().sort((a,b)=>c[a][3]-c[b][3]);
+ if(R.view==="snap"&&!R.line){
+  $("rT").textContent="COR by line, FY 2025";
+  crumb("rCrumb","",R.cmp?"Chubb (teal) and LM Canada (yellow), best Chubb ratio first. Select a line for its history.":"Chubb, best ratio first. Select a line for its history.");
+  bars(host,keys.map(k=>({key:k,l:lab(k),vals:[{v:c[k][3],c:CH}].concat(R.cmp?[{v:l[k][3],c:LMc}]:[])})),{f:"r",mark:100,min:110,base,click:k=>{R.line=k;renderR(0)}});
+ }else if(R.view==="snap"){
+  $("rT").textContent="COR, "+lab(R.line);
+  crumb("rCrumb",R.line,"FY 2022 to FY 2025",back);
+  bars(host,CORY.map((y,i)=>({l:y,vals:[{v:c[R.line][i],c:CH}].concat(R.cmp?[{v:l[R.line][i],c:LMc}]:[])})),{f:"r",mark:100,min:110,sg:CORY.some((y,i)=>c[R.line][i]<0||l[R.line][i]<0),base});
+ }else if(R.view==="move"){
+  const f=R.from;$("rT").textContent="COR change, "+CORY[f]+" to FY 2025";
+  crumb("rCrumb",R.line,(R.cmp?"Chubb (teal) and LM Canada (yellow). ":"")+"Light dot is "+CORY[f]+"; the trail is teal where the ratio improved, orange where it worsened.",back);
+  dumbbell(host,keys.map(k=>({l:lab(k),items:[{a:c[k][f],b:c[k][3]}].concat(R.cmp?[{a:l[k][f],b:l[k][3],lm:true}]:[])})),{base});
+ }else{
+  if(!R.line&&!R.cmp){
+   if(!R.chips)R.chips=new Set(["Commercial Property","CGL","Commercial Auto","D&O","Professional"]);
+   $("rT").textContent="Chubb COR by line, trend";
+   crumb("rCrumb","","Chubb’s five largest lines by GWP. Use the chips to add or remove lines.");
+   host.style.minHeight="300px";
+   lineChart("r",host,CORY,[...R.chips].map(k=>({label:lab(k),data:c[k],c:lineColor(k),w:3})),{base,legend:false,mark:100,fmt:v=>(+v).toFixed(1)+"%"});
+   chipsFor(viz,RK,R.chips,lineColor,k=>{R.chips.has(k)?R.chips.delete(k):R.chips.add(k);renderR(0)});
+  }else{
+   const k=R.line||"Commercial Property";$("rT").textContent="COR trend, "+lab(k);
+   crumb("rCrumb",k,R.cmp?"Chubb vs LM Canada":"Chubb",back);host.style.minHeight="300px";
+   lineChart("r",host,CORY,[{label:"Chubb",data:c[k],c:CH,w:4}].concat(R.cmp?[{label:"LM Canada",data:l[k],c:LMc,w:4}]:[]),{base,mark:100,fmt:v=>(+v).toFixed(1)+"%"});
+   if(!R.line)syncSel("rLine","Commercial Property");
+  }
+ }
+}
+
+/* ═══ 05 Claims analysis ═══ */
+const K={view:"snap",win:3,cmp:false,line:""};
+const KC={cc:"var(--k-cc)",cp:"#28A5AF",lc:"#FFD000",lp:"var(--k-lp)"};
+function renderK(base){
+ const c=D2.pc.c,l=D2.pc.l,viz=$("kViz"),w=K.win;
+ if(K.cmp&&K.line==="All Other")K.line="";
+ setSeg("kView",K.view);setSeg("kWinS",w);setTg("kCmp",K.cmp);syncSel("kLine",K.line);
+ showOpt("kWinS",K.view==="snap"&&!K.line);
+ /* left-hand totals follow the window */
+ const tw=K.view==="snap"&&!K.line?w:3,tc=sum(Object.values(c[tw]).map(v=>v[0])),tp=sum(Object.values(c[tw]).map(v=>v[1]));
+ $("kWin").textContent="Chubb, "+tw+" years to FY 2025";
+ const kc=$("kC"),kp=$("kP");if(+kc.dataset.v!==tc||+kp.dataset.v!==tp){kc.dataset.v=tc;kp.dataset.v=tp;countUp(kc,base==null?600:120);countUp(kp,base==null?700:180)}
+ const lc=sum(Object.values(l[tw]).map(v=>v[0])),lp=sum(Object.values(l[tw]).map(v=>v[1]));
+ $("kLM").textContent="LM Canada over the same "+tw+" years: claims "+moneyD(lc)+", premiums "+moneyD(lp)+".";
+ viz.innerHTML="";viz.classList.remove("ch");let note="";const back=()=>{K.line="";renderK(0)};
+ const host=document.createElement("div");host.style.cssText="flex:1;display:flex;flex-direction:column;min-height:0";viz.appendChild(host);
+ const leg=K.cmp?[["Chubb claims",KC.cc],["Chubb premiums",KC.cp],["LM Canada claims",KC.lc],["LM Canada premiums",KC.lp]]:[["Claims",KC.cc],["Premiums",KC.cp]];
+ const vals=(src,k)=>[{v:src.c[k][0],c:KC.cc},{v:src.c[k][1],c:KC.cp}].concat(K.cmp?[{v:src.l[k][0],c:KC.lc},{v:src.l[k][1],c:KC.lp}]:[]);
+ const labFn=(r,ct)=>{const v=r.vals;return K.cmp
+  ?'<small>C '+ct(v[0].v)+' / '+ct(v[1].v)+'</small><small style="color:var(--lmv)">LM '+ct(v[2].v)+' / '+ct(v[3].v)+'</small>'
+  :'<small>'+ct(v[0].v)+'</small><small>'+ct(v[1].v)+'</small>'};
+ if(K.view==="snap"&&!K.line){
+  $("kT").textContent="Claims vs premiums growth by line, "+w+" years to FY 2025";
+  crumb("kCrumb","","Select a line to see every window from 2 to 7 years.");
+  const keys=LN.filter(k=>!(K.cmp&&k==="All Other")).sort((a,b)=>c[w][b][0]-c[w][a][0]);
+  bars(host,keys.map(k=>({key:k,l:lab(k)+(k==="All Other"?"²":""),vals:vals({c:c[w],l:l[w]},k)})),{sg:true,f:"md",lab:labFn,base,click:k=>{K.line=k;renderK(0)}});
+  note=K.cmp?"All Other is not compared side by side. "+FN1+" "+FN2:FN2;
+ }else if(K.view==="snap"){
+  const k=K.line;$("kT").textContent="Claims vs premiums growth, "+lab(k);
+  crumb("kCrumb",k,"each window to FY 2025",back);
+  bars(host,WIN.map(y=>({l:y+" years",vals:vals({c:c[y],l:l[y]},k)})),{sg:true,f:"md",lab:labFn,base});
+  if(k==="All Other")note=FN2;
+ }else{
+  const k=K.line||"Commercial Property";$("kT").textContent="Claims vs premiums growth trend, "+lab(k);
+  crumb("kCrumb",k,"growth over 2 to 7 years to FY 2025",back);host.style.minHeight="300px";
+  const sets=[{label:"Chubb claims",data:WIN.map(y=>c[y][k][0]),c:CH,w:4},{label:"Chubb premiums",data:WIN.map(y=>c[y][k][1]),c:CH,w:3,dash:[7,5]}];
+  if(K.cmp)sets.push({label:"LM Canada claims",data:WIN.map(y=>l[y][k][0]),c:LMc,w:4},{label:"LM Canada premiums",data:WIN.map(y=>l[y][k][1]),c:LMc,w:3,dash:[7,5]});
+  lineChart("k",host,WIN.map(y=>y+" yrs"),sets,{base,fmt:v=>moneyD(+v)});
+  if(!K.line)syncSel("kLine","Commercial Property");
+  leg.length=0;
+ }
+ $("kLeg").innerHTML=leg.map(x=>'<span><i style="background:'+x[1]+'"></i>'+x[0]+'</span>').join("");
+ $("kNote").textContent=note;
+}
+
+/* ═══ 06 Provincial footprint ═══ */
+let MM="prem",MP="h126",MC=false,MW=3;
+/* growth for the chosen window: 3 years comes from the regional dashboards for both periods; other windows are FY 2025 only */
+
+/* RAW_Data: GWP $M by province x line. FY = Dec 2016..2025 (10), H1 = Jun 2022..2026 (5) */
+const PV={"c":{"fy":{"AB":{"All Other":[0.116,0.174,0.257,0.246,0.255,0.263,0.272,0.265,0.256,0.359],"CGL":[11.112,11.146,12.701,15.561,15.454,16.139,17.442,20.206,19.043,20.194],"Commercial Auto":[12.631,15.798,14.839,17.193,18.799,20.083,21.634,25.909,25.398,28.715],"Commercial Property":[36.728,37.545,41.602,40.005,46.041,46.049,49.197,41.332,41.389,41.311],"Cyber":[0.15,0.541,1.081,1.594,1.873,2.677,4.464,4.736,4.093,3.658],"D&O":[19.521,17.057,18.048,20.034,20.426,24.643,25.941,24.818,22.687,17.363],"Fidelity":[2.085,2.112,2.306,2.094,2.254,2.559,2.687,2.497,0.702,2.822],"Marine":[0.098,0.158,0.053,0.034,0.108,0.092,0.048,0.056,0.235,0.09],"Pollution":[8.479,10.701,13.173,11.647,11.365,12.683,11.215,10.589,9.767,9.299],"Professional":[8.313,7.717,7.578,7.969,7.959,7.904,9.828,8.798,10.499,8.76],"Surety":[4.458,5.817,3.38,4.676,2.722,8.128,3.385,8.073,11.891,4.765],"EXS/UMB":[8.264,9.046,9.781,15.49,24.74,27.29,23.566,26.56,25.273,28.045]},"BC":{"All Other":[0.147,0.174,0.258,0.249,0.35,0.293,0.381,0.463,0.574,0.736],"CGL":[5.062,6.282,6.159,7.43,7.35,9.084,9.513,10.033,10.271,10.311],"Commercial Auto":[1.753,2.5,2.459,2.748,3.783,4.051,3.552,3.527,3.446,3.474],"Commercial Property":[40.511,34.351,31.576,37.483,52.866,55.651,59.072,58.358,73.244,67.643],"Cyber":[0.468,0.494,0.674,1.176,1.362,2.255,3.891,3.401,3.612,3.539],"D&O":[10.958,11.108,11.746,15.489,14.008,24.958,21.993,21.935,17.767,20.904],"Fidelity":[2.687,2.915,2.848,2.812,3.394,4.266,3.924,3.999,1.238,3.877],"Marine":[0.311,0.234,0.164,0.08,0.129,0.256,0.037,0.012,0.177,0.285],"Pollution":[2.817,1.923,1.801,1.785,2.427,2.007,2.597,2.494,2.078,1.999],"Professional":[9.676,10.085,8.728,9.445,9.494,10.999,11.057,11.278,14.158,9.981],"Surety":[1.395,2.079,8.178,4.4,2.117,7.912,5.48,7.884,13.118,4.525],"EXS/UMB":[7.108,6.508,6.63,7.444,8.671,10.848,11.004,12.479,12.47,11.837]},"MB":{"All Other":[0.023,0.024,0.022,0.021,0.046,0.041,0.046,0.028,0.025,0.021],"CGL":[1.61,1.901,2.381,2.182,2.156,1.623,1.684,2.03,1.914,2.24],"Commercial Auto":[0.526,0.669,0.687,0.685,1.365,1.148,1.401,1.327,1.425,1.351],"Commercial Property":[1.786,1.375,1.227,1.35,2.221,2.138,2.305,1.966,2.563,2.669],"Cyber":[0.029,0.023,0.103,0.192,0.162,0.861,0.928,0.827,0.864,0.76],"D&O":[1.263,1.185,1.03,0.843,0.823,1.569,1.168,1.314,1.395,1.026],"Fidelity":[0.888,0.965,0.961,0.989,1.087,1.314,1.462,1.369,0.796,1.228],"Marine":[0.105,0.0,0.001,0.0,0.011,0.001,0.001,0.0,0.0,0.0],"Pollution":[1.316,1.211,0.366,1.082,1.293,0.307,1.299,1.471,0.348,1.352],"Professional":[1.85,1.704,1.507,1.452,1.446,1.564,1.943,2.039,2.092,1.841],"Surety":[0.748,0.278,0.384,0.822,0.27,1.121,1.308,0.535,0.481,0.985],"EXS/UMB":[1.008,0.975,0.752,0.752,1.126,1.211,1.144,1.144,1.17,1.39]},"NB":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.003,0.001,0.001],"CGL":[0.907,0.913,1.213,1.364,1.344,0.938,1.844,1.768,1.512,1.325],"Commercial Auto":[2.392,2.698,2.639,2.785,2.897,5.252,6.378,7.789,7.691,7.566],"Commercial Property":[1.919,1.87,1.788,3.08,4.585,4.606,4.639,2.307,3.549,6.071],"Cyber":[0.0,0.0,0.004,0.049,0.134,0.175,0.36,0.501,0.396,0.633],"D&O":[0.672,0.61,0.645,1.382,1.625,0.875,0.823,0.795,0.724,0.65],"Fidelity":[0.138,0.143,0.108,0.223,0.135,0.22,0.195,0.194,0.101,0.135],"Marine":[0.439,0.209,0.285,0.446,0.442,0.46,0.195,0.204,0.683,0.211],"Pollution":[0.447,0.313,0.648,0.849,0.787,0.964,1.079,1.213,1.013,0.924],"Professional":[0.463,0.647,0.612,0.646,0.579,1.054,1.178,1.319,1.16,1.233],"Surety":[0.367,0.42,0.492,0.45,0.326,0.408,0.022,0.301,0.256,0.316],"EXS/UMB":[0.926,0.991,1.071,1.006,2.204,2.336,2.069,1.852,2.004,1.934]},"NL":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.002,0.001,0.001],"CGL":[0.381,0.493,1.737,1.055,1.034,1.231,1.584,0.859,0.727,0.603],"Commercial Auto":[0.821,0.867,0.779,0.552,0.442,0.826,0.786,0.839,0.867,0.801],"Commercial Property":[1.349,1.466,1.312,0.908,0.903,0.614,0.485,0.411,0.966,1.021],"Cyber":[0.393,0.0,0.0,0.0,0.0,0.003,0.112,0.106,0.005,0.005],"D&O":[0.52,0.305,0.298,0.269,0.29,0.475,0.53,0.309,0.336,0.271],"Fidelity":[0.033,0.012,0.008,0.017,0.029,0.029,0.035,0.017,0.001,0.014],"Marine":[0.125,0.127,0.086,0.002,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.361,0.243,0.244,0.187,0.284,0.437,0.282,0.155,0.167,0.199],"Professional":[0.576,0.564,0.493,0.555,0.673,0.676,0.588,0.694,0.692,0.527],"Surety":[0.25,0.269,0.309,0.575,0.177,0.146,0.026,0.314,0.122,0.147],"EXS/UMB":[0.15,0.155,0.164,0.161,0.168,0.543,0.183,0.166,0.195,0.089]},"NT":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"CGL":[0.091,0.103,0.597,0.63,0.602,0.26,0.172,0.155,0.038,0.049],"Commercial Auto":[0.069,0.069,0.042,0.047,0.041,0.069,0.036,0.107,0.142,0.119],"Commercial Property":[0.322,0.107,0.108,0.238,0.151,0.169,0.2,0.204,0.444,0.229],"Cyber":[0.0,0.0,0.0,0.0,0.016,0.0,0.0,0.0,0.0,0.0],"D&O":[0.067,0.06,0.048,0.016,0.035,0.029,0.029,0.031,0.031,0.03],"Fidelity":[0.021,0.02,0.002,0.0,0.009,0.007,0.006,0.001,0.001,0.111],"Marine":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.052,0.0,0.038,0.007,0.015,0.019,0.02,0.0,0.0,0.0],"Professional":[0.078,0.079,0.044,0.046,0.064,0.039,0.039,0.05,0.133,0.044],"Surety":[0.0,0.01,0.001,0.001,0.001,0.004,0.001,0.0,0.124,0.066],"EXS/UMB":[0.016,0.015,0.013,0.023,0.017,0.015,0.014,0.014,0.014,0.017]},"NS":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.002,0.005,0.003,0.006],"CGL":[0.699,0.708,1.041,1.242,1.239,1.372,1.266,1.409,1.652,1.408],"Commercial Auto":[1.023,1.193,0.966,0.974,-1.806,1.441,1.416,1.8,1.711,1.733],"Commercial Property":[1.187,1.09,0.69,1.424,1.546,2.113,2.004,4.211,5.342,3.985],"Cyber":[0.012,0.032,0.167,0.136,0.166,0.654,0.779,0.761,0.733,0.78],"D&O":[0.879,0.745,2.218,2.054,1.192,1.802,1.672,1.478,1.005,0.939],"Fidelity":[0.133,0.058,0.208,0.24,0.188,0.232,0.262,0.222,0.008,0.221],"Marine":[0.099,0.0,0.038,0.053,0.0,0.126,0.005,0.085,0.042,0.032],"Pollution":[0.43,0.744,0.468,0.846,0.52,0.693,0.765,0.596,0.833,0.794],"Professional":[0.697,0.533,0.408,0.392,0.357,0.591,0.411,0.567,0.622,0.502],"Surety":[0.209,0.23,0.322,0.216,0.17,0.09,0.25,0.236,0.534,5.4],"EXS/UMB":[0.767,0.605,0.643,0.678,0.864,3.085,2.971,3.132,3.458,3.5]},"NU":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"CGL":[0.004,0.004,0.533,0.538,0.538,0.22,0.165,0.146,0.138,0.133],"Commercial Auto":[0.007,0.005,-0.007,0.005,-0.046,0.01,-0.001,0.023,0.039,0.035],"Commercial Property":[1.029,0.094,0.196,0.094,0.145,0.164,0.231,0.052,0.19,0.041],"Cyber":[0.0,0.0,0.0,0.0,0.005,0.016,0.021,0.0,0.0,0.0],"D&O":[0.027,0.004,0.001,0.015,0.02,0.023,0.024,0.024,0.024,0.024],"Fidelity":[0.0,0.0,0.001,0.001,0.001,0.0,0.003,0.001,0.002,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.003,0.01,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Professional":[0.006,0.003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Surety":[0.065,0.0,0.015,0.001,-0.006,0.001,0.001,0.002,0.002,0.0],"EXS/UMB":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.003,0.004,0.004]},"ON":{"All Other":[1.125,1.409,1.486,1.511,1.605,1.457,1.624,1.639,1.594,1.957],"CGL":[36.079,36.921,35.054,38.238,38.107,41.29,49.71,55.633,59.642,61.523],"Commercial Auto":[28.472,29.791,35.061,58.446,77.916,83.166,87.269,100.573,77.355,67.17],"Commercial Property":[67.047,67.782,60.52,74.073,87.954,105.223,121.97,144.502,145.799,148.038],"Cyber":[2.891,3.675,6.859,8.571,10.446,15.776,23.766,21.146,18.461,17.098],"D&O":[33.288,32.793,40.474,40.066,48.247,62.169,66.623,59.714,50.823,49.77],"Fidelity":[12.764,13.267,13.32,13.864,15.112,15.832,17.445,16.003,7.309,14.619],"Marine":[5.531,6.884,4.443,4.353,4.251,3.491,3.892,4.127,3.921,4.324],"Pollution":[11.628,12.38,12.746,12.428,11.006,16.097,14.281,16.592,16.829,13.599],"Professional":[44.529,38.921,35.848,37.129,40.906,42.694,47.213,48.702,55.603,47.418],"Surety":[7.79,12.377,11.678,17.839,12.663,16.206,20.12,26.074,21.143,36.876],"EXS/UMB":[39.254,39.617,38.938,43.794,49.794,49.141,61.058,64.529,59.161,57.3]},"OOC":{"All Other":[0.0,0.163,0.0,0.0,2.038,0.0,0.0,0.0,0.0,0.0],"CGL":[15.616,7.421,26.273,23.831,26.986,33.482,49.047,54.87,58.877,55.905],"Commercial Auto":[0.455,1.951,0.675,1.282,1.287,1.029,1.476,1.881,2.353,2.452],"Commercial Property":[8.276,5.529,8.836,13.675,18.475,17.906,24.645,17.516,17.447,23.219],"Cyber":[0.0,0.0,0.0,0.0,0.007,0.0,0.038,0.0,0.0,0.0],"D&O":[0.048,0.056,0.021,0.0,0.0,0.013,0.0,0.0,0.02,0.059],"Fidelity":[0.0,0.0,0.135,0.006,0.0,0.0,0.0,0.0,0.0,0.0],"Marine":[0.075,0.083,0.062,0.051,0.0,0.0,0.0,0.129,0.0,0.0],"Pollution":[0.367,0.0,-0.182,0.0,0.815,-0.187,0.023,0.0,0.392,0.304],"Professional":[0.0,0.0,0.016,0.12,0.0,0.0,0.0,0.0,0.0,0.0],"Surety":[1.295,0.967,3.883,4.927,4.313,4.176,4.971,4.566,10.257,20.571],"EXS/UMB":[3.819,3.173,6.073,6.31,10.586,5.675,4.29,4.815,5.973,4.954]},"PE":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"CGL":[0.073,0.07,0.622,0.701,0.697,0.411,0.35,0.323,0.151,0.133],"Commercial Auto":[0.157,0.13,0.194,0.185,0.25,0.33,0.41,0.615,0.518,0.634],"Commercial Property":[0.188,0.146,0.153,0.091,0.165,0.28,0.315,0.405,0.545,0.486],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.052,0.115,0.099,0.1,0.109],"D&O":[0.045,0.026,0.017,0.303,0.019,0.086,0.282,-0.073,0.269,0.232],"Fidelity":[0.004,0.002,0.008,0.005,0.002,0.011,0.007,0.007,0.003,0.021],"Marine":[0.002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.024,0.004,0.006,0.025,0.003,0.0,0.028,0.0,0.0,0.027],"Professional":[0.091,0.046,0.044,0.043,0.048,0.055,0.075,0.08,0.104,0.059],"Surety":[0.001,0.032,0.002,0.001,0.003,0.005,0.023,0.001,0.341,0.098],"EXS/UMB":[0.205,0.21,0.224,0.122,0.092,0.405,0.512,0.519,0.507,0.271]},"QC":{"All Other":[0.192,0.181,0.241,0.239,0.283,0.294,0.266,0.428,0.428,0.515],"CGL":[13.678,12.598,13.625,13.663,13.564,17.602,19.346,22.144,21.463,18.43],"Commercial Auto":[5.436,6.637,7.019,7.115,8.9,3.533,10.917,9.839,9.518,11.581],"Commercial Property":[22.472,19.61,22.732,29.938,37.057,39.931,42.993,53.862,56.602,52.984],"Cyber":[0.177,0.614,1.514,2.046,3.605,8.77,13.94,14.504,12.451,13.156],"D&O":[14.318,14.759,14.146,16.565,30.465,41.827,34.656,27.155,21.541,21.642],"Fidelity":[4.744,4.894,4.838,5.046,5.703,6.534,7.143,6.489,3.298,6.667],"Marine":[4.96,2.987,1.682,3.395,2.819,2.436,2.105,1.434,2.054,1.846],"Pollution":[4.061,3.125,3.998,3.865,3.743,3.379,5.275,3.555,3.751,4.04],"Professional":[16.2,13.45,12.838,13.294,14.163,18.477,22.44,21.983,24.216,17.251],"Surety":[3.299,3.374,3.464,5.181,2.369,4.311,5.226,5.686,5.523,4.637],"EXS/UMB":[7.962,7.038,7.589,10.065,14.551,20.927,11.997,13.868,13.705,11.329]},"SK":{"All Other":[0.0,0.0,0.0,0.0,0.001,0.156,0.189,-0.137,0.0,0.0],"CGL":[0.568,0.671,1.169,1.252,1.252,1.078,1.376,1.072,1.455,1.388],"Commercial Auto":[0.762,0.778,0.946,0.876,2.919,1.837,2.903,2.722,2.87,3.301],"Commercial Property":[6.19,5.298,2.23,3.465,5.547,6.566,5.657,4.568,4.447,3.423],"Cyber":[0.058,0.066,0.148,0.128,0.214,0.397,0.618,0.396,0.271,0.249],"D&O":[1.741,1.52,1.646,1.225,1.17,1.391,1.53,1.471,1.566,1.343],"Fidelity":[0.168,0.165,0.148,0.156,0.076,0.181,0.249,0.234,0.07,0.141],"Marine":[0.107,0.061,0.042,0.073,0.14,0.126,0.031,0.074,0.049,0.061],"Pollution":[0.519,0.415,0.232,0.856,0.553,0.256,0.576,0.234,0.391,0.387],"Professional":[1.268,1.016,0.84,0.939,0.804,1.166,1.192,1.203,1.199,1.309],"Surety":[0.713,0.559,0.797,0.686,0.909,0.888,1.021,1.103,1.795,1.054],"EXS/UMB":[0.518,0.425,0.486,0.344,0.416,0.707,0.843,0.732,1.13,1.103]},"YT":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"CGL":[0.032,0.039,0.603,0.667,0.66,0.582,0.507,0.416,0.355,0.32],"Commercial Auto":[0.032,0.038,0.029,0.108,0.058,0.092,0.049,0.162,0.15,0.155],"Commercial Property":[0.129,0.132,0.18,0.166,0.201,1.01,1.225,0.316,0.365,0.309],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.127,0.134,0.122,0.082,0.527,0.036,0.132,0.109,0.086,0.087],"Fidelity":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.198,0.15,0.013,0.019,0.004,0.002,0.009,0.002,0.002,0.01],"Professional":[0.012,0.02,0.009,0.009,0.01,0.011,0.046,0.013,0.016,0.016],"Surety":[0.353,0.029,0.03,0.037,0.125,0.002,0.117,0.113,-0.001,0.002],"EXS/UMB":[0.022,0.023,0.027,0.067,0.067,0.25,0.357,0.117,0.115,0.123]}},"h1":{"AB":{"All Other":[0.135,0.121,0.105,0.14,0.185],"CGL":[8.329,10.321,9.75,8.753,8.232],"Commercial Auto":[11.592,12.352,14.651,13.488,15.322],"Commercial Property":[18.91,18.528,20.735,17.802,19.258],"Cyber":[1.701,1.949,1.464,0.915,0.785],"D&O":[11.531,13.791,10.569,6.412,8.508],"Fidelity":[1.109,1.032,0.317,1.018,1.064],"Marine":[0.016,0.023,0.003,0.025,0.125],"Pollution":[3.013,4.18,3.829,3.458,2.844],"Professional":[4.404,3.164,3.724,3.135,2.855],"Surety":[1.222,3.295,10.39,1.556,2.23],"EXS/UMB":[8.993,12.023,10.991,11.038,10.029]},"BC":{"All Other":[0.2,0.231,0.257,0.238,0.455],"CGL":[4.355,4.703,4.707,3.764,4.386],"Commercial Auto":[1.68,1.837,1.492,1.624,1.591],"Commercial Property":[33.236,28.658,31.68,28.056,20.95],"Cyber":[2.057,1.266,1.457,1.226,1.549],"D&O":[10.511,11.806,8.551,7.523,8.689],"Fidelity":[1.536,1.957,0.618,1.544,1.879],"Marine":[0.01,0.006,0.152,0.235,0.34],"Pollution":[1.595,1.464,1.175,1.201,0.843],"Professional":[6.163,5.403,6.648,3.773,3.977],"Surety":[1.12,2.333,5.956,1.178,2.009],"EXS/UMB":[5.5,6.01,6.137,4.989,5.202]},"MB":{"All Other":[0.016,0.021,0.016,0.002,0.008],"CGL":[1.092,1.265,1.153,0.216,1.379],"Commercial Auto":[0.99,0.912,1.114,0.165,0.73],"Commercial Property":[1.2,1.077,1.247,0.301,1.498],"Cyber":[0.436,0.562,0.404,0.087,0.356],"D&O":[0.563,0.462,0.896,0.074,0.356],"Fidelity":[0.35,1.157,0.914,0.197,0.914],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.307,1.039,0.254,0.064,0.958],"Professional":[1.046,1.217,1.518,0.244,0.916],"Surety":[1.008,0.197,0.361,0.049,0.295],"EXS/UMB":[0.794,1.017,1.106,0.218,0.681]},"NB":{"All Other":[0.0,0.001,0.0,0.0,0.0],"CGL":[1.283,1.556,1.701,0.777,1.714],"Commercial Auto":[6.41,7.069,8.657,4.826,6.563],"Commercial Property":[1.96,2.113,3.795,4.176,3.843],"Cyber":[0.354,0.406,0.485,0.36,0.572],"D&O":[0.436,0.536,0.597,0.346,0.501],"Fidelity":[0.147,0.152,0.12,0.07,0.118],"Marine":[0.183,0.2,0.228,0.147,0.213],"Pollution":[0.593,0.794,0.855,0.541,0.801],"Professional":[1.021,1.143,1.241,0.763,1.113],"Surety":[-0.066,0.22,0.3,0.113,1.036],"EXS/UMB":[1.949,1.777,2.439,1.328,1.682]},"NL":{"All Other":[0.0,0.001,0.0,0.001,0.0],"CGL":[0.883,0.151,0.1,0.053,0.147],"Commercial Auto":[0.64,0.661,0.429,0.255,0.618],"Commercial Property":[0.311,0.191,0.223,0.241,0.299],"Cyber":[0.109,0.102,0.0,0.0,0.0],"D&O":[0.141,0.025,0.011,0.021,0.045],"Fidelity":[0.013,0.011,0.0,0.007,0.013],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.221,0.142,0.113,0.078,0.003],"Professional":[0.033,0.016,0.018,0.009,0.014],"Surety":[-0.038,0.168,0.085,0.03,0.31],"EXS/UMB":[0.105,0.094,0.071,0.035,0.081]},"NT":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.051,-0.003,0.027,0.039,0.015],"Commercial Auto":[0.025,-0.003,0.072,0.067,0.075],"Commercial Property":[0.111,-0.007,0.337,0.109,0.071],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.0,0.0,0.0,0.0,0.0],"Fidelity":[0.0,0.0,0.001,0.105,0.098],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.024,0.0,0.0,0.0,0.0],"Professional":[0.0,0.0,0.096,0.009,0.009],"Surety":[0.0,0.0,0.124,0.005,0.001],"EXS/UMB":[0.017,-0.001,0.014,0.017,0.0]},"NS":{"All Other":[0.001,0.003,0.003,0.002,0.004],"CGL":[0.799,0.957,1.131,0.815,0.439],"Commercial Auto":[0.989,1.251,0.958,0.972,1.202],"Commercial Property":[0.716,0.833,1.535,1.029,1.057],"Cyber":[0.072,0.019,0.048,0.04,0.181],"D&O":[1.138,1.017,0.539,0.484,0.895],"Fidelity":[0.232,0.195,0.001,0.169,0.187],"Marine":[0.005,0.005,0.041,0.028,0.03],"Pollution":[0.545,0.434,0.64,0.485,0.62],"Professional":[0.187,0.278,0.432,0.186,0.251],"Surety":[0.083,0.159,0.077,4.366,0.407],"EXS/UMB":[2.568,2.816,2.804,2.576,3.016]},"NU":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.048,0.044,0.127,0.123,0.112],"Commercial Auto":[0.01,0.01,0.03,0.01,0.021],"Commercial Property":[0.19,0.028,0.165,0.016,0.005],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.0,0.0,0.0,0.0,0.0],"Fidelity":[0.003,0.001,0.002,0.0,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.0,0.0,0.0,0.0,0.0],"Professional":[0.0,0.0,0.0,0.0,0.0],"Surety":[0.0,0.002,0.002,0.0,0.0],"EXS/UMB":[0.0,0.0,0.0,0.0,0.0]},"ON":{"All Other":[0.808,0.834,0.833,1.109,1.022],"CGL":[25.553,29.9,31.443,38.413,32.526],"Commercial Auto":[44.432,47.367,36.236,44.003,31.76],"Commercial Property":[56.155,69.765,73.989,108.216,74.028],"Cyber":[10.074,10.17,9.658,11.309,9.917],"D&O":[33.145,32.217,26.119,33.021,24.163],"Fidelity":[8.032,8.115,3.445,8.299,7.314],"Marine":[2.317,2.734,2.296,3.581,3.296],"Pollution":[6.416,7.775,8.154,7.92,6.219],"Professional":[20.628,23.506,25.804,30.925,23.33],"Surety":[14.393,15.746,10.764,16.671,14.917],"EXS/UMB":[34.296,38.707,31.595,43.049,32.308]},"OOC":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[19.961,23.762,31.985,27.999,2.17],"Commercial Auto":[0.305,0.507,0.679,0.843,0.087],"Commercial Property":[13.499,8.65,6.147,11.553,0.865],"Cyber":[0.047,0.0,0.0,0.0,0.0],"D&O":[0.0,0.0,0.0,0.0,0.0],"Fidelity":[0.0,0.0,0.0,0.0,0.0],"Marine":[0.0,0.133,0.0,0.0,0.0],"Pollution":[0.02,0.0,0.0,0.257,0.0],"Professional":[0.0,0.0,0.0,0.0,0.004],"Surety":[0.678,0.383,-0.318,3.176,0.359],"EXS/UMB":[3.031,3.967,5.15,4.821,0.413]},"PE":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.211,0.218,0.118,0.099,0.016],"Commercial Auto":[0.358,0.521,0.38,0.45,0.461],"Commercial Property":[0.229,0.229,0.158,0.171,0.163],"Cyber":[0.015,0.0,0.0,0.0,0.0],"D&O":[0.082,-0.096,0.07,0.024,0.016],"Fidelity":[0.0,0.0,0.001,0.006,0.019],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.0,0.0,0.0,0.0,0.0],"Professional":[0.032,0.041,0.048,0.015,0.018],"Surety":[0.0,-0.001,0.091,0.038,0.048],"EXS/UMB":[0.499,0.551,0.425,0.12,0.02]},"QC":{"All Other":[0.113,0.162,0.215,0.128,0.304],"CGL":[11.878,13.909,14.905,8.353,11.022],"Commercial Auto":[5.894,4.673,5.256,3.502,5.434],"Commercial Property":[19.221,26.825,30.995,15.787,23.418],"Cyber":[6.562,8.661,7.77,4.267,6.955],"D&O":[18.057,12.673,11.233,6.161,10.023],"Fidelity":[3.395,3.681,2.079,2.252,3.777],"Marine":[1.295,1.175,1.596,0.722,1.35],"Pollution":[2.377,1.539,2.147,1.16,1.395],"Professional":[11.761,11.428,14.252,5.478,7.921],"Surety":[1.453,3.395,4.624,1.565,1.353],"EXS/UMB":[5.79,7.96,7.968,3.472,5.508]},"SK":{"All Other":[0.0,-0.107,0.0,0.0,0.0],"CGL":[0.333,0.253,0.613,0.576,0.651],"Commercial Auto":[2.364,2.145,2.324,2.664,2.366],"Commercial Property":[2.092,1.523,2.104,1.536,1.313],"Cyber":[0.276,0.202,0.176,0.135,0.301],"D&O":[0.725,0.645,0.681,0.544,0.664],"Fidelity":[0.134,0.163,0.023,0.053,0.054],"Marine":[0.006,0.027,0.0,0.0,0.0],"Pollution":[0.342,0.089,0.132,0.222,0.15],"Professional":[0.342,0.557,0.493,0.599,0.527],"Surety":[0.612,0.678,1.745,0.693,0.63],"EXS/UMB":[0.244,0.38,0.676,0.609,0.349]},"YT":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.237,0.268,0.238,0.154,0.203],"Commercial Auto":[-0.012,0.033,0.029,0.022,0.049],"Commercial Property":[0.144,0.197,0.192,0.105,0.103],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.09,0.091,0.071,0.055,0.006],"Fidelity":[0.0,0.0,0.0,0.0,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.01,0.002,0.002,0.007,0.002],"Professional":[0.016,0.002,0.002,0.002,0.005],"Surety":[0.118,0.112,-0.001,0.001,0.002],"EXS/UMB":[0.075,0.08,0.067,0.052,0.067]}}},"l":{"fy":{"AB":{"All Other":[4.359,5.91,0.997,0.958,0.766,5.027,13.711,14.017,2.22,1.493],"CGL":[3.045,4.252,5.59,13.504,13.36,16.452,24.043,19.078,19.464,58.949],"Commercial Auto":[6.714,7.523,8.887,10.043,11.636,13.618,15.561,16.363,14.097,18.464],"Commercial Property":[14.43,22.198,28.532,31.471,48.384,37.121,40.277,36.209,36.839,35.972],"Cyber":[0.0,0.017,0.0,0.383,0.511,0.896,1.293,1.684,2.127,2.529],"D&O":[7.69,7.181,7.691,8.668,11.829,13.641,14.555,13.989,14.585,14.638],"Fidelity":[0.595,0.729,1.171,1.346,0.759,1.607,1.911,1.965,2.297,1.92],"Marine":[0.296,0.382,0.369,0.472,3.003,0.681,0.536,0.704,0.578,0.685],"Pollution":[1.247,1.393,1.027,2.423,2.675,3.176,3.874,3.683,4.035,4.239],"Professional":[4.301,3.733,5.089,4.93,2.996,3.437,3.629,3.342,3.749,2.633],"Surety":[4.849,4.078,6.538,4.691,9.351,5.733,13.991,13.486,27.928,36.297],"EXS/UMB":[5.743,6.263,7.14,11.677,12.803,12.218,14.705,14.892,12.059,11.763]},"BC":{"All Other":[0.163,1.205,4.376,4.288,3.452,10.001,6.188,5.038,6.716,7.326],"CGL":[1.94,2.401,3.012,4.372,4.35,5.494,5.504,5.628,6.061,7.215],"Commercial Auto":[0.779,1.165,1.29,1.302,1.663,1.918,2.274,1.739,1.65,1.106],"Commercial Property":[7.331,14.826,13.962,27.507,51.199,58.393,64.692,53.364,44.313,31.784],"Cyber":[0.0,0.0,0.0,0.112,0.139,0.342,0.398,0.901,0.526,1.533],"D&O":[4.362,4.208,5.322,6.175,10.012,10.599,10.928,9.766,9.64,8.191],"Fidelity":[0.614,0.739,0.964,1.243,0.692,1.911,2.111,2.295,2.555,2.356],"Marine":[0.799,0.994,1.733,2.391,3.029,3.08,3.319,3.342,4.105,4.022],"Pollution":[0.187,0.25,0.467,1.077,0.787,1.932,2.718,2.482,2.382,2.265],"Professional":[3.388,2.16,3.992,6.799,9.432,5.78,4.46,7.138,8.22,7.23],"Surety":[7.657,3.095,4.916,6.344,4.803,10.024,10.924,14.248,28.441,16.563],"EXS/UMB":[1.894,2.388,2.417,4.278,4.344,5.813,6.048,5.929,4.639,3.802]},"MB":{"All Other":[2.203,4.523,12.853,12.833,14.091,16.449,23.538,42.442,54.587,68.601],"CGL":[0.146,0.206,0.184,0.314,0.314,0.353,0.584,0.922,0.755,0.702],"Commercial Auto":[0.134,0.167,0.16,0.15,0.196,0.248,0.37,0.398,0.253,0.211],"Commercial Property":[1.121,1.156,1.713,2.524,5.831,5.079,6.266,7.455,7.11,6.383],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.037,0.192,0.245,0.276],"D&O":[0.34,0.501,0.44,0.493,0.578,0.724,0.83,0.89,0.977,1.252],"Fidelity":[0.087,0.098,0.143,0.2,0.16,0.394,0.405,0.396,0.469,0.403],"Marine":[0.033,0.035,0.082,0.121,0.098,0.107,0.095,0.081,0.136,0.146],"Pollution":[0.154,0.143,0.114,0.155,0.361,0.295,0.387,0.323,0.372,0.459],"Professional":[0.442,0.379,0.569,0.952,0.877,0.608,0.725,0.536,0.219,0.361],"Surety":[0.429,0.122,0.259,0.611,0.751,0.418,0.967,1.107,1.968,2.525],"EXS/UMB":[0.506,0.559,0.567,0.97,1.457,1.0,1.461,1.306,0.8,1.045]},"NB":{"All Other":[53.423,81.771,26.044,25.998,20.91,16.152,10.892,5.678,1.336,0.057],"CGL":[0.151,0.201,0.242,0.409,0.408,0.616,0.692,0.561,0.739,0.949],"Commercial Auto":[0.449,0.571,0.63,0.939,1.346,0.999,0.991,1.298,1.371,0.574],"Commercial Property":[1.016,1.319,5.161,8.886,8.539,11.808,8.932,9.605,9.645,11.287],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.012,0.007,0.0,0.048,0.073],"D&O":[0.113,0.133,0.168,0.239,0.189,0.436,0.525,0.45,0.534,0.786],"Fidelity":[0.07,0.067,0.072,0.033,0.058,0.102,0.107,0.132,0.159,0.209],"Marine":[0.433,0.432,0.441,0.538,0.545,0.576,0.57,0.708,0.396,0.656],"Pollution":[0.189,0.229,0.286,0.231,0.286,0.348,0.288,0.431,0.383,0.281],"Professional":[0.169,0.193,0.206,0.271,0.222,0.133,0.102,0.106,0.041,0.088],"Surety":[0.092,0.11,0.092,0.093,0.103,-0.001,0.222,0.246,0.162,0.063],"EXS/UMB":[0.436,0.49,0.504,1.006,1.209,1.229,1.535,1.572,1.734,1.344]},"NL":{"All Other":[0.024,0.042,0.048,0.047,0.04,0.065,0.041,0.01,0.0,0.0],"CGL":[0.083,0.143,0.14,0.192,0.189,0.236,0.349,0.294,0.414,0.441],"Commercial Auto":[0.163,0.162,0.243,0.226,0.244,0.362,0.486,0.396,0.393,0.478],"Commercial Property":[0.61,0.574,2.989,3.585,4.658,4.736,5.171,5.664,5.117,4.824],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.039],"D&O":[0.172,0.095,0.228,0.177,0.234,0.475,0.304,0.41,0.515,0.321],"Fidelity":[0.045,0.04,0.063,0.107,0.044,0.292,0.16,0.177,0.194,0.165],"Marine":[0.327,0.452,0.999,1.217,1.458,1.463,1.69,1.135,0.815,1.089],"Pollution":[0.04,0.088,0.094,0.104,0.099,0.21,0.269,0.263,0.609,0.564],"Professional":[0.046,0.205,0.091,0.142,0.154,0.139,0.044,0.041,0.054,0.066],"Surety":[0.685,2.003,0.031,0.207,0.106,0.666,0.719,0.628,0.651,0.775],"EXS/UMB":[0.0,0.019,0.092,0.32,0.406,0.399,0.472,0.453,0.527,0.283]},"NT":{"All Other":[0.004,0.004,0.005,0.005,0.004,0.0,0.0,0.0,0.0,0.0],"CGL":[0.0,0.0,0.0,0.001,0.001,0.001,0.002,0.002,0.002,0.001],"Commercial Auto":[0.038,0.032,0.042,0.027,0.021,0.031,0.042,0.053,0.031,0.045],"Commercial Property":[0.046,0.377,0.303,0.267,0.185,0.212,0.454,0.309,0.216,0.417],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.0,0.0,0.0,0.0,0.0,0.0,0.058,0.018,0.018,0.089],"Fidelity":[0.0,0.0,0.0,0.0,0.0,0.033,0.036,0.036,0.036,0.043],"Marine":[0.0,0.017,0.067,0.076,0.032,0.0,0.169,0.401,0.346,0.33],"Pollution":[0.01,0.033,0.035,0.032,0.021,0.07,0.04,0.059,0.043,0.042],"Professional":[0.001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Surety":[0.0,0.042,0.0,0.0,0.0,0.0,0.004,0.0,0.0,0.0],"EXS/UMB":[0.0,0.0,0.0,0.0,0.0,0.001,0.0,0.0,0.0,0.0]},"NS":{"All Other":[0.436,0.475,0.115,0.115,0.184,0.176,0.579,0.051,0.181,0.0],"CGL":[0.0,0.038,0.045,0.163,0.162,0.261,0.54,0.683,0.704,0.936],"Commercial Auto":[0.167,0.265,0.314,0.337,0.346,0.544,0.783,1.03,0.769,0.94],"Commercial Property":[0.232,1.137,3.442,1.218,3.594,4.384,3.678,5.754,4.928,6.125],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.027,0.027,0.045,0.022,0.027],"D&O":[0.28,0.333,0.418,0.404,0.907,0.711,0.877,0.714,1.004,0.975],"Fidelity":[0.236,0.212,0.201,0.099,0.015,0.188,0.144,0.174,0.377,0.205],"Marine":[0.877,0.402,0.733,1.166,1.391,2.318,1.494,1.707,1.181,1.537],"Pollution":[0.182,0.127,0.148,0.221,0.167,0.519,0.483,0.633,0.542,0.88],"Professional":[0.163,0.504,0.416,0.429,0.362,0.605,0.718,0.616,0.653,0.679],"Surety":[0.144,0.29,0.196,0.159,0.563,1.02,0.535,0.615,1.575,5.273],"EXS/UMB":[0.071,0.067,0.107,0.158,0.323,0.591,0.604,0.711,0.756,0.791]},"NU":{"All Other":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"CGL":[0.0,0.0,0.0,0.003,0.003,0.003,0.004,0.0,0.001,0.005],"Commercial Auto":[0.005,0.003,0.005,0.007,0.008,0.009,0.025,0.035,0.033,0.047],"Commercial Property":[0.026,0.248,0.187,0.273,0.335,0.473,0.296,1.481,1.015,0.767],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.0,0.0,0.012,0.007,0.0,0.005,0.013,0.028,0.071,0.027],"Fidelity":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.002,0.008,0.0],"Marine":[0.0,0.0,0.003,0.0,0.308,0.501,0.195,0.0,0.0,0.0],"Pollution":[0.003,0.001,0.001,0.001,0.001,0.006,0.034,0.015,0.044,0.498],"Professional":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Surety":[0.0,0.0,0.0,0.0,0.626,0.627,0.762,0.251,0.405,1.589],"EXS/UMB":[0.0,0.0,0.0,0.0,0.004,0.009,0.009,0.013,0.014,0.019]},"ON":{"All Other":[4.678,6.684,9.974,9.908,9.37,19.292,15.642,14.556,13.194,14.156],"CGL":[8.383,10.16,9.135,18.209,17.545,20.589,21.082,27.197,27.164,24.186],"Commercial Auto":[10.49,11.35,12.491,11.548,14.346,15.612,23.274,15.713,35.993,37.773],"Commercial Property":[15.62,13.073,22.712,36.735,38.031,58.883,68.721,66.222,75.023,50.823],"Cyber":[0.091,0.02,0.002,1.221,2.36,4.515,7.24,7.367,8.013,7.941],"D&O":[12.903,14.744,14.507,18.47,23.802,36.387,38.2,36.85,34.188,35.042],"Fidelity":[4.746,5.187,5.859,5.995,4.239,0.843,1.128,0.668,1.188,3.569],"Marine":[2.103,2.75,3.521,8.15,9.289,8.2,9.445,8.8,9.119,6.964],"Pollution":[3.242,3.991,4.493,8.22,8.726,10.305,12.329,13.163,13.575,12.832],"Professional":[14.996,13.751,11.706,16.949,16.169,19.722,15.393,15.732,14.81,13.481],"Surety":[5.975,11.978,6.869,8.4,6.765,11.383,26.899,22.268,25.816,39.021],"EXS/UMB":[7.916,9.11,9.451,13.662,17.289,21.953,21.897,23.95,22.357,17.473]},"OOC":{"All Other":[-0.322,-0.015,0.0,0.0,1.213,-0.013,0.0,0.0,0.0,0.0],"CGL":[20.764,28.964,34.031,29.644,28.004,40.241,32.935,34.972,29.542,44.666],"Commercial Auto":[8.043,16.27,11.654,17.015,16.061,14.902,15.295,29.2,36.327,40.251],"Commercial Property":[40.078,19.974,48.284,37.857,53.467,32.189,51.892,25.996,68.499,64.094],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.004,0.008,0.009,-0.013,0.0,0.008,0.0,0.0,0.012,0.0],"Fidelity":[0.0,0.115,0.484,0.121,0.118,0.146,0.0,0.0,0.041,0.09],"Marine":[5.154,4.922,2.76,2.488,3.116,2.381,3.113,2.526,0.452,0.105],"Pollution":[0.0,0.016,0.018,0.016,0.437,0.0,0.103,-0.085,0.002,0.0],"Professional":[0.0,0.0,0.0,0.0,0.0,0.01,0.011,0.0,0.242,0.201],"Surety":[7.534,6.718,11.982,11.536,10.886,16.184,10.359,12.198,21.045,33.183],"EXS/UMB":[5.631,5.794,6.792,8.557,7.502,1.277,19.617,15.387,23.546,25.704]},"PE":{"All Other":[0.001,0.004,0.001,0.001,0.001,0.0,0.0,0.0,0.0,0.0],"CGL":[0.017,0.023,0.017,0.023,0.023,0.0,0.168,0.163,0.144,0.13],"Commercial Auto":[0.026,0.016,0.028,0.078,0.067,0.075,0.075,0.074,0.146,0.1],"Commercial Property":[0.023,0.006,0.016,0.309,0.375,0.485,0.745,0.861,0.715,0.542],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.019,0.006,0.027,0.057,0.097,0.046,0.135,0.049,0.08,0.061],"Fidelity":[0.001,0.0,0.012,0.029,0.041,0.072,0.158,0.005,0.001,0.046],"Marine":[0.144,0.131,0.153,0.163,0.19,0.089,0.147,0.117,0.15,0.395],"Pollution":[0.003,0.004,0.0,0.0,0.025,0.002,0.003,0.034,0.012,0.016],"Professional":[0.001,0.015,0.022,0.004,0.004,0.01,0.004,0.01,0.0,0.0],"Surety":[0.001,0.001,0.001,0.0,0.009,0.019,0.001,0.006,0.305,0.019],"EXS/UMB":[0.0,0.0,0.0,0.0,0.016,0.013,0.051,0.083,0.053,0.113]},"QC":{"All Other":[1.248,2.62,2.087,2.057,6.793,6.192,15.142,35.67,49.287,48.774],"CGL":[4.426,4.344,5.166,8.39,8.283,11.904,14.343,14.053,13.851,14.572],"Commercial Auto":[1.619,1.717,1.54,2.061,2.232,3.428,4.801,5.773,3.863,3.905],"Commercial Property":[5.604,6.73,9.993,13.009,15.444,22.644,23.815,21.157,27.631,24.446],"Cyber":[0.0,0.0,0.01,0.613,0.729,1.516,2.501,3.508,4.402,5.602],"D&O":[5.419,4.996,6.094,8.257,15.588,16.343,15.691,13.491,12.266,11.43],"Fidelity":[1.487,1.807,2.261,2.278,1.511,3.256,3.538,3.68,3.39,4.108],"Marine":[1.823,2.713,2.072,2.11,2.71,2.583,2.292,2.345,2.744,2.548],"Pollution":[0.93,1.193,1.821,1.914,1.731,3.235,3.477,3.745,5.265,6.95],"Professional":[3.603,3.408,3.544,4.99,3.692,5.948,5.472,4.078,3.95,3.682],"Surety":[3.837,3.23,2.257,3.991,4.133,5.128,5.35,7.473,17.032,8.054],"EXS/UMB":[2.65,2.3,3.251,4.378,10.354,8.946,11.774,11.294,11.24,9.965]},"SK":{"All Other":[0.017,0.016,0.072,0.072,0.65,2.151,3.354,4.49,5.279,6.326],"CGL":[0.206,0.106,0.143,0.26,0.26,1.439,2.002,2.11,2.105,1.873],"Commercial Auto":[0.231,0.274,0.251,0.343,0.44,0.402,0.526,0.663,0.627,0.635],"Commercial Property":[2.652,2.853,3.924,5.74,8.137,5.124,8.434,6.593,8.69,6.589],"Cyber":[0.0,0.0,0.0,0.024,0.027,0.039,0.064,0.069,0.066,0.066],"D&O":[0.411,0.365,0.608,0.618,0.619,0.895,0.925,0.806,0.884,0.932],"Fidelity":[0.035,0.057,0.115,0.102,0.124,0.209,0.269,0.194,0.245,0.246],"Marine":[0.0,0.0,0.0,0.087,0.105,0.113,0.149,0.12,0.004,0.035],"Pollution":[0.017,0.017,0.017,0.309,0.317,0.272,0.187,0.345,0.143,0.274],"Professional":[0.239,0.13,0.251,0.279,0.348,0.533,0.53,0.546,0.445,0.416],"Surety":[0.117,0.056,0.279,0.385,0.734,1.723,1.662,1.46,2.776,1.583],"EXS/UMB":[0.408,0.396,0.288,0.92,1.05,1.093,1.33,1.518,1.572,1.405]},"YT":{"All Other":[0.0,0.001,0.001,0.001,0.001,0.0,0.0,0.0,0.0,0.0],"CGL":[0.0,0.0,0.0,0.005,0.004,0.004,0.004,0.005,0.005,0.0],"Commercial Auto":[0.001,0.006,0.016,0.023,0.006,0.009,0.006,0.032,0.023,0.064],"Commercial Property":[0.058,0.065,0.164,0.428,0.556,0.399,0.48,0.463,0.612,0.214],"Cyber":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"D&O":[0.037,0.019,0.032,0.038,0.165,0.044,0.025,-0.009,0.078,0.024],"Fidelity":[0.0,0.0,0.0,0.0,0.0,0.001,0.0,0.0,0.004,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Pollution":[0.009,0.039,0.048,0.066,0.063,0.03,0.1,0.085,0.089,0.121],"Professional":[0.002,0.002,0.002,0.022,0.045,0.048,0.051,0.003,0.038,0.023],"Surety":[0.0,0.0,0.056,0.045,0.121,0.202,0.043,0.418,0.091,0.32],"EXS/UMB":[0.0,0.0,0.0,0.055,0.081,0.086,0.096,0.105,0.109,0.08]}},"h1":{"AB":{"All Other":[1.894,0.621,1.289,0.609,2.514],"CGL":[15.938,12.847,13.115,52.481,52.385],"Commercial Auto":[5.155,6.03,5.691,5.291,6.939],"Commercial Property":[24.905,23.834,20.201,20.664,21.617],"Cyber":[0.398,0.514,0.611,0.814,1.106],"D&O":[5.595,5.972,5.803,5.868,6.472],"Fidelity":[0.812,0.761,0.987,0.817,1.062],"Marine":[0.405,0.309,0.402,0.307,0.232],"Pollution":[1.251,1.676,1.509,1.657,1.83],"Professional":[1.322,1.209,1.526,0.913,1.45],"Surety":[10.22,7.17,6.627,12.069,20.439],"EXS/UMB":[5.835,7.34,5.589,6.422,5.129]},"BC":{"All Other":[3.191,3.249,5.767,5.867,5.141],"CGL":[2.613,2.962,2.872,3.681,3.181],"Commercial Auto":[0.588,0.731,0.747,0.293,0.326],"Commercial Property":[33.867,28.198,30.334,19.248,15.373],"Cyber":[0.298,0.563,0.197,0.711,0.737],"D&O":[4.419,4.036,3.445,3.298,4.544],"Fidelity":[1.047,0.99,1.164,1.034,0.696],"Marine":[2.111,1.797,2.075,2.114,2.021],"Pollution":[0.851,0.981,1.171,1.043,1.241],"Professional":[1.969,5.212,5.752,5.81,4.476],"Surety":[5.029,5.293,15.146,9.33,9.663],"EXS/UMB":[2.004,2.677,2.324,1.803,1.395]},"MB":{"All Other":[10.647,20.328,25.721,28.863,36.099],"CGL":[0.457,0.67,0.589,0.54,0.816],"Commercial Auto":[0.14,0.204,0.133,0.096,0.067],"Commercial Property":[3.862,4.918,5.266,4.556,4.13],"Cyber":[0.0,0.135,0.137,0.124,0.139],"D&O":[0.307,0.353,0.48,0.599,0.541],"Fidelity":[0.083,0.084,0.089,0.052,0.098],"Marine":[0.072,0.071,0.126,0.123,0.123],"Pollution":[0.191,0.138,0.109,0.165,0.201],"Professional":[0.476,0.33,0.117,0.302,0.193],"Surety":[0.549,0.814,1.178,0.611,1.543],"EXS/UMB":[1.117,0.888,0.587,0.512,0.234]},"NB":{"All Other":[6.562,3.83,0.948,0.002,0.591],"CGL":[0.171,0.161,0.221,0.361,0.39],"Commercial Auto":[0.177,0.306,0.231,0.594,0.31],"Commercial Property":[8.5,8.308,8.394,11.121,9.119],"Cyber":[0.007,0.0,0.0,0.0,0.0],"D&O":[0.269,0.267,0.243,0.3,0.321],"Fidelity":[0.086,0.119,0.133,0.115,0.108],"Marine":[0.421,0.55,0.232,0.353,0.579],"Pollution":[0.091,0.197,0.193,0.135,0.311],"Professional":[0.048,0.069,-0.001,0.016,0.042],"Surety":[0.163,0.154,0.051,0.023,0.325],"EXS/UMB":[0.619,0.717,0.856,0.953,0.649]},"NL":{"All Other":[0.0,0.0,0.0,0.0,0.592],"CGL":[0.188,0.143,0.251,0.352,0.613],"Commercial Auto":[0.191,0.203,0.21,0.206,0.359],"Commercial Property":[3.355,3.429,3.088,3.416,3.647],"Cyber":[0.0,0.0,0.0,0.039,0.143],"D&O":[0.11,0.282,0.183,0.126,0.15],"Fidelity":[0.009,0.026,0.016,0.0,0.024],"Marine":[0.63,0.501,0.154,0.404,0.481],"Pollution":[0.144,0.108,0.2,0.27,0.243],"Professional":[0.015,0.014,0.017,0.029,0.105],"Surety":[0.12,0.308,0.267,0.523,0.884],"EXS/UMB":[0.267,0.282,0.338,0.143,0.258]},"NT":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.001,0.001,0.0,0.0,0.0],"Commercial Auto":[0.017,0.007,0.008,0.037,0.011],"Commercial Property":[0.406,0.151,0.07,0.16,0.049],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.058,0.018,0.018,0.089,0.054],"Fidelity":[0.0,0.036,0.036,0.043,0.0],"Marine":[0.0,0.224,0.131,0.33,0.35],"Pollution":[0.04,0.038,0.019,0.017,0.018],"Professional":[0.0,0.0,0.0,0.0,0.0],"Surety":[0.0,0.0,0.0,0.0,0.0],"EXS/UMB":[0.0,0.0,0.0,0.0,0.0]},"NS":{"All Other":[0.299,0.16,0.161,0.0,0.055],"CGL":[0.2,0.319,0.317,0.344,0.419],"Commercial Auto":[0.312,0.422,0.32,0.548,0.312],"Commercial Property":[2.856,3.978,3.463,5.039,3.819],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.403,0.301,0.428,0.383,0.247],"Fidelity":[0.077,0.076,0.137,0.139,0.091],"Marine":[0.429,0.722,0.618,0.901,0.703],"Pollution":[0.287,0.268,0.368,0.605,0.961],"Professional":[0.218,0.28,0.182,0.234,0.385],"Surety":[0.165,0.299,0.848,4.71,1.822],"EXS/UMB":[0.308,0.411,0.53,0.461,0.367]},"NU":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.004,0.0,0.001,0.003,0.001],"Commercial Auto":[0.016,0.024,0.016,0.036,0.059],"Commercial Property":[0.122,0.766,0.281,0.459,0.285],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.009,0.006,0.004,0.015,0.0],"Fidelity":[0.0,0.0,0.0,0.0,0.0],"Marine":[0.0,0.0,0.0,0.0,0.155],"Pollution":[0.008,0.014,0.038,0.495,0.516],"Professional":[0.0,0.0,0.0,0.0,0.0],"Surety":[0.4,0.067,0.192,1.19,0.535],"EXS/UMB":[0.006,0.008,0.012,0.012,0.009]},"ON":{"All Other":[10.431,7.74,7.538,12.264,4.85],"CGL":[26.627,15.821,10.775,30.62,21.293],"Commercial Auto":[7.994,4.615,10.456,17.98,14.596],"Commercial Property":[34.222,34.204,31.271,24.88,47.466],"Cyber":[2.418,3.157,1.827,3.288,2.934],"D&O":[14.359,14.939,13.029,13.413,13.231],"Fidelity":[1.003,0.719,0.557,1.989,1.482],"Marine":[4.221,4.389,4.58,3.088,3.932],"Pollution":[6.553,4.688,6.25,6.207,6.919],"Professional":[6.494,7.18,5.206,6.1,6.179],"Surety":[18.031,9.269,14.508,21.888,21.468],"EXS/UMB":[12.343,12.455,10.359,7.766,9.981]},"OOC":{"All Other":[0.0,2.875,0.0,0.0,0.0],"CGL":[12.938,0.0,10.347,13.95,1.985],"Commercial Auto":[6.666,15.463,14.363,15.62,13.605],"Commercial Property":[45.049,21.816,52.027,55.985,50.022],"Cyber":[0.0,11.454,0.0,0.0,0.0],"D&O":[0.0,0.0,0.0,0.0,0.0],"Fidelity":[0.0,0.0,0.0,0.019,0.052],"Marine":[1.215,1.172,0.321,0.033,0.069],"Pollution":[0.12,-0.078,0.002,0.0,0.0],"Professional":[0.011,0.0,0.23,0.229,0.0],"Surety":[3.958,6.781,13.583,16.013,17.372],"EXS/UMB":[1.161,8.037,16.945,7.621,15.888]},"PE":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.041,0.061,0.057,0.084,0.109],"Commercial Auto":[0.097,0.003,0.11,0.107,0.078],"Commercial Property":[0.051,0.156,0.261,0.408,0.326],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.016,0.003,0.013,0.017,0.013],"Fidelity":[0.0,0.0,0.001,0.001,0.002],"Marine":[0.018,0.013,0.018,0.16,0.154],"Pollution":[0.002,0.008,0.01,0.007,0.068],"Professional":[0.004,0.007,0.0,0.0,0.0],"Surety":[0.001,0.004,0.012,0.016,0.049],"EXS/UMB":[0.01,0.035,0.031,0.064,0.052]},"QC":{"All Other":[8.52,16.868,22.931,21.806,26.213],"CGL":[5.449,5.298,5.613,5.769,6.249],"Commercial Auto":[1.537,2.094,1.8,1.51,1.272],"Commercial Property":[12.363,10.408,11.323,10.651,11.915],"Cyber":[1.523,2.14,2.06,2.638,3.01],"D&O":[7.637,5.99,6.115,5.601,4.658],"Fidelity":[1.448,1.535,1.423,1.586,1.244],"Marine":[0.626,0.681,0.894,0.889,1.044],"Pollution":[1.37,2.028,2.603,3.28,2.833],"Professional":[3.663,2.396,2.011,1.999,3.014],"Surety":[2.992,4.982,10.247,4.193,3.136],"EXS/UMB":[4.896,4.842,4.614,4.256,3.885]},"SK":{"All Other":[1.464,2.101,2.536,2.676,3.229],"CGL":[0.95,0.919,1.035,1.136,1.116],"Commercial Auto":[0.276,0.303,0.324,0.296,0.384],"Commercial Property":[4.537,3.052,4.357,3.519,3.688],"Cyber":[0.0,0.0,0.0,0.0,0.025],"D&O":[0.633,0.539,0.589,0.704,0.667],"Fidelity":[0.148,0.04,0.11,0.129,0.04],"Marine":[0.023,0.004,0.004,0.038,0.039],"Pollution":[0.135,0.225,0.089,0.211,0.155],"Professional":[0.205,0.203,0.148,0.178,0.217],"Surety":[0.846,0.84,1.53,0.808,1.783],"EXS/UMB":[0.448,0.203,0.276,0.166,0.07]},"YT":{"All Other":[0.0,0.0,0.0,0.0,0.0],"CGL":[0.004,0.004,0.005,0.0,0.0],"Commercial Auto":[0.001,0.007,0.004,0.049,0.015],"Commercial Property":[0.323,0.099,0.527,0.112,0.659],"Cyber":[0.0,0.0,0.0,0.0,0.0],"D&O":[0.025,0.0,0.03,0.01,0.009],"Fidelity":[0.0,0.0,0.0,0.0,0.0],"Marine":[0.0,0.0,0.0,0.0,0.0],"Pollution":[0.061,0.068,0.076,0.081,0.003],"Professional":[0.0,0.0,0.015,0.0,0.0],"Surety":[0.004,0.343,0.107,0.286,-0.004],"EXS/UMB":[0.096,0.098,0.109,0.07,0.052]}}}};
+let ML="",MU="d";
+const PALL=["ON","QC","AB","BC","MB","SK","NB","NS","NL","PE","YT","NT","NU","OOC"];
+function pvVal(co,per,a,line){const p=PV[co][per][a];if(!p)return null;if(line)return p[line]||null;
+ const ks=Object.keys(p),n=p[ks[0]].length;return [...Array(n)].map((_,i)=>ks.reduce((s,k)=>s+p[k][i],0))}
+const lastv=(co,per,a,line)=>{const v=pvVal(co,per,a,line);return v?v[v.length-1]:0};
+const FG=v=>MU==="p"?pct(v):moneyD(v);const GF=()=>MU==="p"?"p":"md";
+const UW=()=>MU==="p"?"compound annual growth (CAGR)":"growth in dollars";
+function gwin(co,per,a,line){const v=pvVal(co,per,a,line);if(!v)return null;const n=v.length;if(MW>n-1)return null;
+ const f=v[n-1-MW],t=v[n-1];if(MU==="p"){if(f<=0||t<=0)return null;return (Math.pow(t/f,1/MW)-1)*100}return t-f}
+function gData(a){const per=MP==="fy25"?"fy":"h1",c=gwin("c",per,a,ML),l=gwin("l",per,a,ML);return(c==null||l==null)?null:[c,l]}
+function natG(co){const per=MP==="fy25"?"fy":"h1";const sums=PALL.map(a=>pvVal(co,per,a,ML)).filter(Boolean);const n=sums[0].length;
+ const v=[...Array(n)].map((_,i)=>sums.reduce((s,x)=>s+x[i],0));if(MW>n-1)return null;const f=v[n-1-MW],t=v[n-1];
+ return MU==="p"?(f>0&&t>0?(Math.pow(t/f,1/MW)-1)*100:null):t-f}
+function syncPrem(){["fy25","h126"].forEach(k=>{const per=k==="fy25"?"fy":"h1";
+ [["c","prem"],["l","premL"]].forEach(([co,key])=>{const tot=PALL.reduce((s,a)=>s+lastv(co,per,a,ML),0),vals={};
+  D.provOrder.forEach(a=>{const v=lastv(co,per,a,ML);vals[a]={v,s:tot?v/tot*100:0}});const oo=lastv(co,per,"OOC",ML);
+  D[key]=D[key]||{};D[key][k]={vals,cut:{},ooc:{v:oo,s:tot?oo/tot*100:0}}})})}
+function growthCell(a){const g=gData(a),nm=D.provNames[a];
+ if(!g)return{f:C.g10,t:C.g81,v:"not meaningful",tip:nm+": not meaningful for this window or line"};
+ const v=g[0],neg=v<0,flat=Math.abs(v)<0.1;
+ return{f:flat?C.t40:neg?C.lb:C.lmt,t:neg?C.wh:C.lb,v:FG(v),tip:nm+": Chubb "+MW+"-year "+(MU==="p"?"CAGR ":"growth ")+FG(v)+", LM Canada "+FG(g[1])}}
+function cellCmp(a,m,per){
+ const pp=perf(per),nm=D.provNames[a];
+ if(m==="share"){const x=pp.chubbS[a],y=pp.branchS[a],r=y/(x+y);
+  return{split:r,t:C.lb,v:"LM "+y.toFixed(1)+"%, C "+x.toFixed(1)+"%",tip:nm+": LM Canada share "+y.toFixed(2)+"%, Chubb "+x.toFixed(2)+"%. LM Canada holds "+Math.round(r*100)+"% of the two combined"}}
+ if(m==="prem"){const x=D.prem[per].vals[a].v,y=D.premL[per].vals[a].v,r=(x+y)?y/(x+y):.5;
+  return{split:r,t:C.lb,v:"LM "+money(y)+", C "+money(x),tip:nm+": premium LM Canada "+money(y)+", Chubb "+money(x)}}
+ const g=gData(a);if(!g)return{f:C.g10,t:C.g81,v:"not meaningful",tip:nm+": not meaningful for this window or line"};
+ const x=g[0],y=g[1],lm=y>x,close=Math.abs(y-x)<(MU==="p"?0.5:1);
+ return{f:lm?(close?C.y40:C.ly):(close?C.t40:C.lmt),t:C.lb,v:"LM "+FG(y)+", C "+FG(x),tip:nm+": "+MW+"-year growth LM Canada "+FG(y)+", Chubb "+FG(x)};
+}
+/* a hard-edged gradient splits a tile: yellow for LM Canada’s part, teal for Chubb’s, with a white seam that slides from the middle into place */
+function splitDef(id,r){
+ const a=r.toFixed(3),b=Math.min(1,r+.01).toFixed(3),an=(to,from)=>REDUCE?"":'<animate attributeName="offset" from="'+from+'" to="'+to+'" dur="1.3s" begin="0.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".16 1 .3 1"/>';
+ return'<linearGradient id="'+id+'" x1="0" y1="0" x2="1" y2="0"><stop offset="'+a+'" stop-color="#FFD000">'+an(a,.5)+'</stop><stop offset="'+a+'" stop-color="#FFFFFF">'+an(a,.5)+'</stop><stop offset="'+b+'" stop-color="#FFFFFF">'+an(b,.51)+'</stop><stop offset="'+b+'" stop-color="#28A5AF">'+an(b,.51)+'</stop></linearGradient>';
+}
+function renderMap(boxId,cell){
+ const fa=21,fv=MC?13:16,Fn="Barlow, Arial, sans-serif";
+ let svg='<svg viewBox="0 0 1080 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Canada by province" preserveAspectRatio="xMidYMid meet">';
+ const cells={};D.provOrder.forEach(a=>cells[a]=cell(a));
+ let defs="";Object.keys(GEO).forEach(k=>{const cc=cells[GEOKEY[k]];if(cc.split!=null){const id="sp"+k+Date.now()%100000;defs+=splitDef(id,cc.split);cc["f"+k]="url(#"+id+")"}});
+ if(defs)svg+="<defs>"+defs+"</defs>";
+ Object.keys(GEO).forEach(k=>{const cc=cells[GEOKEY[k]],mnx=Math.min(...GEO[k].split(" ").map(q=>+q.split(",")[0]));
+  svg+='<g class="maptile" style="animation-delay:'+Math.round(120+mnx*0.85)+'ms"><polygon points="'+GEO[k]+'" fill="'+(cc["f"+k]||cc.f)+'" style="stroke:var(--card)" stroke-width="2.5" stroke-linejoin="round"></polygon><title>'+cc.tip+'</title></g>'});
+ D.provOrder.forEach(a=>{const cc=cells[a],pos=LBL[a];let x,y,st='fill:'+cc.t;
+  if(Array.isArray(pos)){x=pos[0];y=pos[1]}
+  else{x=pos.t[0];y=pos.t[1];st='fill:var(--card-ink)';const q=pos.l;svg+='<line x1="'+q[0]+'" y1="'+q[1]+'" x2="'+q[2]+'" y2="'+q[3]+'" style="stroke:var(--card-mute)" stroke-width="1.2"></line>'}
+  svg+='<text x="'+x+'" y="'+y+'" font-family="'+Fn+'" font-size="'+fa+'" font-weight="800" style="'+st+'" pointer-events="none">'+a+'</text>'
+     +'<text x="'+x+'" y="'+(y+fv+5)+'" font-family="'+Fn+'" font-size="'+fv+'" font-weight="600" style="'+st+'" pointer-events="none">'+cc.v+'</text>'});
+ if(!MC&&MM==="prem"){const o=D.prem[MP].ooc;svg+='<text x="12" y="624" font-family="'+Fn+'" font-size="'+fv+'" font-weight="700" style="fill:var(--accent-t)">Out of Canada '+money(o.v)+', '+o.s.toFixed(1)+'%</text>'}
+ $(boxId).innerHTML=svg+'</svg>';
+}
+function renderM(){
+ if(MM==="growth"&&MP==="h126"&&MW>4)MP="fy25";
+ setSeg("sMap",MM);setSeg("sMapP",MP);setTg("mCmp",MC);setSeg("mWin",MW);showOpt("mWin",MM==="growth");showOpt("mUnit",MM==="growth");setSeg("mUnit",MU);syncSel("mLine",ML);
+ const wnote=MP==="h126"?" Half-year windows run up to 4 years (data from H1 2022).":"";
+ const pp=perf(MP),o=D.provOrder,pl=MP==="fy25"?"FY 2025":"H1 2026";
+ if(MC){
+  renderMap("map",a=>cellCmp(a,MM,MP));
+  $("mapS").textContent=MM==="prem"?"Premium by province, "+pl+". Each province is split by the two companies’ premium: the bigger the yellow part, the bigger LM Canada is there.":MM==="share"
+   ?"Market share in each province within Liberty’s peer panel, "+pl+". Each province is split by the two companies’ shares: the bigger the yellow part, the bigger LM Canada is there."
+   :MW+"-year "+UW()+" by province, "+pl+". Yellow where LM Canada grew more, teal where Chubb grew more; lighter shades where the gap is "+(MU==="p"?"under 0.5 points.":"under $1M.")+wnote;
+  $("mapL").innerHTML=MM!=="growth"
+   ?'<span><i style="background:linear-gradient(90deg,var(--ly) 0 60%,#fff 60% 64%,var(--lmt) 64%)"></i>Split by '+(MM==="prem"?"premium":"share")+': LM Canada (yellow) and Chubb (teal)</span>'
+   :'<span><i style="background:var(--ly)"></i>LM Canada grew more</span><span><i style="background:var(--lmt)"></i>Chubb grew more</span><span><i style="background:var(--y40)"></i><i style="background:var(--t40);margin-left:-2px"></i>'+(MU==="p"?"Gap under 0.5 pts":"Gap under $1M")+'</span>';
+ }else{
+  renderMap("map",a=>MM==="growth"?growthCell(a):provCell(a,MM,MP));
+  $("mapS").textContent=MM==="growth"?"Chubb "+MW+"-year "+UW()+" by province, "+pl+"."+wnote:MAPSUB[MM][MP];$("mapL").innerHTML=mapLegend(MM);
+ }
+ let rows;
+ const gs=a=>{const g=gData(a);return g?{c:g[0],l:g[1]}:null};
+ if(MC){rows=o.map(a=>{if(MM==="share")return{a,c:pp.chubbS[a],l:pp.branchS[a],f:"r"};if(MM==="prem")return{a,c:D.prem[MP].vals[a].v,l:D.premL[MP].vals[a].v,f:"m"};const g=gs(a);return g?{a,c:g.c,l:g.l,f:GF()}:{a,na:1,l:-1e9}}).sort((x,y)=>y.l-x.l)}
+ else if(MM==="prem"){const pd=D.prem[MP];rows=o.map(a=>({a,v:pd.vals[a].v,f:"m"})).sort((x,y)=>y.v-x.v);rows.push({nm:"Out of Canada",v:pd.ooc.v,f:"m"})}
+ else rows=o.map(a=>{if(MM==="share")return{a,v:pp.chubbS[a],f:"r"};const g=gs(a);return g?{a,v:g.c,f:GF()}:{a,v:-1e9,txt:"not meaningful"}}).sort((x,y)=>y.v-x.v);
+ $("rkCap").textContent=MC
+  ?(MM==="prem"?"Premium by province, "+pl:MM==="share"?"Market share by province, "+pl+", within Liberty’s peer panel":MW+"-year "+UW()+" by province, "+pl)
+  :(MM==="prem"?"Chubb premium by province, "+pl+""
+   :MM==="share"?"Chubb market share in each province, "+pl+", within Liberty’s peer panel. This is share of each provincial market, not share of Chubb’s book"
+   :"Chubb "+MW+"-year "+UW()+" by province, "+pl);
+ const el=$("rank");
+ el.innerHTML=(MC?'<div class="rk hd"><b></b><span>Province</span><span>LM Canada</span><span>Chubb</span></div>':"")+rows.map((r,i)=>MC
+  ?(r.na?'<div class="rk two" style="--i:'+i+'"><b></b><span>'+D.provNames[r.a]+'</span><span class="lmv">n/a</span><span>not in extract</span></div>':'<div class="rk two" style="--i:'+i+'"><b>'+(i+1)+'</b><span>'+D.provNames[r.a]+'</span><span class="lmv"><span class="ct" data-v="'+r.l+'" data-f="'+r.f+'">0</span></span><span><span class="ct" data-v="'+r.c+'" data-f="'+r.f+'">0</span></span></div>')
+  :'<div class="rk" style="--i:'+i+'"><b>'+(r.nm?"":i+1)+'</b><span>'+(r.nm||D.provNames[r.a])+'</span><span>'+(r.txt?r.txt:(r.pre||"")+'<span class="ct" data-v="'+r.v+'" data-f="'+r.f+'">0</span>')+'</span></div>').join("");
+ el.querySelectorAll(".ct").forEach((c,i)=>countUp(c,700+i*30));
+ if(ML){$("mapS").textContent=lab(ML)+": "+$("mapS").textContent;$("rkCap").textContent=lab(ML)+": "+$("rkCap").textContent;
+  if(MM==="share")$("mapS").textContent+=" Share is shown for all lines; line-level share isn’t in the extracts."}
+ if(MM==="growth"){const a=natG("l"),b=natG("c");if(a!=null&&b!=null)$("rkCap").textContent+=". All Canada: LM Canada "+FG(a)+", Chubb "+FG(b)}
+}
+
+/* ═══ 07 Growth in percent and dollars ═══ */
+let twK="h126";
+let twM="p";
+function drawTw(k,base){
+ twK=k;const g=D.growth[k],a=[],b=[];
+ g.l.forEach((n0,i)=>{if(n0==="GRS NA peers")return;const n=n0==="LM Branch"?"LM Canada":n0;
+  a.push({l:n,vals:[{v:g.p[i],c:col(n)}]});if(g.d[i]!==null)b.push({l:(g.approx[i]?"≈ ":"")+n,vals:[{v:g.d[i],c:col(n)}]})});
+ setSeg("sTwM",twM);setSeg("sTw",k);
+ bars("twA",twM==="p"?a:b,{sg:true,f:twM==="p"?"p":"md",base});
+ $("twP").textContent=k==="h126"
+  ?"In H1 2026, LM Canada’s +2.03% added $12M. Chubb’s −15.86% took away $96M, eight times our gain."
+  :"In FY 2025, LM Canada’s +4.24% added $43M. Chubb’s −0.93% took away $11M.";
+}
+
+/* ═══ 08 Key takeaways ═══ */
+const TK=[
+ {h:"LM Canada passed Chubb on half-year GWP for the first time since at least 2021.",
+  fx:"H1 2026: LM Canada $580M, Chubb $511M. On a full year Chubb is still ahead: $1,172M vs $1,051M in FY 2025, a gap that has narrowed from $254M in FY 2020.",
+  to:2,lbl:"See GWP trend",pre:()=>{raceK="h1";setSeg("sRace","h1")}},
+ {h:"Chubb’s H1 2026 decline is concentrated in two lines.",
+  fx:"Chubb’s GWP fell $96M (−15.86%). Commercial Property* fell $42M and CGL fell $27M: together 72% of the drop.",
+  to:3,lbl:"See GWP insights",pre:()=>Object.assign(G,{per:"h1",view:"snap",cmp:false,line:""})},
+ {h:"We now write more than Chubb in Commercial Property*, CGL and Surety.",
+  fx:"H1 2026: Commercial Property* $172M vs $147M, CGL $89M vs $63M, Surety $79M vs $24M. Chubb is larger in Commercial Auto ($66M vs $38M), D&O ($54M vs $31M), Professional ($41M vs $16M) and EXS/UMB ($59M vs $38M).",
+  to:3,lbl:"Compare by line",pre:()=>Object.assign(G,{per:"h1",view:"snap",cmp:true,line:""})},
+ {h:"On FY 2025 COR the gap is 2 points; line by line it cuts both ways.",
+  fx:"Chubb 78.80%, LM Canada 80.81%. We are better in CGL (60.90% vs 79.54%), D&O (45.34% vs 95.46%) and Professional (33.08% vs 64.65%). Chubb is better in Commercial Auto (71.12% vs 92.31%) and EXS/UMB (74.28% vs 88.27%). Over five years the gap is 21 points (64.21% vs 85.36%).",
+  to:4,lbl:"Compare COR by line",pre:()=>Object.assign(R,{view:"snap",cmp:true,line:""})},
+ {h:"Over three years, LM Canada grew in 11 of 13 provinces; Chubb shrank in all four of its largest.",
+  fx:"3-year growth to H1 2026: Ontario LM +$35M vs Chubb −$26M, Alberta +$53M vs −$9M, Quebec +$9M vs −$18M. British Columbia fell for both: LM −$8M, Chubb −$14M.",
+  to:6,lbl:"See the map",pre:()=>{MM="growth";MP="h126";MC=true;MW=3}}
+];
+function buildTk(){
+ $("tks").innerHTML=TK.map((t,i)=>'<div class="tkw" style="--i:'+i+'"><div class="tkc" data-tilt><span class="n">'+(i+1)+'</span><div class="bd"><h3>'+t.h+'</h3><p class="fx">'+t.fx+'</p>'
+  +'<button class="go" type="button" data-i="'+i+'">'+t.lbl+'<svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg></button></div></div></div>').join("");
+ $("tks").querySelectorAll(".go").forEach(b=>b.onclick=()=>{const t=TK[+b.dataset.i];t.pre();go(t.to)});
+}
+
+/* cover: the half-year race drawn as the backdrop */
+function drawCover(){
+ const box=$("cvArt"),W=Math.max(300,box.clientWidth),H=Math.max(120,box.clientHeight),a=D.gwpH1.chubb,b=D.gwpH1.branch,lo=390,hi=640,n=a.length;
+ const X=i=>4+i*(W-8)/(n-1),Y=v=>H-6-(v-lo)/(hi-lo)*(H-12);
+ const pts=arr=>arr.map((v,i)=>[X(i),Y(v)]);
+ const path=p=>{let d="M"+p[0];for(let i=0;i<p.length-1;i++){const p0=p[i-1]||p[i],p1=p[i],p2=p[i+1],p3=p[i+2]||p2;
+   d+=" C"+(p1[0]+(p2[0]-p0[0])/6)+","+(p1[1]+(p2[1]-p0[1])/6)+" "+(p2[0]-(p3[0]-p1[0])/6)+","+(p2[1]-(p3[1]-p1[1])/6)+" "+p2};return d};
+ const pa=pts(a),pb=pts(b);
+ const area=p=>path(p)+" L"+p[p.length-1][0]+","+H+" L"+p[0][0]+","+H+" Z";
+ let g="";for(let i=0;i<n;i++)g+='<line class="gl" x1="'+X(i)+'" x2="'+X(i)+'" y1="0" y2="'+H+'"/>';
+ const i0=n-2,da=a[i0]-b[i0],db=a[i0+1]-b[i0+1],t=da/(da-db),cx=X(i0)+t*(X(i0+1)-X(i0)),cy=Y(a[i0]+t*(a[i0+1]-a[i0]));
+ const pc=(x,y)=>'left:'+(x/W*100)+'%;top:'+(y/H*100)+'%';
+ box.innerHTML='<svg viewBox="0 0 '+W+' '+H+'"><defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1444" stop-opacity=".16"/><stop offset="1" stop-color="#1A1444" stop-opacity="0"/></linearGradient></defs>'+g
+  +'<path class="ar" d="'+area(pb)+'" fill="url(#ga)"/>'
+  +'<path class="ln" d="'+path(pa)+'" pathLength="1" style="stroke:'+C.ldt+'"/>'
+  +'<path class="ln" d="'+path(pb)+'" pathLength="1" style="stroke:#1A1444"/></svg>'
+  +'<span class="lab" style="'+pc(X(n-1),Y(b[n-1]))+';color:#1A1444">LM Branch</span>'
+  +'<span class="lab" style="'+pc(X(n-1),Y(a[n-1]))+';color:'+C.ldt+'">Chubb</span>'
+  +'<span class="x" style="'+pc(cx,cy)+'"></span>'
+  +'<span class="cap">Half-year GWP, 2021 to 2026</span>';
+}
+
+/* ═══ text splitting for the headline reveals ═══ */
+function splitWords(h){
+ let i=0;
+ const walk=node=>{[...node.childNodes].forEach(ch=>{
+  if(ch.nodeType===3){const frag=document.createDocumentFragment();
+   ch.textContent.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){frag.appendChild(document.createTextNode(" "));return}
+    const s=document.createElement("span");s.className="w";const k=document.createElement("i");k.style.setProperty("--i",i++);k.textContent=w;s.appendChild(k);frag.appendChild(s)});
+   ch.replaceWith(frag)}
+  else if(ch.nodeType===1)walk(ch)})};
+ walk(h);
+}
+function splitChars(t){
+ let i=0;t.querySelectorAll(".ln").forEach(ln=>{const txt=ln.textContent;ln.textContent="";
+  [...txt].forEach(c=>{const s=document.createElement("span");s.className="ch";s.style.setProperty("--i",i++);s.textContent=c;s.setAttribute("aria-hidden","true");ln.appendChild(s)})});
+}
+
+/* ═══ engine ═══ */
+const pages=[...document.querySelectorAll(".pg")];
+const ids=pages.map(p=>p.dataset.id);
+const N=pages.length-1;
+const pad=n=>String(n).padStart(2,"0");
+
+pages.forEach((p,i)=>{if(!i)return;
+ const h=p.querySelector(".h");
+ const ey=document.createElement("div");ey.className="eyebrow";ey.innerHTML="<span>"+pad(i)+" · "+p.dataset.title+"</span>";
+ h.before(ey);splitWords(h);
+ const r=document.createElement("div");r.className="rule";h.after(r);
+ const wm=document.createElement("div");wm.className="wm";wm.setAttribute("aria-hidden","true");wm.innerHTML="<span>"+pad(i)+"</span>";p.prepend(wm);
+});
+splitChars($("cvTitle"));
+
+/* top-bar chapter links and contents cards */
+const nl=$("nl"),grid=$("tocGrid");
+pages.forEach((p,i)=>{if(!i)return;
+ const b=document.createElement("button");b.type="button";b.textContent=p.dataset.short;b.onclick=()=>go(i);nl.appendChild(b);
+ const li=document.createElement("li");li.style.setProperty("--i",i);
+ li.innerHTML='<button class="toc-card" type="button" data-tilt><span class="n">'+pad(i)+'</span><span class="bd"><span class="t">'+p.dataset.title+'</span><span class="q">'+p.dataset.q+'</span><span class="st">'+p.dataset.st+'</span></span></button>';
+ li.firstChild.onclick=()=>{closeToc();setTimeout(()=>go(i),250)};grid.appendChild(li);
+});
+const navBtns=[...nl.querySelectorAll("button")],cards=[...grid.querySelectorAll(".toc-card")];
+function moveUL(i){const b=navBtns[i-1],ul=$("ul");if(!b){ul.style.width="0";return}
+ ul.style.width=b.offsetWidth+"px";ul.style.transform="translateX("+b.offsetLeft+"px)"}
+
+const draw={2:()=>drawRace(raceK),3:()=>renderG(),4:()=>renderR(),5:()=>renderK(),6:()=>renderM(),7:()=>drawTw(twK)};
+const done={};let cur=-1,busy=false,pend=null;
+
+function show(i){
+ const p=pages[i];
+ /* draw first, while the page is still in its pre-entrance state, so every new element animates in */
+ draw[i]&&draw[i]();
+ if(!done[i]){done[i]=1;
+  p.querySelectorAll(".tg").forEach(s=>{s.classList.add("nudge");s.addEventListener("animationend",()=>s.classList.remove("nudge"),{once:true})});}
+ else if(!draw[i])p.querySelectorAll(".bars,.db").forEach(el=>play(el));
+ void p.offsetWidth;
+ pages.forEach((q,j)=>{q.classList.toggle("is-on",j===i);q.inert=j!==i;q.setAttribute("aria-hidden",j!==i?"true":"false")});
+ cur=i;p.scrollTop=0;
+ p.querySelectorAll(".bk .ct,.ck .ct").forEach((c,j)=>countUp(c,c.id?650:600+j*70));
+ p.querySelectorAll(".seg").forEach(placeInd);
+ document.body.classList.toggle("on-cover",i===0);
+ document.body.classList.toggle("spot-on",FINE&&!REDUCE&&p.classList.contains("dk"));
+ $("prog").style.transform="scaleX("+(i/N)+")";
+ if(i>0){
+  $("nowN").textContent=pad(i);$("nowT").textContent=p.dataset.title;
+  const nw=$("now");nw.classList.remove("flip");void nw.offsetWidth;nw.classList.add("flip");
+  navBtns.forEach((b,j)=>{b.classList.toggle("on",j===i-1);b.setAttribute("aria-current",j===i-1?"step":"false")});
+  cards.forEach((c,j)=>c.classList.toggle("cur",j===i-1));
+  requestAnimationFrame(()=>moveUL(i));
+ }
+ $("prev").disabled=i<=1;$("next").disabled=i>=pages.length-1;
+ try{history.replaceState(null,"","#"+ids[i])}catch(e){}
+}
+
+/* the curtain: yellow then navy sweep across, carrying the next chapter’s number */
+const curtain=$("curtain");
+function go(i){
+ i=Math.max(0,Math.min(pages.length-1,i));
+ if(busy){pend=i;return}
+ if(i===cur)return;
+ if(cur<0||REDUCE){show(i);return}
+ busy=true;const dir=i>cur?1:-1,vert=cur===0||i===0;
+ curtain.className="curtain "+(vert?"v "+(dir>0?"up":"down"):"h "+(dir>0?"fwd":"back"));
+ void curtain.offsetWidth;
+ curtain.classList.add("cover");
+ setTimeout(()=>{
+  show(i);
+  curtain.classList.remove("cover");curtain.classList.add("leave");
+  setTimeout(()=>{curtain.className="curtain";busy=false;if(pend!==null){const p=pend;pend=null;if(p!==cur)go(p)}},700);
+ },vert?560:520);
+}
+const step=d=>go((busy&&pend!==null?pend:cur)+d);
+
+/* segmented switches with a sliding marker */
+function placeInd(seg){const on=seg.querySelector("button.on"),ind=seg.querySelector(".ind");if(!on||!ind)return;
+ ind.style.width=on.offsetWidth+"px";ind.style.transform="translateX("+(on.offsetLeft-2)+"px)"}
+function seg(id,fn){const b=$(id);const ind=document.createElement("span");ind.className="ind";b.prepend(ind);
+ b.querySelectorAll("button").forEach(x=>x.onclick=()=>{if(x.classList.contains("on"))return;b.querySelectorAll("button").forEach(y=>y.classList.remove("on"));x.classList.add("on");placeInd(b);fn(x.dataset.k)})}
+seg("sRace",k=>drawRace(k,0));seg("sTw",k=>drawTw(k,0));seg("sTwM",k=>{twM=k;drawTw(twK,0)});
+seg("gPer",k=>{G.per=k;renderG(0)});seg("gView",k=>{G.view=k;renderG(0)});seg("gYrs",k=>{G.yrs=+k;renderG(0)});
+$("gCmp").onclick=()=>{G.cmp=!G.cmp;renderG(0)};$("gArs").onclick=()=>{G.ars=!G.ars;renderG(0)};fillSel("gLine",LN);$("gLine").onchange=e=>{G.line=e.target.value;renderG(0)};
+seg("rView",k=>{R.view=k;renderR(0)});seg("rFrom",k=>{R.from=+k;renderR(0)});
+$("rCmp").onclick=()=>{R.cmp=!R.cmp;renderR(0)};fillSel("rLine",RK);$("rLine").onchange=e=>{R.line=e.target.value;renderR(0)};
+seg("kView",k=>{K.view=k;renderK(0)});seg("kWinS",k=>{K.win=+k;renderK(0)});
+$("kCmp").onclick=()=>{K.cmp=!K.cmp;renderK(0)};fillSel("kLine",LN);$("kLine").onchange=e=>{K.line=e.target.value;renderK(0)};
+seg("sMap",k=>{MM=k;renderM()});seg("sMapP",k=>{MP=k;if(k==="h126"&&MW>4)MW=3;renderM()});seg("mUnit",k=>{MU=k;renderM()});fillSel("mLine",LN);$("mLine").onchange=e=>{ML=e.target.value;syncPrem();renderM()};syncPrem();seg("mWin",k=>{MW=+k;renderM()});$("mCmp").onclick=()=>{MC=!MC;renderM()};
+buildTk();
+
+/* filter tips on every chart card; hiding them is remembered for this viewer */
+const TIPS={
+ raceViz:[["Half year or Full year","switch the period"],["Hover the chart","see each year’s figures"]],
+ gViz:[["H1 or Full year","choose the period"],["Snapshot","every line in one period"],["Trend","lines over time; pick 2 to 6 years"],["Add LM Canada","puts our numbers beside Chubb’s"],["All lines","pick a line, or click a bar, to deep dive"],["Excl. ARS","LM Canada without ARS"]],
+ rViz:[["Snapshot","FY 2025 by line"],["Change","how each line moved since FY 2024, 2023 or 2022"],["Trend","FY 2022 to FY 2025 as lines"],["Add LM Canada","adds our ratios"],["All lines","pick a line, or click a bar"]],
+ kViz:[["Snapshot","growth by line over 3, 5 or 7 years"],["Trend","one line across every window, 2 to 7 years"],["Add LM Canada","adds our claims and premiums"],["All lines","pick a line, or click a bar"]],
+ map:[["Premium, Share or Growth $","choose what the map shows"],["2 to 7 yrs","growth window (FY 2025; H1 2026 has 3 years)"],["FY 2025 or H1 2026","choose the period"],["Add LM Canada","splits each province between us and Chubb"],["Hover a province","see its exact figures"]],
+ twViz:[["In percent or In dollars","switch the measure"],["FY 2025 or H1 2026","switch the period"]]};
+const setTips=on=>{document.body.classList.toggle("notips",!on);try{localStorage.setItem("lmTips",on?"1":"0")}catch(e){}};
+Object.keys(TIPS).forEach(id=>{const el=$(id),pn=el&&el.closest(".pn");if(!pn)return;
+ const t=document.createElement("div");t.className="tips";
+ t.innerHTML='<span class="tl">How to filter</span>'+TIPS[id].map(x=>'<span><b>'+x[0]+'</b>: '+x[1]+'</span>').join("")+'<button class="tx" type="button" aria-label="Hide filter tips" title="Hide tips">×</button>';
+ (pn.querySelector(".ctl")||pn.querySelector(".pt")).after(t);
+ t.querySelector(".tx").onclick=()=>setTips(false);
+ const q=document.createElement("button");q.className="tq";q.type="button";q.textContent="?";q.title="Show filter tips";q.setAttribute("aria-label","Show filter tips");q.onclick=()=>setTips(true);
+ pn.querySelector(".pt").appendChild(q);
+});
+try{if(localStorage.getItem("lmTips")==="0")document.body.classList.add("notips")}catch(e){}
+
+/* buttons */
+$("enter").onclick=()=>go(1);
+$("home").onclick=()=>go(0);
+$("prev").onclick=()=>step(-1);
+$("next").onclick=()=>step(1);
+
+/* contents: opens as a circle growing out of the Contents button */
+const toc=$("toc");let lastFocus=null;
+function openToc(){lastFocus=document.activeElement;const r=$("tocBtn").getBoundingClientRect();
+ toc.style.setProperty("--ox",(r.left+r.width/2)+"px");toc.style.setProperty("--oy",(r.top+r.height/2)+"px");
+ toc.classList.add("open");$("tocBtn").setAttribute("aria-expanded","true");setTimeout(()=>(cards[Math.max(0,cur-1)]||$("tocX")).focus({preventScroll:true}),120)}
+function closeToc(){toc.classList.remove("open");$("tocBtn").setAttribute("aria-expanded","false");lastFocus&&lastFocus.focus&&lastFocus.focus({preventScroll:true})}
+$("tocBtn").onclick=()=>toc.classList.contains("open")?closeToc():openToc();
+$("tocX").onclick=closeToc;
+$("toCover").onclick=()=>{closeToc();setTimeout(()=>go(0),250)};
+
+/* full screen, when allowed */
+const fsBtn=$("fs");
+if(document.fullscreenEnabled){fsBtn.hidden=false;fsBtn.onclick=toggleFs}
+function toggleFs(){try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}}
+
+/* keyboard */
+const canScroll=(p,dir)=>dir>0?p.scrollTop+p.clientHeight<p.scrollHeight-2:p.scrollTop>1;
+document.addEventListener("keydown",e=>{
+ if(e.metaKey||e.ctrlKey||e.altKey)return;
+ const open=toc.classList.contains("open"),k=e.key;
+ if(k==="Escape"){if(open){e.preventDefault();closeToc()}return}
+ if(k==="c"||k==="C"){e.preventDefault();open?closeToc():openToc();return}
+ if((k==="f"||k==="F")&&document.fullscreenEnabled){e.preventDefault();toggleFs();return}
+ if(open)return;
+ const onBtn=document.activeElement&&document.activeElement.tagName==="BUTTON";
+ if(cur===0&&k==="Enter"&&!onBtn){e.preventDefault();go(1);return}
+ const p=pages[cur];
+ if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!onBtn)){e.preventDefault();step(1)}
+ else if(k==="ArrowLeft"||k==="PageUp"){e.preventDefault();step(-1)}
+ else if(k==="ArrowDown"&&!canScroll(p,1)){e.preventDefault();step(1)}
+ else if(k==="ArrowUp"&&!canScroll(p,-1)){e.preventDefault();step(-1)}
+ else if(k==="Home"){e.preventDefault();go(0)}
+ else if(k==="End"){e.preventDefault();go(pages.length-1)}
+});
+
+/* wheel: one gesture turns one page once the page’s own content is at its edge */
+let wLast=0,wAcc=0,wFired=false;
+$("stage").addEventListener("wheel",e=>{
+ if(toc.classList.contains("open")||busy)return;
+ if(e.target.closest&&e.target.closest(".rank"))return;
+ const now=performance.now();if(now-wLast>220){wAcc=0;wFired=false}wLast=now;
+ const dy=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX,dir=dy>0?1:-1;
+ if(canScroll(pages[cur],dir)){wAcc=0;return}
+ wAcc+=dy;if(!wFired&&Math.abs(wAcc)>50){wFired=true;step(dir)}
+},{passive:true});
+
+/* touch swipe */
+let tx=0,ty=0,tt=0;
+$("stage").addEventListener("touchstart",e=>{const t=e.touches[0];tx=t.clientX;ty=t.clientY;tt=Date.now()},{passive:true});
+$("stage").addEventListener("touchend",e=>{const t=e.changedTouches[0],dx=t.clientX-tx,dy=t.clientY-ty;
+ if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4&&Date.now()-tt<700)step(dx<0?1:-1)},{passive:true});
+
+/* ═══ cursor-driven motion: parallax, spotlight, magnetic button, 3D tilt ═══ */
+if(FINE&&!REDUCE){
+ let mx=innerWidth/2,my=innerHeight/2,sx=mx,sy=my,tiltEl=null,tx2=0,ty2=0,raf=0;
+ const spot=$("spot"),mag=$("mag"),enter=$("enter"),blobs=[...document.querySelectorAll(".blob")];
+ addEventListener("pointermove",e=>{mx=e.clientX;my=e.clientY;
+  const t=e.target.closest&&e.target.closest("[data-tilt]");
+  if(t!==tiltEl){if(tiltEl){tiltEl.classList.remove("tilting");tiltEl.style.transform=""}tiltEl=t;if(t)t.classList.add("tilting")}
+  if(!raf)raf=requestAnimationFrame(tick)},{passive:true});
+ function tick(){raf=0;
+  sx+=(mx-sx)*.18;sy+=(my-sy)*.18;
+  spot.style.transform="translate3d("+sx+"px,"+sy+"px,0)";
+  const nx=mx/innerWidth-.5,ny=my/innerHeight-.5,p=pages[cur];
+  if(p){const wm=p.querySelector(".wm");if(wm){wm.style.setProperty("--px",(-nx*40).toFixed(1)+"px");wm.style.setProperty("--py",(-ny*30).toFixed(1)+"px")}}
+  if(cur===0){
+   blobs.forEach(b=>{const d=+b.dataset.depth;b.style.setProperty("--bx",(nx*d).toFixed(1)+"px");b.style.setProperty("--by",(ny*d).toFixed(1)+"px")});
+   const r=enter.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=mx-cx,dy=my-cy,dist=Math.hypot(dx,dy),reach=180;
+   if(dist<reach){const k=(1-dist/reach);mag.style.setProperty("--mx",(dx*.28*k).toFixed(1)+"px");mag.style.setProperty("--my",(dy*.35*k).toFixed(1)+"px");
+    enter.querySelector(".tx").style.setProperty("--tx",(dx*.08*k).toFixed(1)+"px");enter.querySelector(".tx").style.setProperty("--ty",(dy*.08*k).toFixed(1)+"px")}
+   else{mag.style.setProperty("--mx","0px");mag.style.setProperty("--my","0px");enter.querySelector(".tx").style.setProperty("--tx","0px");enter.querySelector(".tx").style.setProperty("--ty","0px")}
+  }
+  if(tiltEl){const r=tiltEl.getBoundingClientRect(),px=(mx-r.left)/r.width-.5,py=(my-r.top)/r.height-.5;
+   tiltEl.style.transform="perspective(900px) rotateX("+(-py*7).toFixed(2)+"deg) rotateY("+(px*9).toFixed(2)+"deg) translateZ(6px)"}
+  if(Math.abs(mx-sx)>.5||Math.abs(my-sy)>.5)raf=requestAnimationFrame(tick);
+ }
+}
+
+/* hash links */
+const fromHash=()=>{const i=ids.indexOf(location.hash.replace("#",""));return i<0?0:i};
+addEventListener("hashchange",()=>{const i=fromHash();if(i!==cur)go(i)});
+
+/* layout changes */
+let rzT;addEventListener("resize",()=>{clearTimeout(rzT);rzT=setTimeout(()=>{drawCover();document.querySelectorAll(".seg").forEach(placeInd);if(cur>0)moveUL(cur)},180)});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{if(draw[cur])draw[cur]()});
+new MutationObserver(()=>{if(draw[cur])draw[cur]()}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{document.querySelectorAll(".seg").forEach(placeInd);if(cur>0)moveUL(cur)});
+
+/* print: draw every chapter */
+addEventListener("beforeprint",()=>{pages.forEach((p,i)=>{if(!done[i]){done[i]=1;draw[i]&&draw[i]()}p.querySelectorAll(".bars,.db").forEach(b=>b.classList.add("go"))})});
+
+drawCover();
+show(fromHash());
+</script>
+</body>
+</html>
